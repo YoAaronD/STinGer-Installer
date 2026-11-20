@@ -65,3 +65,4 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 - Jotego's premium betas need `filter = [mister]` under `[jtcores]`; keep filters scoped per database.
 
 - Truxton II / Tatsujin Oh: MAD gives it the parent title "Truxton - Tatsujin", which grouped it with the 1988 original and dropped it. Split out in data/split.csv.
+- No curated "Start Here" list (Aaron): taste in STGs varies too much (Gun Frontier, DoDonPachi). STinGer stays neutral; discovery comes from the By Year / By Hardware views. Personal favorites: bundle wizzo's Favorites (mrext) - to test on a tate CRT.
