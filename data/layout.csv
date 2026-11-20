@@ -1,0 +1,12 @@
+# Where each tier lands under _Arcade on the SD card. {prefix} is replaced by the value below.
+# To rename every STinGer folder at once (e.g. to _Shmups), change only this line:
+# prefix=_STG
+tier,folder,in_tate_build
+core,{prefix},yes
+fixed,{prefix} Fixed,yes
+multidirectional,{prefix} Multidirectional,yes
+overhead,{prefix} Overhead,yes
+practice,{prefix} Practice,yes
+hack,{prefix} Hacks & Mods,yes
+other,_Tate Other,yes
+3d,{prefix} 3D,no

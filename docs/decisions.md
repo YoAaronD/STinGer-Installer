@@ -8,6 +8,11 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 - **CW/CCW is not a filter.** Most cores can flip, so every vertical game is in.
 - **Completeness over quality.** Bad shmups are still shmups (e.g. Mission Craft).
 
+## Menu layout
+- Everything lives under **`_Arcade`**, like a regular install, so MRAs find their cores in `_Arcade/cores`.
+- Folders use the **`_STG`** prefix: `_STG`, `_STG Fixed`, `_STG Multidirectional`, `_STG Overhead`, `_STG Practice`, `_STG Hacks & Mods`, plus `_Tate Other` for non-shooters. Chosen over `_Shmups` because it's shorter (the menu is ~28 characters wide) and it's what the games call themselves. Reversible: one line in `data/layout.csv`.
+- The 3D section isn't in the tate build (almost all horizontal).
+
 ## Version picking
 - Japanese first, then World, newest revision within the region.
 - **Battle Garegga:** the original (Feb 3 1996) set, `bgaregga`, not Type 2.
