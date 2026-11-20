@@ -73,6 +73,7 @@ _Arcade/
     _Multidirectional Shooting/   Time Pilot, Bosconian…
     _Overhead Shooting/           Out Zone, Guwange, Gundhara…
     _By Hardware/                 the same games, one folder per board (CPS-2, CV1000, Toaplan 2…)
+    _By Year/                     the same games, one folder per release year (1992, 1993…)
     _Practice ROMs/
     _Hacks & Mods/
     _Other Games/                 vertical games that aren't shooters

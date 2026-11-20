@@ -1,11 +1,13 @@
 # Where each tier lands under _Arcade. Nested folders use "/". The menu is ~28 characters wide.
 # "hardware" is the by-board view: the same shooting games again, one subfolder per arcade board.
+# "year" is the by-year view: the same shooting games again, one subfolder per release year.
 tier,folder,in_tate_build
 core,_Vertical Arcade/_Scrolling STGs,yes
 fixed,_Vertical Arcade/_Fixed Screen Shooting,yes
 multidirectional,_Vertical Arcade/_Multidirectional Shooting,yes
 overhead,_Vertical Arcade/_Overhead Shooting,yes
 hardware,_Vertical Arcade/_By Hardware,yes
+year,_Vertical Arcade/_By Year,yes
 practice,_Vertical Arcade/_Practice ROMs,yes
 hack,_Vertical Arcade/_Hacks & Mods,yes
 other,_Vertical Arcade/_Other Games,yes

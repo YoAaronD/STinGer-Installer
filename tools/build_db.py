@@ -42,6 +42,10 @@ def read_hardware(data_dir, mad_csv):
                 or (re.sub(r" (hardware|based)$", "", plat) if plat else None) or row["core"])
     return board
 
+def year_of(r):
+    m = re.match(r"(19|20)\d\d", r.get("year") or "")
+    return m.group(0) if m else "Unknown year"
+
 HARDWARE_TIERS = {"core", "fixed", "multidirectional", "overhead"}
 MIN_BOARD_GAMES = 2  # boards with fewer tate STGs than this go to "Other hardware"
 
@@ -55,6 +59,7 @@ def main(picks, data_dir, out_dir, *sources):
     sources = tuple(s for s in sources if not s.startswith("mad="))
     board_of = read_hardware(data_dir, mad_csv)
     hardware_entries = []  # (board, file name, entry) for the _STG Hardware view
+    year_entries = []  # (year, file name, entry) for the _By Year view
     display = {r["setname"]: r["display_name"] for r in read_csv(os.path.join(data_dir, "display_names.csv"))}
     roots = dict(s.split("=", 1) for s in sources)
     commits = {k: subprocess.check_output(["git", "-C", v, "rev-parse", "HEAD"], text=True).strip()
@@ -97,6 +102,7 @@ def main(picks, data_dir, out_dir, *sources):
         add_folder(f"_Arcade/{folder}", "arcade", TIER_TAG[r["tier"]])
         if r["tier"] in HARDWARE_TIERS:
             hardware_entries.append((board_of(r), os.path.basename(dest), files[dest], extra))
+            year_entries.append((year_of(r), os.path.basename(dest), files[dest], extra))
 
     # _STG Hardware/<board>/: the same MRAs again, grouped by arcade board
     counts = {}
@@ -107,6 +113,14 @@ def main(picks, data_dir, out_dir, *sources):
         path = f"{hw_root}/{safe_name(board)}/{name}"
         files[path] = dict(entry, tags=tag_ids("arcade", "stghardware", *extra))
         add_folder(f"{hw_root}/{safe_name(board)}", "arcade", "stghardware")
+
+    # _By Year/<year>/: the same MRAs again, grouped by release year
+    if "year" in layout:
+        yr_root = "_Arcade/" + layout["year"][0]
+        for y, name, entry, extra in year_entries:
+            path = f"{yr_root}/{y}/{name}"
+            files[path] = dict(entry, tags=tag_ids("arcade", "stgyear", *extra))
+            add_folder(f"{yr_root}/{y}", "arcade", "stgyear")
     folders["_Arcade"] = {"tags": tag_ids("arcade")}
 
     db = {
