@@ -36,6 +36,7 @@ and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatab
 | 2 | `select_versions.py` | One version per game: pinned (`data/prefer.csv`) > no hacks > Japan > World > newest. Practice ROMs, hacks and `data/split.csv` matches become their own entries |
 | 3 | `core_check.py` | Flags games whose core no database ships (e.g. Raki's CV1000 core, Patreon-only) |
 | 4 | `tag_merge.py` | Folds in upstream Downloader screen tags to confirm or settle tate status |
+| 5 | `build_db.py` | Writes the Downloader database: every tate entry points at its upstream MRA, pinned to a commit, saved under its `_STG` folder and display name |
 
 ### The files you edit
 
@@ -72,11 +73,26 @@ _Arcade/
   _Tate Other/             vertical games that aren't shooters
 ```
 
+## Trying it on a MiSTer
+
+Add this to the bottom of `downloader.ini`, then run the updater:
+
+```ini
+[YoAaronD/STinGer-Installer]
+db_url = https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/db.json.zip
+```
+
+STinGer only adds MRAs; the cores come from Distribution, Jotego, Coin-Op Collection and Ongo, so those databases need to be enabled too.
+
+**Filter tags**: `stg`, `stgfixed`, `stgmultidirectional`, `stgoverhead`, `stgpractice`, `stghacks`, `tateother`, `cv1000` (needs Raki's core), `needsflip` (native CW; flip it once in the core's menu).
+The default filter is `!cv1000`. Example: skip hacks and non-shooters with `filter = !stghacks !tateother !cv1000`.
+
 ## Roadmap
 
 - [x] Candidate list with Japanese-first version picking
 - [x] Upstream screen tags merged
 - [ ] Cab test: folder layout, `filter = arcade`, `osd_rotate=2`
-- [ ] Downloader database with `_Shmups` tree and filter tags
+- [x] Downloader database with `_STG` tree and filter tags (`db` branch)
+- [ ] Nightly GitHub Action to rebuild and publish the database
 - [ ] `MiSTer.ini` / `downloader.ini` templates for CCW CRT tate
 - [ ] Installer image (Mr. Fusion remaster with the inis pre-loaded)

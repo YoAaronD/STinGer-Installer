@@ -29,3 +29,6 @@ with open("data/picks.csv", "w", newline="", encoding="utf-8") as f:
     w = csv.DictWriter(f, fieldnames=keep, extrasaction="ignore"); w.writeheader(); w.writerows(r)
 print(f"data/picks.csv: {len(r)} entries")
 EOF
+
+# 6. generate the Downloader database (tate build) into build/db/
+python3 -I tools/build_db.py data/picks.csv data build/db $SRC
