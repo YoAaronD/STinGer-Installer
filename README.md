@@ -67,7 +67,7 @@ and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatab
 
 ```
 _Arcade/
-  _Vertical Shooting/
+  _Vertical Arcade/
     _Scrolling Shooting/          DoDonPachi, Batsugun, Raiden, 1941…
     _Fixed Screen Shooting/       Galaga, Phoenix, Invaders…
     _Multidirectional Shooting/   Time Pilot, Bosconian…
@@ -75,7 +75,7 @@ _Arcade/
     _By Hardware/                 the same games, one folder per board (CPS-2, CV1000, Toaplan 2…)
     _Practice ROMs/
     _Hacks & Mods/
-  _Vertical Other Games/          vertical games that aren't shooters
+    _Other Games/                 vertical games that aren't shooters
 ```
 
 Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.
