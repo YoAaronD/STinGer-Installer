@@ -1,0 +1,6 @@
+setname,reason
+# Pin a specific set as the pick for its game, overriding the region rule.
+# The automatic rule already lands on these two; they're pinned so a future MRA rename can't change the pick.
+bbakraidj,Unlimited Version (Japan) over the original Japan release
+batriderj,Japan B version over the older Japan A version
+bgaregga,Original Feb 3 1996 release - the standard version (Type 2 changes bullets and locks some formations)

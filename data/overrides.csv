@@ -1,0 +1,77 @@
+setname_or_title,action,tier,reason,rotation
+# Matched against setname first, then parent_title. action: include | exclude
+1942,include,core,DB files it under Gallery; it's a vertical scroller
+1942w,include,core,DB files it under Gallery
+scramble,include,core,DB files one set under Gallery; horizontal scroller
+R-Type II,include,core,Uncategorized in DB
+X Multiply,include,core,Uncategorized in DB
+Dark Planet,include,multidirectional,Uncategorized in DB
+Dark Planet (no BKG),include,multidirectional,Uncategorized in DB
+The End (BKG),include,fixed,Uncategorized in DB
+Gorf (Speech),include,fixed,Uncategorized in DB
+Space Invaders - Space Invaders M,include,fixed,Uncategorized in DB
+Computer Space,include,multidirectional,Uncategorized in DB
+Bubble System Bios,exclude,,Not a game
+Test Tape,exclude,,Not a game
+subs,exclude,,Atari Subs - not really a shooter
+After Burner (Ver 1.32),include,3d,Into-the-screen shooter; MRA only says Shooter
+After Burner II,include,3d,Into-the-screen shooter
+Thunder Blade (upright),include,3d,Mixed overhead/behind shooter
+"Buck Rogers: Planet of Zoom (not encrypted, set 1)",include,3d,Into-the-screen shooter
+Blaster,include,3d,Into-the-screen shooter
+"Agent Super Bond (Super Cobra conversion, not encrypted)",include,core,Super Cobra conversion
+Dog Fight,include,core,Vertical shooter
+Omega Fighter,include,core,Vertical shooter
+XX Mission,include,core,Vertical shooter
+Zodiack,include,multidirectional,Multidirectional shooter
+Ark Area,include,multidirectional,Multidirectional shooter
+"Eliminator (2 Players, set 2)",include,multidirectional,Vector multidirectional
+Space Fury (revision C),include,multidirectional,Vector multidirectional
+Star Castle [rev 3],include,multidirectional,Vector fixed-screen shooter
+Space Wars,include,multidirectional,Vector versus shooter
+Rip Off,include,multidirectional,Vector shooter
+Armor Attack,include,multidirectional,Vector shooter
+Aztarac,include,multidirectional,Vector shooter
+War of the Worlds (monochrome),include,fixed,Fixed shooter
+Victory (Exidy),include,multidirectional,Multidirectional shooter
+Brute Force,include,overhead,Overhead run-and-gun
+Last Survivor,include,overhead,Overhead versus shooter
+Line of Fire (World),exclude,,Gun/first-person
+A.B. Cop (World),exclude,,Driving game
+"Super Monaco GP (World, Rev B)",exclude,,Racing game mis-tagged Shooter
+GP Rider (World),exclude,,Racing game mis-tagged Shooter
+Racing Hero,exclude,,Racing game mis-tagged Shooter
+Starhawk,exclude,,First-person
+Tank,exclude,,Tank versus game
+Tank II,exclude,,Tank versus game
+# --- Ongo additions (regex keys match the MRA name) ---
+re:^Raiden Fighters,include,core,Seibu SPI vertical shooter
+re:^(RayForce|RayStorm|G-Darius|Darius Gaiden|Gunlock),include,core,Taito vertical/horizontal shooter
+re:^(Viper Phase 1|Akuu Gallet|Blaze On|Explosive Breaker|Air Buster|Heavy Unit|B-Wings|Sonic Wings Limited|Aero Fighters Special|Skull Fang|Wing Force|Wivern Wings|Daikaiju no Gyakushu|Baryon|Gaia - The Last Choice|Nostradamus|Dual Assault|Sauro|HeliFire|Space Launcher|G-Stream G2020|Super-X|R-Shark|Saurian Front|Danger Express|Strikers 1945|Zero Gunner|Pilot Kids),include,core,Scrolling shooter missing from the arcade DB
+re:^(Space Fever|Battlantis|Millipede|Sheriff|Genix Family),include,fixed,Fixed shooter
+re:^(Smash T\.V\.|Total Carnage|Exterminator),include,multidirectional,Twin-stick / multidirectional
+re:^(G-LOC|Galaxy Force|Sky Target|Strike Fighter|Star Wars \(Sega),include,3d,Into-the-screen shooter (per Aaron: kept out of regular STG)
+re:^(Catch-22|Cheyenne|Chiller|Clay Pigeon|Combat \(version|Crackshot|Crossbow|Hit 'n Miss|Showdown|Who Dunit|Golgo 13|Gunbarl|Point Blank|Ghoul Panic|Oh! Bakyuuun|Rail Chase|SWAT Police|Judge Dredd|Terminator 2|Revolution X|Lethal Enforcers|Virtua Cop|The House of the Dead|Line of Fire|Tenkomori Shooting|Attack Pla Rail|Sega NetMerc),exclude,,Light-gun / gallery game
+re:^(Super Monaco GP|GP Rider|Racing Hero|A\.B\. Cop|Desert Tank|Tank Cocktail),exclude,,Driving game
+re:^Brave Blade,include,core,Vertical 3D shooter; direction assumed CCW like the rest of Raizing/Eighting - verify on a cab,ccw (assumed)
+re:^Garuka,include,core,Japanese A-Jax,
+re:^SF-HiSplitter,include,fixed,Space Fever variant,
+re:^Fortress 2 Blue,exclude,,Artillery game - not an STG,
+re:^Crazy War,include,fixed,Not a scrolling shmup - yoko only (per Aaron),
+re:^Iron Fortress,include,fixed,Fixed-screen tank game - yoko only (per Aaron),
+re:^Mission Craft,include,core,StarCraft-themed vertical shooter - included for completeness (per Aaron),
+re:^Pirates \(set,exclude,,Cabal / NAM-1975 style crosshair game - not an STG (per Aaron),
+Mogu Chan,include,other,Not a shooting game (per Aaron) - vertical so it goes in Other,
+# --- vertical games with no genre anywhere (mostly Ongo / Jotego) ---
+re:^(Aero Fighters \(|Arbalester|Argus|Ashura Blaster|Change Air Blade|Cyvern|Daisenpu|DoDonPachi Dai-Ou-Jou Tamashii|Gekirindan|Grid Seeker|Last Duel|Master of Weapon|Meta Fox|Nebulas Ray|Ryu Jin|Scramble Spirits|Sengeki Striker|Star Fighter \(v|Storm Blade|Turbo Force|Twin Cobra II|Twin Eagle II|Ultra X Weapons|Vasara|The Game Paradise),include,core,Vertical shooter with no genre tag in DB or MRA,
+re:^Space Invaders '95,include,fixed,Fixed shooter with no genre tag,
+re:^(Valtric|Desert War),include,overhead,Overhead tank shooter with no genre tag,
+re:^The Bounty,include,core,Orca boat shooter - included as a Toaplan forerunner (per Aaron),
+re:^The Percussor,include,multidirectional,Orca free-roaming aircraft shooter (per Aaron),
+re:^Gain Ground,include,other,Not a shooter (per Aaron),
+re:^Seicross,include,other,Not a shooter (per Aaron),
+re:^(Strike Gunner|Daioh|Eight Forces|War of Aero|U\.N\. Defense Force|Mad Shark|Galmedes|SD Gundam Neo Battling|Zing Zing Zip|Twin Eagle - Revenge),include,core,Vertical STG tagged 'Arcade' in its MRA (confirmed by Aaron),
+re:^Gundhara,include,overhead,Out Zone-style overhead shooter (per Aaron),
+re:^Return of the Jedi,include,core,Isometric scroller - not into-the-screen,
+re:^Space Harrier,include,3d,Behind-view shooter (per Aaron: kept out of regular STG),
+re:^(Star Wars \(Rev|Empire Strikes Back|Red Baron|Space Seeker|Star Trek|Combat Hawk|Battle Zone|Bradley Trainer),include,3d,Cockpit-view shooter - into-the-screen section,

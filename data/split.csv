@@ -1,0 +1,7 @@
+pattern,reason
+# MRAs whose name matches one of these regexes become their own game instead of a version of their folder's game.
+Black Label,DoDonPachi Dai-Ou-Jou Black Label is its own release
+Empire Strikes Back,Separate game - MAME lists it as a Star Wars clone
+Star Wars \(Sega,Sega's 1983 Star Wars - not Atari's
+Bradley Trainer,Army training variant of Battlezone - its own entry
+Zakk,Zakk's mod - its own entry next to the original
