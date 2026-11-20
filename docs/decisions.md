@@ -10,7 +10,9 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 
 ## Menu layout
 - Everything lives under **`_Arcade`**, like a regular install, so MRAs find their cores in `_Arcade/cores`.
-- Folders use the **`_STG`** prefix: `_STG`, `_STG Fixed`, `_STG Multidirectional`, `_STG Overhead`, `_STG Practice`, `_STG Hacks & Mods`, plus `_Tate Other` for non-shooters. Chosen over `_Shmups` because it's shorter (the menu is ~28 characters wide) and it's what the games call themselves. Reversible: one line in `data/layout.csv`.
+- The menu says **vertical** up front: `_Vertical Shooting` (all shooting games) and `_Vertical Other Games`.
+- No repeated "STG": inside `_Vertical Shooting` the folders are `_Scrolling Shooting`, `_Fixed Screen Shooting`, `_Multidirectional Shooting`, `_Overhead Shooting`, `_By Hardware`, `_Practice ROMs`, `_Hacks & Mods`. (Replaces the earlier `_STG`-prefixed layout.)
+- **By Hardware** repeats the shooting games grouped by arcade board; boards with a single tate shooter go in `Other hardware`.
 - The 3D section isn't in the tate build (almost all horizontal).
 
 ## Sources

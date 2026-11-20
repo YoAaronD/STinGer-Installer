@@ -45,7 +45,8 @@ and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatab
 - `data/overrides.csv`: include/exclude a game, set its tier, fix its rotation. Keys are a setname, a title, or `re:<regex>` on the MRA name.
 - `data/prefer.csv`: pin a specific set as a game's pick.
 - `data/split.csv`: names that are their own game, not a version of their folder's game (Black Label, Zakk's Garegga…).
-- `data/layout.csv`: which `_Arcade` subfolder each tier goes in. The `_STG` prefix is one setting.
+- `data/layout.csv`: which `_Arcade` folder each tier goes in (nested with `/`).
+- `data/hardware.csv`: board names for the By Hardware view, by core or by arcade-DB platform.
 - `data/display_names.csv`: the name a game shows in the menu, when upstream's MRA name isn't what we want.
 - `data/core_tiers.csv`: default tier for shooters on a core the arcade DB doesn't know (e.g. CV1000).
 
@@ -66,38 +67,18 @@ and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatab
 
 ```
 _Arcade/
-  _STG/                    scrolling shooters
-  _STG Fixed/
-  _STG Multidirectional/
-  _STG Overhead/
-  _STG Practice/
-  _STG Hacks & Mods/
-  _Tate Other/             vertical games that aren't shooters
+  _Vertical Shooting/
+    _Scrolling Shooting/          DoDonPachi, Batsugun, Raiden, 1941…
+    _Fixed Screen Shooting/       Galaga, Phoenix, Invaders…
+    _Multidirectional Shooting/   Time Pilot, Bosconian…
+    _Overhead Shooting/           Out Zone, Guwange, Gundhara…
+    _By Hardware/                 the same games, one folder per board (CPS-2, CV1000, Toaplan 2…)
+    _Practice ROMs/
+    _Hacks & Mods/
+  _Vertical Other Games/          vertical games that aren't shooters
 ```
 
-## Flavors
-
-One STinGer database and game list; the hardware layer differs. `tools/build_flavors.py` writes each flavor to `build/flavors/`:
-
-| Flavor | `MiSTer.ini` base | Controls |
-| --- | --- | --- |
-| `mistercade-v2` | [MiSTerAddons' MiSTercade V2 15kHz ini](https://github.com/misteraddons/mister_ini) | MiSTercade V2 mappings (drop-in `downloader_maps-v2-osd.ini`) |
-| `mistercade-v1` | MiSTerAddons' MiSTercade V1 15kHz ini | MiSTercade V1 2025 mappings (plain V1 is deprecated upstream) |
-| `heber-ms2` | MiSTer's stock `MiSTer.ini` + [Heber Multisystem² Arcade](https://multisystem.uk/products/multisystem-2-arcade/) player bindings | onboard CTRLDock (`usb-1.7/input2/`, `input3/`) |
-| `regular` | MiSTer's stock `MiSTer.ini` (native 15kHz analog out) | left to the user |
-
-STinGer adds only what's in [`templates/stinger_overlay.ini`](templates/stinger_overlay.ini) on top of the base: `osd_rotate=2` and MiSTerAddons' recommended `[Menu]` block. Board-specific settings (Direct Video, JAMMA IDs, player port assignment, audio) always come from the base. MiSTercade control mappings are keyed by set name, so they apply to the `_STG` copies automatically.
-
-## Trying it on a MiSTer
-
-Use [`templates/downloader.ini`](templates/downloader.ini) as your `downloader.ini`: it enables STinGer plus every database its games need (Distribution, Jotego, Coin-Op Collection, Ongo, kuze, shmupfan), filtered for an arcade-only vertical cab. Then run the updater.
-
-STinGer only adds MRAs; the cores come from those databases.
-
-The template also installs [Update All](https://github.com/theypsilon/Update_All_MiSTer) through its official Downloader section. Update All only edits the databases in its own catalog, so STinGer's, kuze's, shmupfan's and Ongo's sections survive its settings screen. Keep Distribution, JTCORES and Coin-Op Collection enabled there: STinGer games need their cores.
-
-**Filter tags**: `stg`, `stgfixed`, `stgmultidirectional`, `stgoverhead`, `stgpractice`, `stghacks`, `tateother`, `cv1000` (needs Raki's core), `needsflip` (native CW; flip it once in the core's menu).
-The default filter is `!cv1000`. Example: skip hacks and non-shooters with `filter = !stghacks !tateother !cv1000`.
+Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.
 
 ## Where this is going
 

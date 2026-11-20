@@ -1,12 +1,12 @@
-# Where each tier lands under _Arcade on the SD card. {prefix} is replaced by the value below.
-# To rename every STinGer folder at once (e.g. to _Shmups), change only this line:
-# prefix=_STG
+# Where each tier lands under _Arcade. Nested folders use "/". The menu is ~28 characters wide.
+# "hardware" is the by-board view: the same shooting games again, one subfolder per arcade board.
 tier,folder,in_tate_build
-core,{prefix},yes
-fixed,{prefix} Fixed,yes
-multidirectional,{prefix} Multidirectional,yes
-overhead,{prefix} Overhead,yes
-practice,{prefix} Practice,yes
-hack,{prefix} Hacks & Mods,yes
-other,_Tate Other,yes
-3d,{prefix} 3D,no
+core,_Vertical Shooting/_Scrolling Shooting,yes
+fixed,_Vertical Shooting/_Fixed Screen Shooting,yes
+multidirectional,_Vertical Shooting/_Multidirectional Shooting,yes
+overhead,_Vertical Shooting/_Overhead Shooting,yes
+hardware,_Vertical Shooting/_By Hardware,yes
+practice,_Vertical Shooting/_Practice ROMs,yes
+hack,_Vertical Shooting/_Hacks & Mods,yes
+other,_Vertical Other Games,yes
+3d,_Vertical Shooting/_3D Shooting,no

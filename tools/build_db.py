@@ -25,8 +25,7 @@ def read_csv(path):
     return list(csv.DictReader(l for l in open(path, encoding="utf-8") if not l.startswith("#")))
 
 def read_layout(path):
-    prefix = next(l.split("=", 1)[1].strip() for l in open(path, encoding="utf-8") if l.startswith("# prefix="))
-    return {r["tier"]: (r["folder"].replace("{prefix}", prefix), r["in_tate_build"] == "yes") for r in read_csv(path)}
+    return {r["tier"]: (r["folder"], r["in_tate_build"] == "yes") for r in read_csv(path)}
 
 def safe_name(name):
     name = re.sub(r'[<>:"/\\|?*]', "-", name)  # characters Windows / exFAT won't take
@@ -52,8 +51,6 @@ def is_tate(row):
 
 def main(picks, data_dir, out_dir, *sources):
     layout = read_layout(os.path.join(data_dir, "layout.csv"))
-    prefix = next(l.split("=", 1)[1].strip() for l in open(os.path.join(data_dir, "layout.csv"), encoding="utf-8")
-                  if l.startswith("# prefix="))
     mad_csv = next((s.split("=", 1)[1] for s in sources if s.startswith("mad=")), None)
     sources = tuple(s for s in sources if not s.startswith("mad="))
     board_of = read_hardware(data_dir, mad_csv)
@@ -68,6 +65,11 @@ def main(picks, data_dir, out_dir, *sources):
     tags, files, folders, skipped = {}, {}, {}, []
     def tag_ids(*names):
         return [tags.setdefault(n, len(tags)) for n in names]
+    def add_folder(path, *tag_names):  # the folder and every parent folder up to _Arcade
+        parts = path.split("/")
+        for i in range(2, len(parts) + 1):
+            folders.setdefault("/".join(parts[:i]), {"tags": tag_ids("arcade")})
+        folders[path] = {"tags": tag_ids(*tag_names)}
 
     for r in read_csv(picks):
         folder, in_build = layout.get(r["tier"], (None, False))
@@ -92,20 +94,19 @@ def main(picks, data_dir, out_dir, *sources):
                    + urllib.parse.quote(r["mra_path"]),
             "tags": tag_ids("arcade", TIER_TAG[r["tier"]], *extra),
         }
-        folders.setdefault(f"_Arcade/{folder}", {"tags": tag_ids("arcade", TIER_TAG[r["tier"]])})
+        add_folder(f"_Arcade/{folder}", "arcade", TIER_TAG[r["tier"]])
         if r["tier"] in HARDWARE_TIERS:
             hardware_entries.append((board_of(r), os.path.basename(dest), files[dest], extra))
 
     # _STG Hardware/<board>/: the same MRAs again, grouped by arcade board
     counts = {}
     for b, *_ in hardware_entries: counts[b] = counts.get(b, 0) + 1
-    hw_root = f"_Arcade/{prefix} Hardware"
+    hw_root = "_Arcade/" + layout["hardware"][0]
     for b, name, entry, extra in hardware_entries:
         board = b if counts[b] >= MIN_BOARD_GAMES else "Other hardware"
         path = f"{hw_root}/{safe_name(board)}/{name}"
         files[path] = dict(entry, tags=tag_ids("arcade", "stghardware", *extra))
-        folders.setdefault(f"{hw_root}/{safe_name(board)}", {"tags": tag_ids("arcade", "stghardware")})
-    folders.setdefault(hw_root, {"tags": tag_ids("arcade", "stghardware")})
+        add_folder(f"{hw_root}/{safe_name(board)}", "arcade", "stghardware")
     folders["_Arcade"] = {"tags": tag_ids("arcade")}
 
     db = {
@@ -125,7 +126,9 @@ def main(picks, data_dir, out_dir, *sources):
     with zipfile.ZipFile(os.path.join(out_dir, "db.json.zip"), "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("db.json", json.dumps(db, separators=(",", ":"), ensure_ascii=False))
     by_folder = {}
-    for p in files: by_folder[p.split("/")[1]] = by_folder.get(p.split("/")[1], 0) + 1
+    for p in files:
+        k = "/".join(p.split("/")[1:-1]) if not p.startswith(hw_root + "/") else hw_root[8:]
+        by_folder[k] = by_folder.get(k, 0) + 1
     print(f"{len(files)} MRAs in {len(folders) - 1} folders: {dict(sorted(by_folder.items()))}")
     for name, why in skipped: print("  skipped:", name, "-", why)
 
