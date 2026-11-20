@@ -75,6 +75,18 @@ _Arcade/
   _Tate Other/             vertical games that aren't shooters
 ```
 
+## Flavors
+
+One STinGer database and game list; the hardware layer differs. `tools/build_flavors.py` writes each flavor to `build/flavors/`:
+
+| Flavor | `MiSTer.ini` base | Controls |
+| --- | --- | --- |
+| `mistercade-v2` | [MiSTerAddons' MiSTercade V2 15kHz ini](https://github.com/misteraddons/mister_ini) | MiSTercade V2 mappings (drop-in `downloader_maps-v2-osd.ini`) |
+| `mistercade-v1` | MiSTerAddons' MiSTercade V1 15kHz ini | MiSTercade V1 2025 mappings (plain V1 is deprecated upstream) |
+| `regular` | MiSTer's stock `MiSTer.ini` (native 15kHz analog out) | left to the user |
+
+STinGer adds only what's in [`templates/stinger_overlay.ini`](templates/stinger_overlay.ini) on top of the base: `osd_rotate=2` and MiSTerAddons' recommended `[Menu]` block. Board-specific settings (Direct Video, JAMMA IDs, player port assignment, audio) always come from the base. MiSTercade control mappings are keyed by set name, so they apply to the `_STG` copies automatically.
+
 ## Trying it on a MiSTer
 
 Use [`templates/downloader.ini`](templates/downloader.ini) as your `downloader.ini`: it enables STinGer plus every database its games need (Distribution, Jotego, Coin-Op Collection, Ongo, kuze, shmupfan), filtered for an arcade-only vertical cab. Then run the updater.

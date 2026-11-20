@@ -46,7 +46,12 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 | Brave Blade | core, rotation assumed CCW (verify) |
 | Strike Gunner, Daioh, Eight Forces, War of Aero, U.N. Defense Force, Mad Shark, Galmedes, SD Gundam Neo Battling, Zing Zing Zip, Twin Eagle | core (MRAs tagged only "Arcade") |
 
+## Flavors
+- Three flavors: **MiSTercade V2**, **MiSTercade V1** (V1 2025 mappings), **regular/other** (e.g. a Blast City's D-sub with a standard MiSTer).
+- STinGer never replaces a MiSTercade's ini: it takes MiSTerAddons' official 15kHz ini and adds only `osd_rotate=2` and the `[Menu]` block.
+- MiSTercade control mappings come from MiSTerAddons' own drop-in Downloader inis and apply by set name.
+
 ## Setup facts
-- `osd_rotate=2` (rotate left, -90°) for a CCW cab, per the MiSTer ini docs and the maintainer's own setups.
+- `osd_rotate=2` (rotate left, -90°) for a CCW cab, per the MiSTer ini docs, MiSTerAddons' V2 notes and the maintainer's own setups. Stock MiSTer.ini now also offers `3` (match the game's direction, analog only).
 - Raki's CV1000 core is Patreon-only; Ongo ships the CV1000 MRAs but not the core.
 - Jotego's premium betas need `filter = [mister]` under `[jtcores]`; keep filters scoped per database.

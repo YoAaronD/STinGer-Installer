@@ -53,4 +53,14 @@ curl -sSL -o sources/dbs/shmupfan.json https://raw.githubusercontent.com/shmupfa
   || git -C sources/shmupfan_db clone -q --depth 1 https://github.com/shmupfan/Distribution . 2>/dev/null
 [ -s sources/dbs/shmupfan.json ] || cp sources/shmupfan_db/db.json sources/dbs/shmupfan.json
 python3 -I tools/mirror_db.py sources/dbs/shmupfan.json sources/shmupfan
+# Flavor bases: MiSTerAddons' official MiSTercade inis + control mappings, and MiSTer's stock MiSTer.ini
+for pair in "misteraddons_ini misteraddons/mister_ini" "misteraddons_mistercade misteraddons/MiSTercade"; do
+  set -- $pair
+  if [ ! -d "sources/$1/.git" ]; then git clone -q --depth 1 "https://github.com/$2" "sources/$1"
+  else git -C "sources/$1" pull -q --ff-only; fi
+done
+if [ ! -d sources/main_mister/.git ]; then
+  git clone -q --depth 1 --filter=blob:none --sparse https://github.com/MiSTer-devel/Main_MiSTer sources/main_mister
+  git -C sources/main_mister sparse-checkout set --no-cone /MiSTer.ini
+else git -C sources/main_mister pull -q --ff-only; fi
 echo "sources ready"

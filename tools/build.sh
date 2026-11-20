@@ -32,3 +32,6 @@ EOF
 
 # 6. generate the Downloader database (tate build) into build/db/
 python3 -I tools/build_db.py data/picks.csv data build/db $SRC
+
+# 7. per-hardware flavors (MiSTercade V2 / V1 / regular) into build/flavors/
+python3 -I tools/build_flavors.py $S build/flavors
