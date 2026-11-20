@@ -32,12 +32,32 @@ def safe_name(name):
     name = re.sub(r'[<>:"/\\|?*]', "-", name)  # characters Windows / exFAT won't take
     return re.sub(r"\s+", " ", name).strip().rstrip(".")
 
+def read_hardware(data_dir, mad_csv):
+    hw = {r["key"]: r["board"] for r in read_csv(os.path.join(data_dir, "hardware.csv"))}
+    mad = {}
+    if mad_csv and os.path.exists(mad_csv):
+        mad = {r["setname"]: r.get("platform", "") for r in csv.DictReader(open(mad_csv, encoding="utf-8-sig"))}
+    def board(row):
+        plat = mad.get(row["setname"], "")
+        return (hw.get(row["core"]) or (hw.get("mad:" + plat) if plat else None)
+                or (re.sub(r" (hardware|based)$", "", plat) if plat else None) or row["core"])
+    return board
+
+HARDWARE_TIERS = {"core", "fixed", "multidirectional", "overhead"}
+MIN_BOARD_GAMES = 2  # boards with fewer tate STGs than this go to "Other hardware"
+
 def is_tate(row):
     s = row["tate_ccw_cab"]
     return not (s.startswith("horizontal") or s == "unknown")
 
 def main(picks, data_dir, out_dir, *sources):
     layout = read_layout(os.path.join(data_dir, "layout.csv"))
+    prefix = next(l.split("=", 1)[1].strip() for l in open(os.path.join(data_dir, "layout.csv"), encoding="utf-8")
+                  if l.startswith("# prefix="))
+    mad_csv = next((s.split("=", 1)[1] for s in sources if s.startswith("mad=")), None)
+    sources = tuple(s for s in sources if not s.startswith("mad="))
+    board_of = read_hardware(data_dir, mad_csv)
+    hardware_entries = []  # (board, file name, entry) for the _STG Hardware view
     display = {r["setname"]: r["display_name"] for r in read_csv(os.path.join(data_dir, "display_names.csv"))}
     roots = dict(s.split("=", 1) for s in sources)
     commits = {k: subprocess.check_output(["git", "-C", v, "rev-parse", "HEAD"], text=True).strip()
@@ -73,6 +93,19 @@ def main(picks, data_dir, out_dir, *sources):
             "tags": tag_ids("arcade", TIER_TAG[r["tier"]], *extra),
         }
         folders.setdefault(f"_Arcade/{folder}", {"tags": tag_ids("arcade", TIER_TAG[r["tier"]])})
+        if r["tier"] in HARDWARE_TIERS:
+            hardware_entries.append((board_of(r), os.path.basename(dest), files[dest], extra))
+
+    # _STG Hardware/<board>/: the same MRAs again, grouped by arcade board
+    counts = {}
+    for b, *_ in hardware_entries: counts[b] = counts.get(b, 0) + 1
+    hw_root = f"_Arcade/{prefix} Hardware"
+    for b, name, entry, extra in hardware_entries:
+        board = b if counts[b] >= MIN_BOARD_GAMES else "Other hardware"
+        path = f"{hw_root}/{safe_name(board)}/{name}"
+        files[path] = dict(entry, tags=tag_ids("arcade", "stghardware", *extra))
+        folders.setdefault(f"{hw_root}/{safe_name(board)}", {"tags": tag_ids("arcade", "stghardware")})
+    folders.setdefault(hw_root, {"tags": tag_ids("arcade", "stghardware")})
     folders["_Arcade"] = {"tags": tag_ids("arcade")}
 
     db = {

@@ -1,0 +1,72 @@
+# Board name for the _STG Hardware folders.
+# key: a core (.rbf name) or "mad:<platform>" for the MiSTer Arcade Database's platform name. Core keys win.
+key,board
+ikacore_CV1k,Cave CV1000
+CaveBanpresto,Cave 68000
+mad:CAVE 68000,Cave 68000
+IGSPGM,IGS PGM
+mad:IGS PGM,IGS PGM
+PGM2,IGS PGM2
+NMK16_Gunnail,NMK16
+NMK16_Afega,NMK16
+NMK16_Raphero,NMK16
+NMK16_Macross2,NMK16
+NMKBP964,NMK16
+SandScrp,NMK16
+ppriest_Seta,Seta
+ppriest_SetaDowntown,Seta
+jtarblst,Seta
+Meathax_SSV,Seta SSV
+TaitoF3,Taito F3
+TaitoGNET,Taito G-NET
+TaitoB,Taito B System
+TaitoAsuka,Taito Asuka
+mad:Taito F2 System,Taito F2
+NamcoS2_STD,Namco System 2
+NamcoS2_MH,Namco System 2
+mad:Namco System-1,Namco System 1
+SeibuSPI,Seibu SPI
+Raiden2,Seibu Raiden II
+XNZN1,Sony ZN-1
+Psikyo,Psikyo 68EC020
+mad:Psikyo SH-2 hardware,Psikyo SH-2
+pspike,Video System
+dooyong,Dooyong
+dec8,Data East DEC8
+mad:Data East DECO Cassette,Data East DECO Cassette
+DECOCassette,Data East DECO Cassette
+tecmo16,Tecmo 16
+1945kiii,Oriental Soft
+Vastar,Orca
+UPLFramebuffer,UPL
+SKNS,Kaneko Super Nova
+Meathax_Nintendo8080,Nintendo 8080
+ppriest_JalecoMS32,Jaleco Mega System 32
+mad:Jaleco Mega System 1,Jaleco Mega System 1
+mad:Toaplan 2,Toaplan 2
+mad:Toaplan 1,Toaplan 1
+mad:Toaplan Twin Cobra hardware,Toaplan Twin Cobra
+twincobr_mister,Toaplan Twin Cobra
+mad:Capcom CPS-0,Capcom (pre-CPS)
+mad:Capcom CPS-1,Capcom CPS-1
+mad:Capcom CPS-2,Capcom CPS-2
+mad:Konami Scramble based,Konami Scramble
+scramble,Konami Scramble
+mad:Namco Galaxian based,Namco Galaxian
+mad:Namco Galaga based,Namco Galaga
+mad:SNK Triple Z80,SNK Triple Z80
+mad:Sega System 1,Sega System 1
+mad:Taito System SJ,Taito SJ
+mad:SNK - Alpha Denshi,SNK & Alpha Denshi
+mad:Universal Cosmic hardware,Universal Cosmic
+mad:Kyugo hardware,Kyugo
+RaizingMD,Raizing
+Meathax_Argus,NMK (Jaleco)
+Meathax_DataEastLiberation,Data East (Liberation)
+ppriest_Vamphalf,SemiCom Hyperstone
+mad:Taito Bubble Booble based,Taito Bubble Bobble
+mad:Taito Qix Hardware,Taito Qix
+mad:Taito The NewZealand Story hardware,Taito New Zealand Story
+mad:Konami 6809 based,Konami 6809
+mad:Konami Double Dribble based,Konami Double Dribble
+mad:Sega Zaxxon based,Sega Zaxxon
