@@ -65,11 +65,15 @@ def newness(name):
     if re.search(r"\bnewer?\b", n): return (1, 1)
     return (1,)
 
-def main(inp, pref_csv, out, prio="db_priority=distribution,jotego,coinop,ongo", split_csv=None):
+def main(inp, pref_csv, out, prio="db_priority=distribution,jotego,kuze,coinop,shmupfan,ongo", split_csv=None):
     split_csv = split_csv or os.path.join(os.path.dirname(os.path.abspath(pref_csv)), "split.csv")
     splits = [r["pattern"] for r in csv.DictReader(l for l in open(split_csv) if not l.startswith("#"))] if os.path.exists(split_csv) else []
     prio = prio.split("=", 1)[1].split(",")
-    pinned = {r["setname"] for r in csv.DictReader(l for l in open(pref_csv) if not l.startswith("#"))}
+    # A pin is a setname, or setname@database to also choose which source's MRA (and core) wins.
+    pins = [r["setname"] for r in csv.DictReader(l for l in open(pref_csv) if not l.startswith("#"))]
+    pin_any = {p for p in pins if "@" not in p}
+    pin_db = {tuple(p.split("@", 1)) for p in pins if "@" in p}
+    is_pinned = lambda r: r["setname"] in pin_any or (r["setname"], r["database"]) in pin_db
     rows = list(csv.DictReader(open(inp, encoding="utf-8")))
     # Union-find: an MRA joins its MAME parent, its _alternatives folder, and same-named mains.
     # Practice ROMs and trainers sit off to the side: listed individually, never picked as a game's version.
@@ -122,7 +126,7 @@ def main(inp, pref_csv, out, prio="db_priority=distribution,jotego,coinop,ongo",
         def rank(r):
             region = 0 if is_japan(r) else 1 if is_world(r) else 2
             nw = newness(r["mra_name"])
-            return (r["setname"] not in pinned, junk(r), region, tuple(-x for x in nw),
+            return (not is_pinned(r), junk(r), region, tuple(-x for x in nw),
                     prio.index(r["database"]) if r["database"] in prio else 9, r["alternative"] == "yes")
         g.sort(key=rank)
         best = dict(g[0])
@@ -132,7 +136,7 @@ def main(inp, pref_csv, out, prio="db_priority=distribution,jotego,coinop,ongo",
             best["tier"] = min(stg, key=["core", "fixed", "multidirectional", "overhead", "3d", "unsorted"].index)
         if hackish(best):  # only hacks/mods in this group: keep them out of the main lists
             best["tier"] = "hack"
-        best["pick_reason"] = ("pinned in prefer.csv" if best["setname"] in pinned else
+        best["pick_reason"] = ("pinned in prefer.csv" if is_pinned(best) else
                                "Japan" if is_japan(best) else "World (no Japanese set)" if is_world(best)
                                else "no region in name" if not re.search(r"\((usa?|europe|korea|asia|hong kong|china|taiwan|germany)", best["mra_name"], re.I)
                                else "no Japanese or World set")

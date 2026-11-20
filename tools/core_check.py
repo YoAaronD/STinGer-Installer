@@ -1,7 +1,7 @@
 """Flag picks whose core (.rbf) isn't shipped by any scanned database.
 
 usage: python3 -I tools/core_check.py <picks.csv> <label=repo_dir> [...]
-MiSTer resolves an MRA's <rbf>X</rbf> to X.rbf or X_<anything>.rbf, so match the same way.
+MiSTer resolves an MRA's <rbf>X</rbf> to X.rbf or X_<anything>.rbf (optionally prefixed "Arcade-"), so match the same way.
 """
 import csv, os, sys
 
@@ -14,6 +14,8 @@ def main(picks, *sources):
         listing = os.path.join(d, ".rbf_list")  # optional: names from `git ls-tree` for sparse clones
         if os.path.exists(listing):
             stems |= {l.strip().lower() for l in open(listing) if l.strip()}
+    # Some developers prefix core files with "Arcade-" (e.g. kuze's Arcade-NMK16_Gunnail_20261114.rbf)
+    stems |= {s[7:] for s in stems if s.startswith("arcade-")}
     ships = lambda rb: any(s == rb or s.startswith(rb + "_") for s in stems)
     rows = list(csv.DictReader(open(picks, encoding="utf-8")))
     for r in rows:

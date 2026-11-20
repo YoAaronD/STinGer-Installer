@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 S=sources
-SRC="distribution=$S/distribution jotego=$S/jotego coinop=$S/coinop ongo=$S/ongo"
+SRC="distribution=$S/distribution jotego=$S/jotego coinop=$S/coinop ongo=$S/ongo kuze=$S/kuze shmupfan=$S/shmupfan"
 mkdir -p build
 
 # 1. classify every MRA (shooter tiers, plus vertical non-shooters as "other")
@@ -15,7 +15,7 @@ python3 -I tools/core_check.py build/picks.csv $SRC
 # 4. fold in upstream screen tags (tate CW/CCW/flip)
 python3 -I tools/tag_merge.py build/picks.csv \
   distribution=$S/dbs/distribution.json.zip jotego=$S/dbs/jotego.json.zip \
-  coinop=$S/dbs/coinop.json.zip ongo=$S/dbs/ongo.json.zip
+  coinop=$S/dbs/coinop.json.zip ongo=$S/dbs/ongo.json.zip kuze=$S/dbs/kuze.json.zip
 
 # 5. publish a trimmed, sorted copy
 python3 -I - <<'EOF'

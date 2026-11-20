@@ -1,3 +1,9 @@
 rbf,tier,reason
 # MRAs on these cores whose own category mentions "shoot" get this tier even when the arcade DB doesn't list them.
 ikacore_CV1k,core,Cave CV1000 - every shooter on it is a danmaku STG
+NMK16_Gunnail,core,kuze's NMK16 family - exceptions (puzzles etc.) are excluded in overrides.csv
+NMK16_Macross2,core,kuze's NMK16 family
+NMK16_Raphero,core,kuze's NMK16 family
+NMK16_Afega,core,kuze's NMK16 family (Afega line)
+SandScrp,core,Sand Scorpion
+TaitoGNET,core,shmupfan's Taito G-NET core - exceptions in overrides.csv

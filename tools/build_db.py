@@ -14,6 +14,8 @@ REPOS = {  # label -> GitHub owner/repo the MRAs are downloaded from
     "jotego": "jotego/jtcores_mister",
     "coinop": "Coin-OpCollection/Distribution-MiSTerFPGA",
     "ongo": "OngoGablogian/MiSTer_Ongo",
+    "kuze": "kuzearcade/kuzecores",
+    # shmupfan's MRAs live in several core repos; mirror_db.py records each one's URL in .urls.json
 }
 # Filter tags per tier. Downloader lowercases tags and ignores '-' and '_'.
 TIER_TAG = {"core": "stg", "fixed": "stgfixed", "multidirectional": "stgmultidirectional",
@@ -38,7 +40,10 @@ def main(picks, data_dir, out_dir, *sources):
     layout = read_layout(os.path.join(data_dir, "layout.csv"))
     display = {r["setname"]: r["display_name"] for r in read_csv(os.path.join(data_dir, "display_names.csv"))}
     roots = dict(s.split("=", 1) for s in sources)
-    commits = {k: subprocess.check_output(["git", "-C", v, "rev-parse", "HEAD"], text=True).strip() for k, v in roots.items()}
+    commits = {k: subprocess.check_output(["git", "-C", v, "rev-parse", "HEAD"], text=True).strip()
+               for k, v in roots.items() if k in REPOS}
+    url_maps = {k: json.load(open(os.path.join(v, ".urls.json"))) for k, v in roots.items()
+                if os.path.exists(os.path.join(v, ".urls.json"))}
 
     tags, files, folders, skipped = {}, {}, {}, []
     def tag_ids(*names):
@@ -62,7 +67,8 @@ def main(picks, data_dir, out_dir, *sources):
         files[dest] = {
             "hash": hashlib.md5(blob).hexdigest(),
             "size": len(blob),
-            "url": f"https://raw.githubusercontent.com/{REPOS[r['database']]}/{commits[r['database']]}/"
+            "url": url_maps[r["database"]][r["mra_path"]] if r["database"] in url_maps else
+                   f"https://raw.githubusercontent.com/{REPOS[r['database']]}/{commits[r['database']]}/"
                    + urllib.parse.quote(r["mra_path"]),
             "tags": tag_ids("arcade", TIER_TAG[r["tier"]], *extra),
         }

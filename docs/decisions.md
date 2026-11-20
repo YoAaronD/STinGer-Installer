@@ -13,6 +13,12 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 - Folders use the **`_STG`** prefix: `_STG`, `_STG Fixed`, `_STG Multidirectional`, `_STG Overhead`, `_STG Practice`, `_STG Hacks & Mods`, plus `_Tate Other` for non-shooters. Chosen over `_Shmups` because it's shorter (the menu is ~28 characters wide) and it's what the games call themselves. Reversible: one line in `data/layout.csv`.
 - The 3D section isn't in the tate build (almost all horizontal).
 
+## Sources
+- Distribution, Jotego, Coin-Op Collection, Ongo, **kuze** (NMK16 family, Jaleco MS1, Namco System 2) and **shmupfan** (Taito G-NET, Dooyong, DEC8, Tecmo 16, 1945k III).
+- When two sources ship the same game, the order is Distribution > Jotego > kuze > Coin-Op > shmupfan > Ongo, after region.
+- **Thunder Dragon** is pinned to kuze's feature-complete NMK16 core (`tdragon@kuze`); Coin-Op's NMK16 builds are betas.
+- `templates/downloader.ini` enables all of them; `[mister]` carries no positive filter because Jotego and Coin-Op inherit it.
+
 ## Version picking
 - Japanese first, then World, newest revision within the region.
 - **Battle Garegga:** the original (Feb 3 1996) set, `bgaregga`, not Type 2.

@@ -28,6 +28,8 @@ Sources: [Distribution](https://github.com/MiSTer-devel/Distribution_MiSTer),
 [Jotego](https://github.com/jotego/jtcores_mister),
 [Coin-Op Collection](https://github.com/Coin-OpCollection/Distribution-MiSTerFPGA),
 [Ongo](https://github.com/OngoGablogian/MiSTer_Ongo),
+[kuze](https://github.com/kuzearcade/kuzecores),
+[shmupfan](https://github.com/shmupfan/Distribution),
 and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatabase) for genre data.
 
 | Step | Script | What it does |
@@ -75,14 +77,9 @@ _Arcade/
 
 ## Trying it on a MiSTer
 
-Add this to the bottom of `downloader.ini`, then run the updater:
+Use [`templates/downloader.ini`](templates/downloader.ini) as your `downloader.ini`: it enables STinGer plus every database its games need (Distribution, Jotego, Coin-Op Collection, Ongo, kuze, shmupfan), filtered for an arcade-only vertical cab. Then run the updater.
 
-```ini
-[YoAaronD/STinGer-Installer]
-db_url = https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/db.json.zip
-```
-
-STinGer only adds MRAs; the cores come from Distribution, Jotego, Coin-Op Collection and Ongo, so those databases need to be enabled too.
+STinGer only adds MRAs; the cores come from those databases.
 
 **Filter tags**: `stg`, `stgfixed`, `stgmultidirectional`, `stgoverhead`, `stgpractice`, `stghacks`, `tateother`, `cv1000` (needs Raki's core), `needsflip` (native CW; flip it once in the core's menu).
 The default filter is `!cv1000`. Example: skip hacks and non-shooters with `filter = !stghacks !tateother !cv1000`.
