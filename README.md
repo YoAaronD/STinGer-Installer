@@ -99,6 +99,23 @@ The template also installs [Update All](https://github.com/theypsilon/Update_All
 **Filter tags**: `stg`, `stgfixed`, `stgmultidirectional`, `stgoverhead`, `stgpractice`, `stghacks`, `tateother`, `cv1000` (needs Raki's core), `needsflip` (native CW; flip it once in the core's menu).
 The default filter is `!cv1000`. Example: skip hacks and non-shooters with `filter = !stghacks !tateother !cv1000`.
 
+## Where this is going
+
+STinGer's long-term aim: **the shortcut to an arcade MiSTer, whatever your screen.** Flash one image, boot, and get a MiSTer set up for your board and display, with every shooting game sorted and ready.
+
+It's built in three layers, so new setups add a flavor instead of a rewrite:
+
+| Layer | What it covers | Status |
+| --- | --- | --- |
+| Content | Game list, tiers, `_STG` folders, the Downloader database | Built (hardware-independent) |
+| Hardware | MiSTercade V1/V2, Heber Multisystem² Arcade, regular MiSTer | Flavors built, untested on hardware |
+| Display | CRT tate CCW first; tate CW, yoko and LCD tate later | Data already records every game's orientation |
+
+The installer is what ties them together, staged so it never blocks the build:
+
+1. **Remastered Mr. Fusion**: stock Mr. Fusion with STinGer's inis preloaded (MiSTercade cabs first).
+2. **STinGer's own installer**: a Mr. Fusion fork (GPLv3) that drops the HDMI check (needed for boards like the Heber), detects MiSTercade boards by USB ID (`16D0:1358` V2, `16D0:10BE` V1-family), and asks a one-screen question for whatever it can't detect (tate CCW / tate CW / yoko, CRT / LCD).
+
 ## Roadmap
 
 - [x] Candidate list with Japanese-first version picking
@@ -107,4 +124,10 @@ The default filter is `!cv1000`. Example: skip hacks and non-shooters with `filt
 - [x] Downloader database with `_STG` tree and filter tags (`db` branch)
 - [ ] Nightly GitHub Action to rebuild and publish the database
 - [ ] `MiSTer.ini` / `downloader.ini` templates for CCW CRT tate
-- [ ] Installer image (Mr. Fusion remaster with the inis pre-loaded)
+- [x] Hardware flavors: MiSTercade V2 / V1, Heber Multisystem² Arcade, regular
+- [x] Update All installed through its official Downloader section
+- [ ] Test on a MiSTercade V2 tate cab (then Heber)
+- [ ] Cleaner menu names (drop `[MD]`/`[CoC]` tags, date stamps)
+- [ ] Installer stage 1: Mr. Fusion remaster with the inis preloaded
+- [ ] Installer stage 2: STinGer's own Mr. Fusion fork with hardware detection and a display picker
+- [ ] More displays: tate CW, yoko, LCD tate
