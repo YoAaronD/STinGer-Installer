@@ -79,7 +79,6 @@ Defender,core,horizontal: scaler rotation only,,horizontal,unknown,defender,ship
 "DoDonPachi II (Japan, ver. 102)",core,native,,ccw,unknown,IGSPGM,ships with databases,distribution,,Japan,17,,,,ddp2j,"_Arcade/_alternatives/_DoDonPachi II - Bee Storm/DoDonPachi II (Japan, ver. 102).mra"
 "DoDonPachi SaiDaiOuJou (Japan, 2012/ 4/20)",core,native,,ccw,unknown,ikacore_CV1k,NOT in any database - install separately,ongo,,Japan,1,2012,Cave,Shooter,ddpsdoj,"_Arcade/_Cave CV1000/DoDonPachi SaiDaiOuJou (Japan, 2012- 4-20).mra"
 Dog Fight,core,native,,ccw,no,Vastar,ships with databases,distribution,,World (no Japanese set),1,1983,Orca / Thunderbolt,Shooter,dogfight,_Arcade/Dog Fight.mra
-Dolmen,core,horizontal? (no rotation tag): scaler rotation only,,horizontal?,unknown,NMK16_Gunnail,ships with databases,kuze,,no region in name,1,1995,Afega,Shooter,dolmen,_Arcade/Dolmen.mra
 DonPachi (Japan),core,native,,ccw,yes,cave,ships with databases,distribution,,Japan,4,1995,CAVE,Shooter - Flying Vertical,donpachij,_Arcade/_alternatives/_DonPachi/DonPachi (Japan).mra
 "Double Wings (World, alt)",core,UPSIDE DOWN (no flip known),confirmed by DB tags,cw,unknown,dblewing,ships with databases,coinop,,World (no Japanese set),2,1993,Mitchell,Shooter - Flying Vertical,dblewinga,"_Arcade/_alternatives/_Double Wings/Double Wings (World, Set 2).mra"
 Dr. Toppel's Tankentai (Japan),core,flip setting,confirmed by DB tags,cw,yes,jtkiwi,ships with databases,jotego,,Japan,2,1987,Kaneko / Taito Corporation,Shooter - Flying Vertical,drtoppelj,_Arcade/_alternatives/_Dr. Toppel's Adventure/Dr. Toppel's Tankentai (Japan).mra
@@ -578,6 +577,7 @@ DECO Widel Multigame,other,native,confirmed by DB tags,ccw,unknown,DECOCassette,
 Dig Dug,other,flip setting,CONFLICT: DB tags say CW tate only,cw,yes,digdug,ships with databases,distribution,,no region in name,6,1982,Namco,Maze - Digging,digdug,_Arcade/Dig Dug (Rev 2).mra
 Dig Dug II,other,flip setting,confirmed by DB tags,cw,yes,druaga,ships with databases,distribution,,no region in name,1,1985,Namco,Maze - Collect,digdug2,_Arcade/Dig Dug II (New Ver).mra
 Digger (CVS),other,"vertical, direction unknown",,vertical?,unknown,bazset_CVS,ships with databases,ongo,,no region in name,0,1982,Century Electronics,Arcade,diggerc,_Arcade/Digger (CVS).mra
+Dolmen,other,horizontal? (no rotation tag): scaler rotation only,,horizontal?,unknown,NMK16_Gunnail,ships with databases,kuze,,no region in name,1,1995,Afega,Shooter,dolmen,_Arcade/Dolmen.mra
 Donkey Kong Jr. (Japan),other,flip setting,,cw,yes,donkeykongjunior,ships with databases,distribution,,Japan,1,1982,Nintendo,Platform - Run Jump,dkongjrj,_Arcade/_alternatives/_Donkey Kong Junior/Donkey Kong Jr. (Japan).mra
 Dorodon,other,native,confirmed by DB tags,ccw,no,ladybug,ships with databases,distribution,,no region in name,1,1982,UPL,Maze - Collect,dorodon,_Arcade/Dorodon (Set 1).mra
 DownTown / Mokugeki (set 1),other,"vertical, direction unknown",,vertical?,unknown,ppriest_SetaDowntown,ships with databases,ongo,,no region in name,3,1989,Seta,Arcade,downtown,_Arcade/DownTown - Mokugeki (set 1).mra
