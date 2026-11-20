@@ -69,10 +69,10 @@ and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatab
 _Arcade/
   _Vertical Arcade/
     _Core STGs/                   DoDonPachi, Truxton II, Raiden, 1941…
+      _By Hardware/               the Core STGs again, one folder per board (CV1000, NMK16, Cave 68000…)
+      _By Year/                   the Core STGs again, one folder per release year (1992, 1993…)
       _Hacks & Mods/              Zakk's Garegga, visibility mods
       _Practice ROMs/             practice / trainer sets
-    _Core STGs by Hardware/       the Core STGs again, one folder per board (CV1000, NMK16, Cave 68000…)
-    _Core STGs by Year/           the Core STGs again, one folder per release year (1992, 1993…)
     _Other Shooting Games/
       _Fixed Screen Shooting/     Galaga, Phoenix…
       _Multidirectional Shooting/
