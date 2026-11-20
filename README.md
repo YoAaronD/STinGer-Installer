@@ -120,13 +120,12 @@ The installer is what ties them together, staged so it never blocks the build:
 
 - [x] Candidate list with Japanese-first version picking
 - [x] Upstream screen tags merged
-- [ ] Cab test: folder layout, `filter = arcade`, `osd_rotate=2`
 - [x] Downloader database with `_STG` tree and filter tags (`db` branch)
 - [ ] Nightly GitHub Action to rebuild and publish the database
-- [ ] `MiSTer.ini` / `downloader.ini` templates for CCW CRT tate
+- [x] `MiSTer.ini` / `downloader.ini` templates for CCW CRT tate
 - [x] Hardware flavors: MiSTercade V2 / V1, Heber Multisystem² Arcade, regular
 - [x] Update All installed through its official Downloader section
-- [ ] Test on a MiSTercade V2 tate cab (then Heber)
+- [ ] Test on a MiSTercade V2 tate cab (then Heber): `_STG` folders, games boot, `filter = arcade`, `osd_rotate=2`, Update All keeps our sections
 - [ ] Cleaner menu names (drop `[MD]`/`[CoC]` tags, date stamps)
 - [ ] Installer stage 1: Mr. Fusion remaster with the inis preloaded
 - [ ] Installer stage 2: STinGer's own Mr. Fusion fork with hardware detection and a display picker
