@@ -13,7 +13,7 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 - **Battle Garegga:** the original (Feb 3 1996) set, `bgaregga`, not Type 2.
 - **Battle Bakraid / Batrider:** Unlimited Version (Japan) / Japan B version, pinned.
 - **Black Label** releases are their own games (DoDonPachi Dai-Ou-Jou BL, and the CV1000 Black Labels).
-- **Zakk's Garegga** (`bgareggz`) is its own entry next to the original.
+- **Zakk's Garegga** (`bgareggz`) is its own entry next to the original, shown as **Battle Garegga Zakk Version** (`data/display_names.csv`).
 - **DonPachi "Satsuei version"** is excluded as a variant; the plain Japan set is used.
 
 ## Sections

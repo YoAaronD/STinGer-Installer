@@ -1,0 +1,3 @@
+setname,display_name,reason
+# The menu shows an MRA's file name. STinGer ships its own copies, named here when the upstream name isn't what we want.
+bgareggz,Battle Garegga Zakk Version,Aaron's call

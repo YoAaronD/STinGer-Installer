@@ -42,6 +42,7 @@ and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatab
 - `data/overrides.csv`: include/exclude a game, set its tier, fix its rotation. Keys are a setname, a title, or `re:<regex>` on the MRA name.
 - `data/prefer.csv`: pin a specific set as a game's pick.
 - `data/split.csv`: names that are their own game, not a version of their folder's game (Black Label, Zakk's Garegga…).
+- `data/display_names.csv`: the name a game shows in the menu, when upstream's MRA name isn't what we want.
 - `data/core_tiers.csv`: default tier for shooters on a core the arcade DB doesn't know (e.g. CV1000).
 
 ## Tiers
