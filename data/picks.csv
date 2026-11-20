@@ -402,6 +402,7 @@ Gravitar,multidirectional,horizontal: scaler rotation only,,horizontal,unknown,b
 Kozmik Krooz'r,multidirectional,horizontal: scaler rotation only,,horizontal,unknown,mcr2,ships with databases,distribution,,no region in name,0,1983,Bally,Shooter - Field,kroozr,_Arcade/Kozmik Krooz'r.mra
 Lizard Wizard,multidirectional,flip setting,confirmed by DB tags,cw,yes,pacman,ships with databases,distribution,,no region in name,0,1985,Techstar,Shooter - Field,lizwiz,_Arcade/Lizard Wizard.mra
 Mad Planets,multidirectional,native,confirmed by DB tags,ccw,yes,qbert,ships with databases,distribution,,no region in name,0,1982,Gottlieb,Shooter - Field,mplanets,_Arcade/Mad Planets.mra
+Makyou Senshi (Japan),multidirectional,native,,ccw,unknown,dec8,ships with databases,shmupfan,,Japan,2,1987,Data East Corporation,,makyosen,_Arcade/_alternatives/_Gondomania/Makyou Senshi (Japan).mra
 No Mans Land,multidirectional,native,confirmed by DB tags,ccw,yes,cosmic,ships with databases,distribution,,no region in name,0,1981,Universal,Shooter - Field,nomnlnd,_Arcade/No Mans Land.mra
 Nova 2001,multidirectional,horizontal: scaler rotation only,,horizontal,yes,UPLFramebuffer,ships with databases,distribution,,no region in name,3,1983,UPL,Shooter - Field,nova2001,_Arcade/Nova 2001.mra
 Rip Off,multidirectional,horizontal: scaler rotation only,,horizontal,unknown,StarCastle,ships with databases,distribution,,no region in name,0,1980,Cinematronics,Shooter,ripoff,_Arcade/Rip Off.mra
@@ -644,7 +645,6 @@ Lunar Rescue,other,native,confirmed by DB tags,ccw,yes,spaceinvaders,ships with 
 Lupin III,other,native,confirmed by DB tags,ccw,yes,spaceinvaders,ships with databases,distribution,,no region in name,0,1980,Taito,Maze - Defeat Enemies,lupin3a,_Arcade/Lupin III (Set 2).mra
 Mad Gear (Japan),other,native,,ccw,unknown,madgear,ships with databases,ongo,,Japan,2,1989,Capcom,,madgearj,_Arcade/_alternatives/_Mad Gear/Mad Gear (Japan).mra
 "Major League (World, S16A) [No Protection]",other,native,confirmed by DB tags,ccw,yes,jts16,ships with databases,jotego,,World (no Japanese set),0,1985,Sega,Sports - Baseball,mjleague,"_Arcade/Major League (World, S16A) [No Protection].mra"
-Makyou Senshi (Japan),other,native,,ccw,unknown,dec8,ships with databases,shmupfan,,Japan,2,1987,Data East Corporation,,makyosen,_Arcade/_alternatives/_Gondomania/Makyou Senshi (Japan).mra
 Manhattan (Japan),other,native,confirmed by DB tags,ccw,unknown,DECOCassette,ships with databases,distribution,,Japan,0,1981,Data East,Action,cmanhat,_Arcade/Manhattan (Japan) (DECO).mra
 Mania Challenge (Set 1),other,native,confirmed by DB tags,ccw,no,maniach,ships with databases,coinop,,no region in name,1,1986,Technos Japan (Taito America License),Sports - Wrestling,maniach,_Arcade/Mania Challenge (Set 1).mra
 Mappy,other,UPSIDE DOWN (no flip known),,cw,no,druaga,ships with databases,distribution,,Japan,4,1983,Namco,Platform - Run Jump,mappyj,_Arcade/_alternatives/_Mappy/Mappy (Japan).mra
