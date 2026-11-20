@@ -94,6 +94,8 @@ Use [`templates/downloader.ini`](templates/downloader.ini) as your `downloader.i
 
 STinGer only adds MRAs; the cores come from those databases.
 
+The template also installs [Update All](https://github.com/theypsilon/Update_All_MiSTer) through its official Downloader section. Update All only edits the databases in its own catalog, so STinGer's, kuze's, shmupfan's and Ongo's sections survive its settings screen. Keep Distribution, JTCORES and Coin-Op Collection enabled there: STinGer games need their cores.
+
 **Filter tags**: `stg`, `stgfixed`, `stgmultidirectional`, `stgoverhead`, `stgpractice`, `stghacks`, `tateother`, `cv1000` (needs Raki's core), `needsflip` (native CW; flip it once in the core's menu).
 The default filter is `!cv1000`. Example: skip hacks and non-shooters with `filter = !stghacks !tateother !cv1000`.
 

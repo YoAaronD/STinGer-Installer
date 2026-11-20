@@ -19,6 +19,10 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 - **Thunder Dragon** is pinned to kuze's feature-complete NMK16 core (`tdragon@kuze`); Coin-Op's NMK16 builds are betas.
 - `templates/downloader.ini` enables all of them; `[mister]` carries no positive filter because Jotego and Coin-Op inherit it.
 
+## Update All
+- Installed via its official `[update_all_mister]` Downloader section in the template, not bundled.
+- Checked in its source: it edits downloader.ini as a document, touching only databases in its catalog (and only the filter lines of Jotego/Coin-Op), so STinGer, kuze, shmupfan and Ongo sections and our Distribution `filter = arcade` survive. Disabling Distribution/JTCORES/Coin-Op in its settings would remove cores STinGer needs.
+
 ## Version picking
 - Japanese first, then World, newest revision within the region.
 - **Battle Garegga:** the original (Feb 3 1996) set, `bgaregga`, not Type 2.
