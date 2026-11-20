@@ -77,7 +77,7 @@ _Arcade/
       _Overhead Shooting/         Out Zone, Commando, Mercs…
     _3 By Hardware/               the same shooting games, one folder per board (CPS-2, CV1000, Toaplan 2…)
     _4 By Year/                   the same shooting games, one folder per release year (1992, 1993…)
-    _5 Non-Shooting Games/        everything else that plays on a tate CCW monitor
+    _5 Other Vertical Games/       everything else that plays on a tate CCW monitor
 ```
 
 Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.

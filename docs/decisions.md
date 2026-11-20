@@ -11,7 +11,7 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 ## Menu layout
 - Everything lives under **`_Arcade`**, like a regular install, so MRAs find their cores in `_Arcade/cores`.
 - One top folder says **vertical** up front: `_Vertical Arcade`. Inside it, the shooting folders first, then `_Other Games`.
-- Menu (Aaron, 2026-11-20): `_1 Core STGs` (scrolling STGs, with `_Hacks & Mods` and `_Practice ROMs` inside), `_2 Other Shooting Games` (Fixed Screen / Multidirectional / Overhead), `_3 By Hardware`, `_4 By Year`, `_5 Non-Shooting Games`. Numbers force the order: MiSTer sorts folders alphabetically and hides the leading `_`. No repeated "STG". (Replaces the `_STG`-prefixed, `_Vertical Shooting` and flat `_Vertical Arcade` layouts.)
+- Menu (Aaron, 2026-11-20): `_1 Core STGs` (scrolling STGs, with `_Hacks & Mods` and `_Practice ROMs` inside), `_2 Other Shooting Games` (Fixed Screen / Multidirectional / Overhead), `_3 By Hardware`, `_4 By Year`, `_5 Other Vertical Games`. Numbers force the order: MiSTer sorts folders alphabetically and hides the leading `_`. No repeated "STG". (Replaces the `_STG`-prefixed, `_Vertical Shooting` and flat `_Vertical Arcade` layouts.)
 - `_By Year` (Aaron's idea): surfaces lesser-known games from strong years like 1992–94. Same MRAs as the main folders, grouped by the MRA/MAD year; 3 games with no year go to `Unknown year`.
 - **By Hardware** repeats the shooting games grouped by arcade board; boards with a single tate shooter go in `Other hardware`.
 - The 3D section isn't in the tate build (almost all horizontal).
