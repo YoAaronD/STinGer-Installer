@@ -83,6 +83,7 @@ One STinGer database and game list; the hardware layer differs. `tools/build_fla
 | --- | --- | --- |
 | `mistercade-v2` | [MiSTerAddons' MiSTercade V2 15kHz ini](https://github.com/misteraddons/mister_ini) | MiSTercade V2 mappings (drop-in `downloader_maps-v2-osd.ini`) |
 | `mistercade-v1` | MiSTerAddons' MiSTercade V1 15kHz ini | MiSTercade V1 2025 mappings (plain V1 is deprecated upstream) |
+| `heber-ms2` | MiSTer's stock `MiSTer.ini` + [Heber Multisystem² Arcade](https://multisystem.uk/products/multisystem-2-arcade/) player bindings | onboard CTRLDock (`usb-1.7/input2/`, `input3/`) |
 | `regular` | MiSTer's stock `MiSTer.ini` (native 15kHz analog out) | left to the user |
 
 STinGer adds only what's in [`templates/stinger_overlay.ini`](templates/stinger_overlay.ini) on top of the base: `osd_rotate=2` and MiSTerAddons' recommended `[Menu]` block. Board-specific settings (Direct Video, JAMMA IDs, player port assignment, audio) always come from the base. MiSTercade control mappings are keyed by set name, so they apply to the `_STG` copies automatically.

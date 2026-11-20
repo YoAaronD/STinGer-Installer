@@ -47,7 +47,8 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 | Strike Gunner, Daioh, Eight Forces, War of Aero, U.N. Defense Force, Mad Shark, Galmedes, SD Gundam Neo Battling, Zing Zing Zip, Twin Eagle | core (MRAs tagged only "Arcade") |
 
 ## Flavors
-- Three flavors: **MiSTercade V2**, **MiSTercade V1** (V1 2025 mappings), **regular/other** (e.g. a Blast City's D-sub with a standard MiSTer).
+- Four flavors: **MiSTercade V2**, **MiSTercade V1** (V1 2025 mappings), **Heber Multisystem² Arcade** (stock ini + its CTRLDock player bindings; analog JAMMA video with composite sync, no HDMI), **regular/other** (e.g. a Blast City's D-sub with a standard MiSTer).
+- The Heber board is the first test bed: it exercises the plain analog path with almost no board-specific settings.
 - STinGer never replaces a MiSTercade's ini: it takes MiSTerAddons' official 15kHz ini and adds only `osd_rotate=2` and the `[Menu]` block.
 - MiSTercade control mappings come from MiSTerAddons' own drop-in Downloader inis and apply by set name.
 

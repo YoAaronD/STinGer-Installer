@@ -5,6 +5,7 @@ usage: python3 -I tools/build_flavors.py <sources_dir> <out_dir>
 Flavors:
   mistercade-v2  MiSTerAddons' MiSTercade V2 15kHz ini   + MiSTercade V2 control mappings drop-in
   mistercade-v1  MiSTerAddons' MiSTercade V1 15kHz ini   + MiSTercade V1 2025 control mappings drop-in
+  heber-ms2      MiSTer's stock MiSTer.ini + Heber Multisystem2 Arcade player bindings (CTRLDock on usb-1.7)
   regular        MiSTer's stock MiSTer.ini (native 15kHz analog out) - controls are left to the user
 Every flavor gets templates/downloader.ini (STinGer + the databases its games need).
 """
@@ -16,7 +17,14 @@ FLAVORS = {
                       "misteraddons_mistercade/mistercade_v2/mappings/downloader_maps-v2-osd.ini"),
     "mistercade-v1": ("misteraddons_ini/MiSTercade V1/15kHz/MiSTer.ini",
                       "misteraddons_mistercade/mistercade_v1_2025/mappings/downloader_maps-v1-2025-osd.ini"),
+    "heber-ms2":     ("main_mister/MiSTer.ini", None),
     "regular":       ("main_mister/MiSTer.ini", None),
+}
+# Extra [MiSTer] lines a flavor needs on top of its base, before STinGer's overlay.
+FLAVOR_EXTRA = {
+    # From Heber's Multisystem2 Arcade product page / manual: "Player Bindings are configured in the mister.ini file"
+    "heber-ms2": ["player_1_controller=usb-1.7/input2/ ; Heber CTRLDock Arcade: JAMMA player 1",
+                  "player_2_controller=usb-1.7/input3/ ; Heber CTRLDock Arcade: JAMMA player 2"],
 }
 KEY = re.compile(r"^\s*([A-Za-z0-9_]+)\s*=")
 SECTION = re.compile(r"^\s*\[([^\]]+)\]")
@@ -67,6 +75,8 @@ def main(sources, out):
         d = os.path.join(out, name)
         os.makedirs(d, exist_ok=True)
         text = open(os.path.join(sources, base), encoding="utf-8", errors="replace").read()
+        if name in FLAVOR_EXTRA:
+            text = apply(text, {"MiSTer": FLAVOR_EXTRA[name]})
         open(os.path.join(d, "MiSTer.ini"), "w", encoding="utf-8").write(apply(text, overlay))
         shutil.copy(os.path.join(ROOT, "templates", "downloader.ini"), os.path.join(d, "downloader.ini"))
         if maps:
