@@ -302,7 +302,6 @@ Ufo Robo Dangar (4/07/1987),core,native,confirmed by DB tags,ccw,yes,galivan,shi
 Ultimate Ecology (Japan 931203),core,horizontal: scaler rotation only,,horizontal,n/a,jtcps2,ships with databases,jotego,,Japan,6,1993,Capcom,Shooter - Flying Horizontal,uecology,_Arcade/_alternatives/_Eco Fighters/Ultimate Ecology (Japan 931203).mra
 Ultra X Weapons / Ultra Keibitai,core,native,,ccw,unknown,Meathax_SSV,ships with databases,ongo,,no region in name,0,1995,Banpresto / Tsuburaya Productions / Seta,,ultrax,_Arcade/Ultra X Weapons - Ultra Keibitai.mra
 US AAF Mustang (25th May. 1990),core,horizontal? (no rotation tag): scaler rotation only,,horizontal?,unknown,NMK16_Gunnail,ships with databases,kuze,,no region in name,4,1990,UPL,Shooter,mustang,_Arcade/US AAF Mustang (25th May. 1990).mra
-Vandyke (Japan),core,native,,ccw,unknown,NMK16_Gunnail,ships with databases,kuze,,Japan,3,1990,UPL,Shooter,vandyke,_Arcade/Vandyke (Japan).mra
 Vanguard (Japan),core,flip setting,,cw,yes,SNK6502,ships with databases,distribution,,Japan,4,1981,SNK,Shooter - Flying,vanguardj,_Arcade/_alternatives/_Vanguard/Vanguard (Japan).mra
 Vapor Trail - Hyper Offence Formation (US),core,native,confirmed by DB tags,ccw,unknown,vaportra_mister,ships with databases,coinop,,no Japanese or World set,0,1989,Data East USA,Shooter - Flying Vertical,vaportrau,_Arcade/_alternatives/_Vapor Trail/Vapor Trail - Hyper Offence Formation (US).mra
 "Vapor Trail - Hyper Offence Formation (World, Rev. 1)",core,native,confirmed by DB tags,ccw,unknown,vaportra_mister,ships with databases,coinop,distribution,World (no Japanese set),1,1989,Data East Corporation,Shooter - Flying Vertical,vaportra,"_Arcade/Vapor Trail - Hyper Offence Formation (World, Rev. 1).mra"
@@ -757,6 +756,7 @@ Turtles,other,flip setting,confirmed by DB tags,cw,yes,scramble,ships with datab
 Tutankham,other,UPSIDE DOWN (no flip known),confirmed by DB tags,cw,no,Tutankham,ships with databases,distribution,,World (no Japanese set),3,1982,Konami,Maze - Shooter Large,tutankhm,_Arcade/Tutankham.mra
 Up'n Down,other,native,confirmed by DB tags,ccw,no,segasys1,ships with databases,distribution,,no region in name,0,1984,Sega,Maze - Driving,upndown,_Arcade/Up'n Down.mra
 Van-Van Car,other,native,confirmed by DB tags,ccw,yes,pacman,ships with databases,distribution,,no region in name,2,1983,Sanritsu,Maze - Collect,vanvan,_Arcade/Van-Van Car.mra
+Vandyke (Japan),other,native,,ccw,unknown,NMK16_Gunnail,ships with databases,kuze,,Japan,3,1990,UPL,Shooter,vandyke,_Arcade/Vandyke (Japan).mra
 Video Eight Ball,other,"vertical, direction unknown",,vertical?,unknown,bazset_CVS,ships with databases,ongo,,no region in name,0,1982,Century Electronics,Arcade,8ball,_Arcade/Video Eight Ball.mra
 "Volfied (Japan, rev 1)",other,native,,ccw,unknown,jtvlfied,ships with databases,jotego,,Japan,5,1989,Taito Corporation,,volfiedj,"_Arcade/_alternatives/_Volfied/Volfied (Japan, rev 1).mra"
 Wall Street,other,"vertical, direction unknown",,vertical?,unknown,bazset_CVS,ships with databases,ongo,,no region in name,0,1982,Century Electronics,Arcade,wallst,_Arcade/Wall Street.mra
