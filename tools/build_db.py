@@ -46,7 +46,7 @@ def year_of(r):
     m = re.match(r"(19|20)\d\d", r.get("year") or "")
     return m.group(0) if m else "Unknown year"
 
-HARDWARE_TIERS = {"core", "fixed", "multidirectional", "overhead"}
+HARDWARE_TIERS = {"core"}  # the by-hardware and by-year views hold Core STGs only
 MIN_BOARD_GAMES = 2  # boards with fewer tate STGs than this go to "Other hardware"
 
 def is_tate(row):

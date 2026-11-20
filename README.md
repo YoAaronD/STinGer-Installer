@@ -68,16 +68,16 @@ and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatab
 ```
 _Arcade/
   _Vertical Arcade/
-    _1 Core STGs/                 DoDonPachi, Batsugun, Raiden, 1941…
+    _Core STGs/                   DoDonPachi, Truxton II, Raiden, 1941…
       _Hacks & Mods/              Zakk's Garegga, visibility mods
       _Practice ROMs/             practice / trainer sets
-    _2 Other Shooting Games/
+    _Core STGs by Hardware/       the Core STGs again, one folder per board (CV1000, NMK16, Cave 68000…)
+    _Core STGs by Year/           the Core STGs again, one folder per release year (1992, 1993…)
+    _Other Shooting Games/
       _Fixed Screen Shooting/     Galaga, Phoenix…
       _Multidirectional Shooting/
       _Overhead Shooting/         Out Zone, Commando, Mercs…
-    _3 By Hardware/               the same shooting games, one folder per board (CPS-2, CV1000, Toaplan 2…)
-    _4 By Year/                   the same shooting games, one folder per release year (1992, 1993…)
-    _5 Other Vertical Games/       everything else that plays on a tate CCW monitor
+    _Other Vertical Games/        everything else that plays on a tate CCW monitor
 ```
 
 Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.

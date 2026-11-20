@@ -1,15 +1,16 @@
-# Numbers force the menu order (MiSTer sorts folders alphabetically and hides the leading "_").
+# MiSTer sorts folders alphabetically (ignoring case, shorter name first on a tie) and hides the leading "_";
+# these names sort into the intended order without numbers.
 # Where each tier lands under _Arcade. Nested folders use "/". The menu is ~28 characters wide.
-# "hardware" is the by-board view: the same shooting games again, one subfolder per arcade board.
-# "year" is the by-year view: the same shooting games again, one subfolder per release year.
+# "hardware" is the by-board view: the Core STGs again, one subfolder per arcade board.
+# "year" is the by-year view: the Core STGs again, one subfolder per release year.
 tier,folder,in_tate_build
-core,_Vertical Arcade/_1 Core STGs,yes
-practice,_Vertical Arcade/_1 Core STGs/_Practice ROMs,yes
-hack,_Vertical Arcade/_1 Core STGs/_Hacks & Mods,yes
-fixed,_Vertical Arcade/_2 Other Shooting Games/_Fixed Screen Shooting,yes
-multidirectional,_Vertical Arcade/_2 Other Shooting Games/_Multidirectional Shooting,yes
-overhead,_Vertical Arcade/_2 Other Shooting Games/_Overhead Shooting,yes
-hardware,_Vertical Arcade/_3 By Hardware,yes
-year,_Vertical Arcade/_4 By Year,yes
-other,_Vertical Arcade/_5 Other Vertical Games,yes
+core,_Vertical Arcade/_Core STGs,yes
+practice,_Vertical Arcade/_Core STGs/_Practice ROMs,yes
+hack,_Vertical Arcade/_Core STGs/_Hacks & Mods,yes
+fixed,_Vertical Arcade/_Other Shooting Games/_Fixed Screen Shooting,yes
+multidirectional,_Vertical Arcade/_Other Shooting Games/_Multidirectional Shooting,yes
+overhead,_Vertical Arcade/_Other Shooting Games/_Overhead Shooting,yes
+hardware,_Vertical Arcade/_Core STGs by Hardware,yes
+year,_Vertical Arcade/_Core STGs by Year,yes
+other,_Vertical Arcade/_Other Vertical Games,yes
 3d,_Vertical Arcade/_3D Shooting,no
