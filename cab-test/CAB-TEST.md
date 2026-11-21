@@ -1,6 +1,6 @@
 # STinGer cab test: MiSTercade V2, tate CCW CRT
 
-Database published 2026-11-20 (db branch d5ba657): 1,014 menu entries, all pinned to upstream commits.
+Databases published 2026-11-20: add-on (`db.json.zip`, 1,014 menu entries) and full install (`full.json.zip`, plus shmupfan's 5 cores), all pinned to upstream commits. Route A passed on Kyle's cab.
 
 ## Pick a route
 
@@ -11,11 +11,18 @@ Database published 2026-11-20 (db branch d5ba657): 1,014 menu entries, all pinne
 3. Have Raki's CV1000 core? Uncomment `filter = arcade` under the STinGer section.
 4. On the cab: Scripts → `update` (or `update_all`). Let it finish, then reboot.
 
-**B: full STinGer flavor (spare SD card only)**
-This turns the card into an arcade-only setup: Distribution's console and computer cores are **deleted** on the first update.
-1. Start from a fresh card, e.g. Mr. Fusion with its first update done.
+**B: full STinGer install (spare SD card only)**
+This makes the card arcade-only and tate-only. The first update **deletes** Distribution's console and
+computer cores and every stock arcade entry: STinGer becomes the whole arcade menu.
+1. Start from a fresh card (e.g. Mr. Fusion with its first update done).
 2. Copy all three files from `B-full-flavor-spare-card/` to `/media/fat/`, replacing what's there.
-3. Scripts → `update`, then reboot.
+3. Scripts → `update`, reboot, then run `update_all` once.
+
+What's different with B:
+- [ ] Main menu → Arcade opens straight onto Core STGs, Other Shooting Games, Other Vertical Games (no Vertical Arcade folder, no stock games)
+- [ ] Still the same after `update_all` (it rewrites Coin-Op's filter line; Coin-Op's games must not come back)
+- [ ] Psyvariar / any G-NET game boots (its core now comes through STinGer, with no shmupfan section)
+- [ ] Controls work without remapping (the MiSTercade maps file has its own filter line)
 
 ## What to check
 
