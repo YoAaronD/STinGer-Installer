@@ -9,6 +9,9 @@ import csv, hashlib, json, os, re, subprocess, sys, time, urllib.parse, zipfile
 
 DB_ID = "YoAaronD/STinGer-Installer"
 DB_URL = "https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/db.json.zip"
+# Full install (the flavors): same db_id, so switching between the two cleans up after itself.
+FULL_DB_URL = "https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/full.json.zip"
+ADDON_ROOT = "_Arcade/_Vertical Arcade"
 REPOS = {  # label -> GitHub owner/repo the MRAs are downloaded from
     "distribution": "MiSTer-devel/Distribution_MiSTer",
     "jotego": "jotego/jtcores_mister",
@@ -55,8 +58,9 @@ def is_tate(row):
 
 def main(picks, data_dir, out_dir, *sources):
     layout = read_layout(os.path.join(data_dir, "layout.csv"))
-    mad_csv = next((s.split("=", 1)[1] for s in sources if s.startswith("mad=")), None)
-    sources = tuple(s for s in sources if not s.startswith("mad="))
+    opts = dict(s.split("=", 1) for s in sources if s.split("=", 1)[0] in ("mad", "shmupfan_db"))
+    mad_csv = opts.get("mad")
+    sources = tuple(s for s in sources if s.split("=", 1)[0] not in opts)
     board_of = read_hardware(data_dir, mad_csv)
     hardware_entries = []  # (board, file name, entry) for the _STG Hardware view
     year_entries = []  # (year, file name, entry) for the _By Year view
@@ -135,16 +139,39 @@ def main(picks, data_dir, out_dir, *sources):
         "default_options": {"filter": "!cv1000"},
     }
     os.makedirs(out_dir, exist_ok=True)
-    with open(os.path.join(out_dir, "db.json"), "w", encoding="utf-8") as fh:
-        json.dump(db, fh, indent=1, ensure_ascii=False)
-    with zipfile.ZipFile(os.path.join(out_dir, "db.json.zip"), "w", zipfile.ZIP_DEFLATED) as z:
-        z.writestr("db.json", json.dumps(db, separators=(",", ":"), ensure_ascii=False))
+    write_db(db, out_dir, "db")
+    write_db(full_variant(db, opts.get("shmupfan_db")), out_dir, "full")
     by_folder = {}
     for p in files:
         k = "/".join(p.split("/")[1:-1]) if not p.startswith(hw_root + "/") else hw_root[8:]
         by_folder[k] = by_folder.get(k, 0) + 1
     print(f"{len(files)} MRAs in {len(folders) - 1} folders: {dict(sorted(by_folder.items()))}")
     for name, why in skipped: print("  skipped:", name, "-", why)
+
+def write_db(db, out_dir, name):
+    with open(os.path.join(out_dir, name + ".json"), "w", encoding="utf-8") as fh:
+        json.dump(db, fh, indent=1, ensure_ascii=False)
+    with zipfile.ZipFile(os.path.join(out_dir, name + ".json.zip"), "w", zipfile.ZIP_DEFLATED) as z:
+        z.writestr("db.json", json.dumps(db, separators=(",", ":"), ensure_ascii=False))
+
+def full_variant(db, shmupfan_db):
+    """The full install: STinGer's folders sit straight in _Arcade (the other databases ship
+    cores only there), and STinGer also delivers shmupfan's cores, since shmupfan's database
+    has no tags to trim its loose MRAs with."""
+    def move(path):
+        return "_Arcade" + path[len(ADDON_ROOT):] if path.startswith(ADDON_ROOT + "/") else path
+    tags = dict(db["tag_dictionary"])
+    files = {move(p): v for p, v in db["files"].items()}
+    folders = {move(p): v for p, v in db["folders"].items() if p != ADDON_ROOT}
+    if shmupfan_db:
+        src = json.load(open(shmupfan_db, encoding="utf-8"))
+        core_tags = [tags.setdefault(n, len(tags)) for n in ("arcade", "shmupfancores")]
+        for p, v in src["files"].items():
+            if p.startswith("_Arcade/cores/") and p.endswith(".rbf"):
+                files[p] = {"hash": v["hash"], "size": v["size"], "url": v["url"], "tags": core_tags}
+        folders.setdefault("_Arcade/cores", {"tags": core_tags})
+    return dict(db, db_url=FULL_DB_URL, files=dict(sorted(files.items())),
+                folders=dict(sorted(folders.items())), tag_dictionary=tags)
 
 if __name__ == "__main__":
     main(*sys.argv[1:])

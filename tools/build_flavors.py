@@ -80,7 +80,11 @@ def main(sources, out):
         open(os.path.join(d, "MiSTer.ini"), "w", encoding="utf-8").write(apply(text, overlay))
         shutil.copy(os.path.join(ROOT, "templates", "downloader.ini"), os.path.join(d, "downloader.ini"))
         if maps:
-            shutil.copy(os.path.join(sources, maps), os.path.join(d, os.path.basename(maps)))
+            # The mappings database has no tags, so it must not inherit [mister]'s cores-only filter.
+            ini = open(os.path.join(sources, maps), encoding="utf-8").read().rstrip("\n")
+            if "filter" not in ini:
+                ini += "\n; STinGer: opt out of downloader.ini's cores-only [mister] filter\nfilter = all"
+            open(os.path.join(d, os.path.basename(maps)), "w", encoding="utf-8").write(ini + "\n")
         print(name, "->", sorted(os.listdir(d)))
 
 if __name__ == "__main__":

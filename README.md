@@ -65,22 +65,44 @@ and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatab
 
 ## Menu layout
 
+STinGer comes two ways. Both use the same folders; only where they sit differs.
+
+**Full install** (the flavors): STinGer *is* the arcade menu. The other databases deliver cores only,
+so `Arcade` opens straight onto STinGer's folders:
+
 ```
 _Arcade/
-  _Vertical Arcade/
-    _Core STGs/                   DoDonPachi, Truxton II, Raiden, 1941…
-      _By Hardware/               the Core STGs again, one folder per board (CV1000, NMK16, Cave 68000…)
-      _By Year/                   the Core STGs again, one folder per release year (1992, 1993…)
-      _Hacks & Mods/              Zakk's Garegga, visibility mods
-      _Practice ROMs/             practice / trainer sets
-    _Other Shooting Games/
-      _Fixed Screen Shooting/     Galaga, Phoenix…
-      _Multidirectional Shooting/
-      _Overhead Shooting/         Out Zone, Commando, Mercs…
-    _Other Vertical Games/        everything else that plays on a tate CCW monitor
+  _Core STGs/                   DoDonPachi, Truxton II, Raiden, 1941…
+    _By Hardware/               the Core STGs again, one folder per board (CV1000, NMK16, Cave 68000…)
+    _By Year/                   the Core STGs again, one folder per release year (1992, 1993…)
+    _Hacks & Mods/              Zakk's Garegga, visibility mods
+    _Practice ROMs/             practice / trainer sets
+  _Other Shooting Games/
+    _Fixed Screen Shooting/     Galaga, Phoenix…
+    _Multidirectional Shooting/
+    _Overhead Shooting/         Out Zone, Commando, Mercs…
+  _Other Vertical Games/        everything else that plays on a tate CCW monitor
 ```
 
+**Add-on** (`cab-test/downloader_stinger.ini` dropped onto an existing setup): the same tree inside
+`_Arcade/_Vertical Arcade/`, next to the arcade collection you already have. Nothing else changes.
+
 Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.
+
+### How the full install keeps the menu clean
+
+| Database | Filter | Why |
+| --- | --- | --- |
+| `[mister]` | `arcaderbfsonly` | Cores only for any database without its own filter line |
+| Distribution | `arcaderbfsonly all_filters font` | Arcade cores, essentials, plus the video filters and fonts the inis use |
+| Jotego, Ongo, kuze | `arcaderbfsonly` | Cores only (Update All appends `!jtbeta` to Jotego's) |
+| Coin-Op Collection | none: falls back to `[mister]` | Update All rewrites Coin-Op's filter line on every run; every value it writes starts with `[MiSTer]` |
+| shmupfan | no section | Its database has no tags, so STinGer's `full.json.zip` delivers its 5 cores |
+| Update All, MiSTercade maps | `all` | Untagged databases: opt out of cores-only |
+| STinGer | `!cv1000` | Raki's CV1000 core is Patreon-only; `all` opts in |
+
+A database added later (by hand or by Update All, e.g. Arcade Names TXT) inherits cores-only and
+installs nothing but its essentials until it gets its own `filter` line.
 
 ## Where this is going
 
@@ -90,8 +112,8 @@ It's built in three layers, so new setups add a flavor instead of a rewrite:
 
 | Layer | What it covers | Status |
 | --- | --- | --- |
-| Content | Game list, tiers, `_STG` folders, the Downloader database | Built (hardware-independent) |
-| Hardware | MiSTercade V1/V2, Heber Multisystem² Arcade, regular MiSTer | Flavors built, untested on hardware |
+| Content | Game list, tiers, menu folders, the Downloader databases | Built (hardware-independent) |
+| Hardware | MiSTercade V1/V2, Heber Multisystem² Arcade, regular MiSTer | Flavors built; add-on tested on a MiSTercade V2 cab |
 | Display | CRT tate CCW first; tate CW, yoko and LCD tate later | Data already records every game's orientation |
 
 The installer is what ties them together, staged so it never blocks the build:
@@ -103,12 +125,13 @@ The installer is what ties them together, staged so it never blocks the build:
 
 - [x] Candidate list with Japanese-first version picking
 - [x] Upstream screen tags merged
-- [x] Downloader database with `_STG` tree and filter tags (`db` branch)
+- [x] Downloader databases with filter tags (`db` branch): `db.json.zip` (add-on), `full.json.zip` (full install)
 - [ ] Nightly GitHub Action to rebuild and publish the database
 - [x] `MiSTer.ini` / `downloader.ini` templates for CCW CRT tate
 - [x] Hardware flavors: MiSTercade V2 / V1, Heber Multisystem² Arcade, regular
 - [x] Update All installed through its official Downloader section
-- [ ] Test on a MiSTercade V2 tate cab (then Heber): `_STG` folders, games boot, `filter = arcade`, `osd_rotate=2`, Update All keeps our sections
+- [x] Add-on tested on a MiSTercade V2 tate cab (Kyle, 2026-11-20): every database installs, folders and games work
+- [ ] Full install on a spare card (MiSTercade V2, then Heber): cores-only filters, menu straight in Arcade, survives Update All
 - [ ] Cleaner menu names (drop `[MD]`/`[CoC]` tags, date stamps)
 - [ ] Installer stage 1: Mr. Fusion remaster with the inis preloaded
 - [ ] Installer stage 2: STinGer's own Mr. Fusion fork with hardware detection and a display picker

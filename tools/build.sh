@@ -30,8 +30,9 @@ with open("data/picks.csv", "w", newline="", encoding="utf-8") as f:
 print(f"data/picks.csv: {len(r)} entries")
 EOF
 
-# 6. generate the Downloader database (tate build) into build/db/
-python3 -I tools/build_db.py data/picks.csv data build/db $SRC mad=$S/mad/ArcadeDatabase.csv
+# 6. generate the Downloader databases into build/db/: db.json.zip (add-on, under _Vertical Arcade)
+#    and full.json.zip (full install: folders straight in _Arcade, plus shmupfan cores)
+python3 -I tools/build_db.py data/picks.csv data build/db $SRC mad=$S/mad/ArcadeDatabase.csv shmupfan_db=$S/dbs/shmupfan.json
 
 # 7. per-hardware flavors (MiSTercade V2 / V1 / regular) into build/flavors/
 python3 -I tools/build_flavors.py $S build/flavors
