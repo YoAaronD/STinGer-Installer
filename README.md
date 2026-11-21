@@ -93,16 +93,16 @@ Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.
 
 | Database | Filter | Why |
 | --- | --- | --- |
-| `[mister]` | `arcaderbfsonly` | Cores only for any database without its own filter line |
+| `[mister]` | `!mra` | Skips stock game lists for any database without its own filter line |
 | Distribution | `arcaderbfsonly all_filters font` | Arcade cores, essentials, plus the video filters and fonts the inis use |
 | Jotego, Ongo, kuze | `arcaderbfsonly` | Cores only (Update All appends `!jtbeta` to Jotego's) |
 | Coin-Op Collection | none: falls back to `[mister]` | Update All rewrites Coin-Op's filter line on every run; every value it writes starts with `[MiSTer]` |
 | shmupfan | no section | Its database has no tags, so STinGer's `full.json.zip` delivers its 5 cores |
-| Update All, MiSTercade maps | `all` | Untagged databases: opt out of cores-only |
-| STinGer | `!cv1000` | Raki's CV1000 core is Patreon-only; `all` opts in |
+| 240p Test Suite | `240psuite` | Just the core (Utility), for setting up the CRT |
+| STinGer | `!cv1000` | Raki's CV1000 core is Patreon-only; `all` opts in. Must stay explicit, or it would inherit `!mra` |
 
-A database added later (by hand or by Update All, e.g. Arcade Names TXT) inherits cores-only and
-installs nothing but its essentials until it gets its own `filter` line.
+Anything switched on later in Update All (arcade ROMs, BIOS, names files) installs normally with no edits:
+`!mra` only removes stock game lists.
 
 ## Where this is going
 
