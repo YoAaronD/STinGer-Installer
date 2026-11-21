@@ -136,3 +136,8 @@ The installer is what ties them together, staged so it never blocks the build:
 - [ ] Installer stage 1: Mr. Fusion remaster with the inis preloaded
 - [ ] Installer stage 2: STinGer's own Mr. Fusion fork with hardware detection and a display picker
 - [ ] More displays: tate CW, yoko, LCD tate
+
+### Upstream proposals (MiSTer itself)
+
+- [ ] **Rotated script console** (Linux-Kernel_MiSTer): enable `CONFIG_FRAMEBUFFER_CONSOLE_ROTATION` so Update All, the downloader and other scripts can display upright on a tate cab (`echo 3 > /sys/class/graphics/fbcon/rotate_all`). Test kernel on a cab first.
+- [ ] **Menu start folder** (Main_MiSTer): a MiSTer.ini setting such as `menu_start_dir=_Arcade` so the core list opens there after boot instead of the SD root. Today the start folder is always the menu core's location (`get_rbf_dir()` in `user_io.cpp`, used by `SelectFile()` in `menu.cpp`).
