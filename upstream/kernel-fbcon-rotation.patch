@@ -1,0 +1,33 @@
+From 6c102515f01de33b19281c78a1fd179b471ba08b Mon Sep 17 00:00:00 2001
+From: YoAaronD <YoAaronD@users.noreply.github.com>
+Date: Fri, 20 Nov 2026 18:55:01 -0700
+Subject: [PATCH] MiSTer_defconfig: enable framebuffer console rotation
+
+Lets the text console be rotated at runtime through
+/sys/class/graphics/fbcon/rotate_all (0 normal, 1 = 90 degrees clockwise,
+2 = 180, 3 = 270), so scripts that run on the framebuffer console
+(Update All, the downloader, other Scripts-menu tools) can be read on a
+rotated (tate) monitor. Rotation is off by default and only affects the
+console; other framebuffer users, like the menu, are unchanged.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+---
+ arch/arm/configs/MiSTer_defconfig | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/arch/arm/configs/MiSTer_defconfig b/arch/arm/configs/MiSTer_defconfig
+index 5b9174f56..add59a615 100644
+--- a/arch/arm/configs/MiSTer_defconfig
++++ b/arch/arm/configs/MiSTer_defconfig
+@@ -2805,7 +2805,7 @@ CONFIG_DUMMY_CONSOLE_ROWS=30
+ CONFIG_FRAMEBUFFER_CONSOLE=y
+ # CONFIG_FRAMEBUFFER_CONSOLE_LEGACY_ACCELERATION is not set
+ CONFIG_FRAMEBUFFER_CONSOLE_DETECT_PRIMARY=y
+-# CONFIG_FRAMEBUFFER_CONSOLE_ROTATION is not set
++CONFIG_FRAMEBUFFER_CONSOLE_ROTATION=y
+ # CONFIG_FRAMEBUFFER_CONSOLE_DEFERRED_TAKEOVER is not set
+ # end of Console display driver support
+ 
+-- 
+2.43.0
+

@@ -1,0 +1,88 @@
+From edec10e298a3b75cb763ef4c1f3785bdcdd053ba Mon Sep 17 00:00:00 2001
+From: YoAaronD <YoAaronD@users.noreply.github.com>
+Date: Fri, 20 Nov 2026 18:52:50 -0700
+Subject: [PATCH] Add menu_start_dir: open the core list in a chosen folder
+
+New MiSTer.ini option, relative to the SD root, e.g. menu_start_dir=_Arcade.
+When the current core sits in the root (the menu itself, e.g. after boot),
+the core list opens in that folder instead of the root. While a core from a
+subfolder is loaded, the list still opens next to that core, as before, and
+Back / .. still lead up to the root. Unset (the default) changes nothing.
+
+Useful for arcade-only and single-purpose setups (cabinets, kiosks) where
+every core lives under one folder.
+
+Co-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>
+---
+ MiSTer.ini |  5 +++++
+ cfg.cpp    |  1 +
+ cfg.h      |  1 +
+ menu.cpp   | 12 ++++++++++++
+ 4 files changed, 19 insertions(+)
+
+diff --git a/MiSTer.ini b/MiSTer.ini
+index 041d7f6..de90bb9 100644
+--- a/MiSTer.ini
++++ b/MiSTer.ini
+@@ -51,6 +51,11 @@ lookahead=1            ; 1 - keep cursor centered while scrolling, 0 - only scro
+ ;          There is also higher chance to corrupt the File System if MiSTer will be reset or powered off while writing.
+ recents=0
+ 
++; Folder the core list opens in after boot, relative to the SD card root (e.g. _Arcade).
++; Leave it commented out to start at the root as usual. While a core from a subfolder is loaded,
++; the list still opens next to that core. Back (or "..") still leads up to the root.
++;menu_start_dir=_Arcade
++
+ ; lastcore - Autoboot the last loaded core (corename autosaved in CONFIG/lastcore.dat) first found on the SD/USB
+ ; lastexactcore - Autoboot the last loaded exact core (corename_yyyymmdd.rbf autosaved in CONFIG/lastcore.dat) first found on the SD/USB
+ ; corename - Autoboot first corename_*.rbf found on the SD/USB
+diff --git a/cfg.cpp b/cfg.cpp
+index 31e9981..499d841 100644
+--- a/cfg.cpp
++++ b/cfg.cpp
+@@ -77,6 +77,7 @@ static const ini_var_t ini_vars[] =
+ 	{ "DPAD_THRESHOLD", (void*)(&(cfg.dpad_threshold)), UINT8, 5, 95 },
+ 	{ "GAMEPAD_DEFAULTS", (void*)(&(cfg.gamepad_defaults)), UINT8, 0, 1 },
+ 	{ "RECENTS", (void*)(&(cfg.recents)), UINT8, 0, 1 },
++	{ "MENU_START_DIR", (void*)(&(cfg.menu_start_dir)), STRING, 0, sizeof(cfg.menu_start_dir) - 1 },
+ 	{ "CONTROLLER_INFO", (void*)(&(cfg.controller_info)), UINT8, 0, 10 },
+ 	{ "REFRESH_MIN", (void*)(&(cfg.refresh_min)), FLOAT, 0, 150 },
+ 	{ "REFRESH_MAX", (void*)(&(cfg.refresh_max)), FLOAT, 0, 150 },
+diff --git a/cfg.h b/cfg.h
+index 70b56e7..869924e 100644
+--- a/cfg.h
++++ b/cfg.h
+@@ -64,6 +64,7 @@ typedef struct {
+ 	int bt_auto_disconnect;
+ 	int bt_reset_before_pair;
+ 	char bootcore[256];
++	char menu_start_dir[256];
+ 	char video_conf[1024];
+ 	char video_conf_pal[1024];
+ 	char video_conf_ntsc[1024];
+diff --git a/menu.cpp b/menu.cpp
+index ca1ac55..c02ed1b 100644
+--- a/menu.cpp
++++ b/menu.cpp
+@@ -504,6 +504,18 @@ void SelectFile(const char* path, const char* pFileExt, int Options, unsigned ch
+ 			strcat(selPath, get_rbf_name());
+ 		}
+ 		ResolveExistingCorePath(selPath);
++
++		// menu_start_dir: when the current core sits in the SD root (the menu itself, e.g. after
++		// boot), open the core list in the configured folder instead of the root. While a core
++		// from a subfolder is loaded, the list still opens next to that core, as before.
++		if (cfg.menu_start_dir[0] && !get_rbf_dir()[0])
++		{
++			char start_dir[sizeof(cfg.menu_start_dir)];
++			strcpy(start_dir, cfg.menu_start_dir);
++			for (int len = strlen(start_dir); len && start_dir[len - 1] == '/'; len--) start_dir[len - 1] = 0;
++			if (start_dir[0] && PathIsDir(start_dir)) strcpy(selPath, start_dir);
++		}
++
+ 		pFileExt = "RBFMRAMGL";
+ 		home_dir = NULL;
+ 	}
+-- 
+2.43.0
+

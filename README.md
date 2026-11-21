@@ -139,5 +139,7 @@ The installer is what ties them together, staged so it never blocks the build:
 
 ### Upstream proposals (MiSTer itself)
 
+Patches and the build/test guide for AD1 are in [`upstream/`](upstream/README.md).
+
 - [ ] **Rotated script console** (Linux-Kernel_MiSTer): enable `CONFIG_FRAMEBUFFER_CONSOLE_ROTATION` so Update All, the downloader and other scripts can display upright on a tate cab (`echo 3 > /sys/class/graphics/fbcon/rotate_all`). Test kernel on a cab first.
 - [ ] **Menu start folder** (Main_MiSTer): a MiSTer.ini setting such as `menu_start_dir=_Arcade` so the core list opens there after boot instead of the SD root. Today the start folder is always the menu core's location (`get_rbf_dir()` in `user_io.cpp`, used by `SelectFile()` in `menu.cpp`).
