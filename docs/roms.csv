@@ -1,0 +1,577 @@
+folder,game,setname,core,source,status,zips,not_in_roms_db
+_Core STGs,1941 Counter Attack (Japan),1941j,jtcps1,jotego,parent only,1941j.zip | 1941.zip,1941j.zip
+_Core STGs,1942 (Revision B),1942,jt1942,jotego,covered,1942.zip,
+_Core STGs,1943 Kai Midway Kaisen (Japan),1943kai,jt1943,jotego,covered,1943kai.zip,
+_Core STGs,"1945k III (Promat license, OPCX1 PCB)",1945kiiipt,1945kiii,shmupfan,missing,1945kiiipt.zip | 1945kiii.zip,1945kiiipt.zip | 1945kiii.zip
+_Core STGs,"19XX The War Against Destiny (Japan 960104, yellow case)",19xxj,jtcps2,jotego,parent only,19xxj.zip | 19xx.zip | qsound.zip,19xxj.zip
+_Core STGs/_Hacks & Mods,Alcon Bootleg (Visibility Mod) [v1.0],alcon_v,SlapFight,ongo,partial,alcon.zip | slapfighb1.zip,slapfighb1.zip
+_Core STGs/_Hacks & Mods,"Faster, Harder, More Challenging Q`Bert (prototype)",sqbert,qbert,distribution,covered,sqbert.zip,
+_Core STGs/_Hacks & Mods,Hishou Zame (Japan) (Visibility Mod) [v1.0],hishouza_v,fshark_mister,ongo,partial,hishouza.zip | fshark.zip,hishouza.zip
+_Core STGs/_Hacks & Mods,Ibara Kuro Black Label - Show Time (2026-10-12),ibarablkst,ikacore_CV1k,ongo,missing,ibarablkst.zip | ibarablk.zip,ibarablkst.zip | ibarablk.zip
+_Core STGs/_Hacks & Mods,"Kyukyoku Tiger (Japan, 2P Co-op) (Visibility Mod) [v1.0]",ktiger_v,twincobr_mister,ongo,partial,ktiger.zip | twincobr.zip,ktiger.zip
+_Core STGs/_Hacks & Mods,Muchi Muchi Pork! Roppaku (2026-10-14 build 15),mmporkr,ikacore_CV1k,ongo,missing,mmpork.zip,mmpork.zip
+_Core STGs/_Hacks & Mods,Pink Sweets Rosy Future (2026-10-15),pinkswtsrf,ikacore_CV1k,ongo,missing,pinkswtsrf.zip | pinkswts.zip,pinkswtsrf.zip | pinkswts.zip
+_Core STGs/_Hacks & Mods,Tiger Heli Bootleg (Visibility Mod) [v1.0],tigerhb1_v,SlapFight,ongo,partial,tigerh.zip | tigerhb2.zip,tigerhb2.zip
+_Core STGs/_Practice ROMs,DoDonPachi Dai-Fukkatsu Black Label (Practice ROM),dfkbl_p,ikacore_CV1k,ongo,missing,cv1000p.zip | dfkbl.zip,cv1000p.zip | dfkbl.zip
+_Core STGs/_Practice ROMs,DoDonPachi Dai-Fukkatsu Ver 1.5 (Practice ROM),ddpdfk_p,ikacore_CV1k,ongo,missing,cv1000p.zip | ddpdfk.zip,cv1000p.zip | ddpdfk.zip
+_Core STGs/_Practice ROMs,DoDonPachi SaiDaiOuJou (Practice ROM),ddpsdoj_p,ikacore_CV1k,ongo,missing,cv1000p.zip | ddpsdoj.zip,cv1000p.zip | ddpsdoj.zip
+_Core STGs/_Practice ROMs,DoDonPachi Trainer (Japan),ddonpachjt,cave,distribution,partial,ddonpachj.zip | ddonpach.zip,ddonpachj.zip
+_Core STGs/_Practice ROMs,DoDonPachi Trainer [v1.11],ddonpacht1,cave,ongo,partial,ddonpach.zip | ddonpachj.zip,ddonpachj.zip
+_Core STGs/_Practice ROMs,Donkey Kong Trainer 1.01 - HBMame,dktrainer,donkeykong,distribution,missing,/hbmame/dkong.zip,/hbmame/dkong.zip
+_Core STGs/_Practice ROMs,Espgaluda II (Practice ROM),espgal2_p,ikacore_CV1k,ongo,missing,cv1000p.zip | espgal2.zip,cv1000p.zip | espgal2.zip
+_Core STGs/_Practice ROMs,Mushihime-Sama (Practice ROM),mushisam_p,ikacore_CV1k,ongo,missing,cv1000p.zip | mushisam.zip,cv1000p.zip | mushisam.zip
+_Core STGs/_Practice ROMs,Mushihime-Sama Futari Black Label (Practice ROM),futariblj_p,ikacore_CV1k,ongo,missing,cv1000p.zip | futariblj.zip | futaribl.zip,cv1000p.zip | futariblj.zip | futaribl.zip
+_Core STGs/_Practice ROMs,Mushihime-Sama Futari Black Label - Another Ver (Practice ROM),futaribl_p,ikacore_CV1k,ongo,missing,cv1000p.zip | futaribl.zip,cv1000p.zip | futaribl.zip
+_Core STGs/_Practice ROMs,Mushihime-Sama Futari Ver 1.5 (Practice ROM),futari15_p,ikacore_CV1k,ongo,missing,cv1000p.zip | futari15.zip,cv1000p.zip | futari15.zip
+_Core STGs/_Practice ROMs,Mushihime-Sama Matsuri Ver 1.5 (Practice ROM),matsuri15_p,ikacore_CV1k,ongo,missing,cv1000p.zip | matsuri15.zip,cv1000p.zip | matsuri15.zip
+_Core STGs,Acrobat Mission,acrobatm,NMK16_Gunnail,kuze,partial,acrobatm.zip | nmk004.zip,acrobatm.zip
+_Core STGs,"Action Fighter (World, S16A) [FD1089A 317-0018]",afighter,jts16,jotego,covered,afighter.zip,
+_Core STGs,"Aero Fighters (Taiwan - Japan, set 1)",aerofgtb,pspike,ongo,missing,aerofgtb.zip | aerofgt.zip,aerofgtb.zip | aerofgt.zip
+_Core STGs,Aero Fighters Special (USA),aerofgts,XNZN1,ongo,missing,coh1002v.zip | aerofgts.zip,coh1002v.zip | aerofgts.zip
+_Core STGs,"Agent Super Bond (Super Cobra conversion, not encrypted)",superbona,scramble,distribution,parent only,superbon.zip | superbona.zip,superbona.zip
+_Core STGs,Air Attack (set 1),airattck,NMK16_Gunnail,kuze,partial,airattck.zip | nmk004.zip,airattck.zip
+_Core STGs,"Air Duel (Japan, M72 hardware)",airdueljm72,IremM72,distribution,parent only,airdueljm72.zip | airduel.zip,airdueljm72.zip
+_Core STGs,Ajax (Japan),ajaxj,jtajax,jotego,parent only,ajaxj.zip | ajax.zip,ajaxj.zip
+_Core STGs,Akuu Gallet (Japan),agalletj,CaveBanpresto,distribution,parent only,agalletj.zip | agallet.zip,agalletj.zip
+_Core STGs,Alpha Mission,alphamis,SNK_TripleZ80,distribution,no zip listed,,
+_Core STGs,Arbalester,arbalest,jtarblst,jotego,covered,arbalest.zip,
+_Core STGs,"Ares no Tsubasa (Japan, rev. A)",lwingsja,jtsectnz,jotego,parent only,lwingsja.zip | lwings.zip,lwingsja.zip
+_Core STGs,Argus,argus,Meathax_Argus,ongo,missing,argus.zip,argus.zip
+_Core STGs,Armed F (Japan) [MD],armedf,ArmedFMD,distribution,covered,armedf.zip,
+_Core STGs,"Armed Police Batrider (Japan, B version) (Fri Feb 13 1998) [MD]",batriderj,RaizingMD,distribution,parent only,batriderj.zip | batrider.zip,batriderj.zip
+_Core STGs,Ashura Blaster (Japan),ashuraj,TaitoB,ongo,missing,ashuraj.zip | ashura.zip,ashuraj.zip | ashura.zip
+_Core STGs,ASO,aso,SNK_TripleZ80,distribution,no zip listed,,
+_Core STGs,B-Wings (Japan new Ver.),bwings,Meathax_DataEastLiberation,ongo,missing,bwings.zip,bwings.zip
+_Core STGs,Baryon - Future Assault (set 1),baryon,ppriest_DreamWorld,ongo,missing,baryon.zip,baryon.zip
+_Core STGs,Battle Bakraid - Unlimited Version (Japan) (Tue Jun 8 1999) [MD],bbakraidj,RaizingMD,distribution,parent only,bbakraidj.zip | bbakraid.zip,bbakraidj.zip
+_Core STGs,Battle Garegga (Europe - USA - Japan - Asia) (Sat Feb 3 1996) [MD],bgaregga,RaizingMD,distribution,covered,bgaregga.zip,
+_Core STGs,Battle of Atlantis,atlantis2,scramble,distribution,parent only,atlantis.zip | atlantis2.zip,atlantis2.zip
+_Core STGs,Bio Attack,bioatack,TaitoSJ,distribution,covered,bioatack.zip,
+_Core STGs,Blast Off (Japan),blastoff,jtshouse,jotego,covered,blastoff.zip,
+_Core STGs,"Blue Hawk (Japan, NTC license, set 1)",bluehawkn,dooyong,shmupfan,missing,bluehawkn.zip | bluehawk.zip,bluehawkn.zip | bluehawk.zip
+_Core STGs,Brave Blade (Japan),brvbladej,XNZN1,ongo,missing,coh1002m.zip | brvbladej.zip | brvblade.zip,coh1002m.zip | brvbladej.zip | brvblade.zip
+_Core STGs,Catacomb,catacomb,galaxian,distribution,covered,catacomb.zip,
+_Core STGs,Change Air Blade (Japan),cairblad,Meathax_SSV,ongo,missing,cairblad.zip,cairblad.zip
+_Core STGs,"Chouji Meikyuu Legion (Japan ver 1.05, set 2) [MD]",legionj2,ArmedFMD,distribution,parent only,legionj2.zip | legion.zip,legionj2.zip
+_Core STGs,Cybattler,cybattlr,JalecoMS1BCD,kuze,missing,cybattlr.zip,cybattlr.zip
+_Core STGs,Cyvern - The Dragon Weapons (Japan),cyvernj,SKNS,ongo,missing,cyvernj.zip | cyvern.zip | skns.zip,cyvernj.zip | cyvern.zip | skns.zip
+_Core STGs,Daikaiju no Gyakushu (rev 1),daikaiju,Meathax_Daikaiju,ongo,missing,daikaiju.zip,daikaiju.zip
+_Core STGs,Daioh,daioh,ppriest_Seta,ongo,missing,daioh.zip,daioh.zip
+_Core STGs,Daisenpu (Japan),daisenpu,jttaitox,jotego,partial,daisenpu.zip | twinhawk.zip | cchip.zip | jtbeta.zip,daisenpu.zip | jtbeta.zip
+_Core STGs,Dangerous Seed (Japan),dangseed,jtshouse,jotego,covered,dangseed.zip,
+_Core STGs,"Dangun Feveron (Japan, 98-09-17 VER.)",dfeveron,cave,distribution,partial,dfeveron.zip | feversos.zip,dfeveron.zip
+_Core STGs,"DoDonPachi (Japan, 1997 2-5 Master Ver.)",ddonpachj,cave,distribution,parent only,ddonpachj.zip | ddonpach.zip,ddonpachj.zip
+_Core STGs,"DoDonPachi Dai-Fukkatsu Black Label (Japan, 2010-1-18 BLACK LABEL)",dfkbl,ikacore_CV1k,ongo,missing,dfkbl.zip,dfkbl.zip
+_Core STGs,"DoDonPachi Dai-Fukkatsu Ver 1.0 (Japan, 2008-05-16 MASTER VER)",ddpdfk10,ikacore_CV1k,ongo,missing,ddpdfk10.zip | ddpdfk.zip,ddpdfk10.zip | ddpdfk.zip
+_Core STGs,"DoDonPachi Dai-Fukkatsu Ver 1.5 (Japan, 2008-06-23 MASTER VER 1.5)",ddpdfk,ikacore_CV1k,ongo,missing,ddpdfk.zip,ddpdfk.zip
+_Core STGs,"DoDonPachi Dai-Ou-Jou (Japan, 2002.04.05 Master Ver)",ddpdojb,IGSPGM,distribution,partial,pgm.zip | ddpdojb.zip | ddp3.zip,ddpdojb.zip
+_Core STGs,"DoDonPachi Dai-Ou-Jou Black Label (Japan, 2002.10.07.Black Ver, newer)",ddpdojblk,IGSPGM,distribution,partial,pgm.zip | ddpdojblk.zip | ddp3.zip,ddpdojblk.zip
+_Core STGs,"DoDonPachi Dai-Ou-Jou Tamashii (V201, China)",ddpdojt,PGM2,ongo,missing,ddpdojt.zip,ddpdojt.zip
+_Core STGs,"DoDonPachi II (Japan, ver. 102)",ddp2j,IGSPGM,distribution,parent only,pgm.zip | ddp2.zip | ddp2j.zip,ddp2j.zip
+_Core STGs,"DoDonPachi SaiDaiOuJou (Japan, 2012- 4-20)",ddpsdoj,ikacore_CV1k,ongo,missing,ddpsdoj.zip,ddpsdoj.zip
+_Core STGs,Dog Fight,dogfight,Vastar,distribution,covered,dogfight.zip,
+_Core STGs,DonPachi (Japan),donpachij,cave,distribution,parent only,donpachij.zip | donpachi.zip,donpachij.zip
+_Core STGs,"Double Wings (World, Set 2)",dblewinga,dblewing,coinop,parent only,dblewinga.zip | dblewing.zip,dblewinga.zip
+_Core STGs,Dr. Toppel's Tankentai (Japan),drtoppelj,jtkiwi,jotego,parent only,drtoppelj.zip | drtoppel.zip,drtoppelj.zip
+_Core STGs,Dragon Blaze,dragnblz,PsikyoSH2,distribution,covered,dragnblz.zip,
+_Core STGs,"Dragon Saber (Japan, Rev B)",dsaberj,NamcoS2_STD,kuze,missing,dsaberj.zip | dsaber.zip | namcoc65.zip,dsaberj.zip | dsaber.zip | namcoc65.zip
+_Core STGs,Dragon Spirit (new version (DS3)),dspirit,jtshouse,jotego,covered,dspirit.zip,
+_Core STGs,Dual Assault,dualaslt,Meathax_DataEastLiberation,ongo,missing,dualaslt.zip | liberate.zip,dualaslt.zip | liberate.zip
+_Core STGs,Eight Forces,eightfrc,ppriest_Seta,ongo,missing,eightfrc.zip,eightfrc.zip
+_Core STGs,"ESP Ra.De. (Japan, 1998 4-21 Master Ver.)",espradej,cave,distribution,parent only,espradej.zip | esprade.zip,espradej.zip
+_Core STGs,Espgaluda (2003.10.15 Master Ver),espgal,IGSPGM,distribution,covered,pgm.zip | espgal.zip,
+_Core STGs,"Espgaluda II (Japan, 2005-11-14 MASTER VER, newer CV1000-B PCB)",espgal2a,ikacore_CV1k,ongo,missing,espgal2a.zip | espgal2.zip,espgal2a.zip | espgal2.zip
+_Core STGs,Exed Exes,exedexes,jtexed,jotego,covered,exedexes.zip,
+_Core STGs,Explorer (DECO),cexplore,DECOCassette,distribution,covered,decocass.zip | cexplore.zip,
+_Core STGs,"Fever SOS (World, 98-09-25 VER)",feversos,cave,distribution,covered,feversos.zip,
+_Core STGs,"Final Star Force (Japan, set 1)",fstarfrcj,tecmo16,shmupfan,missing,fstarfrcj.zip | fstarfrc.zip,fstarfrcj.zip | fstarfrc.zip
+_Core STGs,Finalizer - Super Transformation (Set 1),finalizr,Finalizer,distribution,covered,finalizr.zip,
+_Core STGs,Fire Barrel (Japan),firebarr,IremM107,distribution,parent only,airass.zip | firebarr.zip,firebarr.zip
+_Core STGs,"Flak Attack (Japan, PWB 450593 sub-board)",flkatcka,jtmx5k,jotego,partial,flkatcka.zip | mx5000.zip,flkatcka.zip
+_Core STGs,Flying Tiger (set 1),flytiger,dooyong,shmupfan,missing,flytiger.zip,flytiger.zip
+_Core STGs,Funky Fish,fnkyfish,Kangaroo,distribution,covered,fnkyfish.zip,
+_Core STGs,Future Spy (315-5061),futspy,zaxxon,distribution,covered,futspy.zip,
+_Core STGs,G-Stream G2020,gstream,ppriest_GStream,ongo,missing,gstream.zip,gstream.zip
+_Core STGs,Galmedes (Japan),galmedes,TaitoAsuka,distribution,covered,galmedes.zip,
+_Core STGs,Garuka (Japan ver. W),garuka,Meathax_PWB351024A,ongo,missing,garuka.zip | devstors.zip,garuka.zip | devstors.zip
+_Core STGs,Gekirindan (Ver 2.3O 1995-09-21),gekiridn,TaitoF3,ongo,missing,gekiridn.zip,gekiridn.zip
+_Core STGs,Gemini Wing,gemini,Tecmo,distribution,covered,gemini.zip,
+_Core STGs,Great Mahou Daisakusen (Japan 000121),gmahou,jtcps2,jotego,partial,gmahou.zip | dimahoo.zip | qsound.zip,gmahou.zip
+_Core STGs,Grid Seeker - Project Storm Hammer (Ver 1.3O),gseeker,TaitoF3,ongo,missing,gseeker.zip,gseeker.zip
+_Core STGs,"Gulf Storm (Japan, Media Shoji license)",gulfstrmm,dooyong,shmupfan,missing,gulfstrmm.zip | gulfstrm.zip,gulfstrmm.zip | gulfstrm.zip
+_Core STGs,Gulf War II (set 1),gulfwar2,GulfWarII,distribution,covered,gulfwar2.zip,
+_Core STGs,Gun Frontier (Japan),gunfrontj,TaitoF2,distribution,parent only,gunfrontj.zip | gunfront.zip,gunfrontj.zip
+_Core STGs,Gunbird (Japan),gunbirdj,Psikyo,distribution,parent only,gunbirdj.zip | gunbird.zip,gunbirdj.zip
+_Core STGs,Gunbird 2 (set 1),gunbird2,PsikyoSH2,distribution,covered,gunbird2.zip,
+_Core STGs,Gunlock (Ver 2.3O 1994-01-20),gunlock,TaitoF3,ongo,missing,rayforce.zip | gunlock.zip,rayforce.zip | gunlock.zip
+_Core STGs,GunNail (28th May. 1992),gunnail,NMK16_Gunnail,kuze,partial,gunnail.zip | nmk004.zip,gunnail.zip
+_Core STGs,Gyrodine,gyrodine,Kyugo,distribution,covered,gyrodine.zip,
+_Core STGs,Gyruss,gyruss,Gyruss,distribution,covered,gyruss.zip,
+_Core STGs,"Hammer Away (Japan, prototype)",hamaway,jts18,jotego,covered,hamaway.zip,
+_Core STGs,HeliFire (set 1),helifire,Meathax_Nintendo8080,ongo,missing,helifire.zip,helifire.zip
+_Core STGs,Hishou Zame (Japan),hishouza,jtktiger,jotego,partial,hishouza.zip | fshark.zip | jtbeta.zip,hishouza.zip | jtbeta.zip
+_Core STGs,Hotdog Storm (Korea),hotdogst,CaveBanpresto,distribution,covered,hotdogst.zip,
+_Core STGs,"Ibara (Japan, 2005-03-22 MASTER VER.., '06. 3. 7 ver.)",ibara,ikacore_CV1k,ongo,missing,ibara.zip,ibara.zip
+_Core STGs,"Ibara Kuro Black Label (Japan, 2006-02-06. MASTER VER.)",ibarablk,ikacore_CV1k,ongo,missing,ibarablk.zip,ibarablk.zip
+_Core STGs,Image Fight (Japan),imgfightj,IremM72,distribution,parent only,imgfightj.zip | imgfight.zip,imgfightj.zip
+_Core STGs,Ketsui - Kizuna Jigoku Tachi (2003.01.01. Master Ver.),ket,IGSPGM,distribution,covered,pgm.zip | ket.zip,
+_Core STGs,"Kyukyoku Tiger (Japan, 2 player cooperative)",ktiger,jtktiger,jotego,partial,ktiger.zip | twincobr.zip | jtbeta.zip,ktiger.zip | jtbeta.zip
+_Core STGs,Last Duel (Japan),lastduelj,lastduel,ongo,missing,lastduelj.zip | lastduel.zip,lastduelj.zip | lastduel.zip
+_Core STGs,Last Mission (Japan),lastmisnj,dec8,shmupfan,missing,lastmisnj.zip | lastmisn.zip,lastmisnj.zip | lastmisn.zip
+_Core STGs,Macross Plus,macrossp,NMKBP964,kuze,missing,macrossp.zip,macrossp.zip
+_Core STGs,Mad Shark,madshark,ppriest_Seta,ongo,missing,madshark.zip,madshark.zip
+_Core STGs,Mahou Daisakusen (Japan) [MD],mahoudai,RaizingMD,distribution,partial,mahoudai.zip | sstriker.zip,mahoudai.zip
+_Core STGs,Mars,mars,scramble,distribution,covered,mars.zip,
+_Core STGs,Master of Weapon (Japan),masterwj,TaitoB,ongo,missing,masterwj.zip | masterw.zip,masterwj.zip | masterw.zip
+_Core STGs,Mazinger Z (Japan),mazingerj,CaveBanpresto,distribution,parent only,mazingerj.zip | mazinger.zip,mazingerj.zip
+_Core STGs,Meta Fox,metafox,jtarblst,jotego,covered,metafox.zip,
+_Core STGs,"Metal Hawk (Japan, Rev F)",metlhawkj,NamcoS2_MH,kuze,missing,metlhawkj.zip | metlhawk.zip | namcoc65.zip,metlhawkj.zip | metlhawk.zip | namcoc65.zip
+_Core STGs,Mighty Monkey (Scramble Hardware) [bl],mimonscr,scramble,distribution,covered,mimonkey.zip,
+_Core STGs,Mission Craft (version 2.7),misncrft,ppriest_Vamphalf,ongo,missing,misncrft.zip,misncrft.zip
+_Core STGs,Mission-X (DECO),cmissnx,DECOCassette,distribution,covered,decocass.zip | cmissnx.zip,
+_Core STGs,Moon War,moonwar,scramble,distribution,covered,moonwar.zip,
+_Core STGs,"Muchi Muchi Pork! (Japan, 2007- 4-17 MASTER VER.)",mmpork,ikacore_CV1k,ongo,missing,mmpork.zip,mmpork.zip
+_Core STGs,"Mushihime-Sama (Japan, 2004-10-12.MASTER VER.)",mushisam,ikacore_CV1k,ongo,missing,mushisam.zip,mushisam.zip
+_Core STGs,"Mushihime-Sama Futari Black Label (Japan, 2007-12-11 BLACK LABEL VER)",futariblj,ikacore_CV1k,ongo,missing,futariblj.zip | futaribl.zip,futariblj.zip | futaribl.zip
+_Core STGs,"Mushihime-Sama Futari Black Label - Another Ver (World, 2009-11-27 INTERNATIONAL BL)",futaribl,ikacore_CV1k,ongo,missing,futaribl.zip,futaribl.zip
+_Core STGs,"Mushihime-Sama Futari Ver 1.0 (Japan, 2006-10-23 MASTER VER.)",futari10,ikacore_CV1k,ongo,missing,futari10.zip | futari15.zip,futari10.zip | futari15.zip
+_Core STGs,"Mushihime-Sama Futari Ver 1.5 (Japan, 2006-12-8.MASTER VER. 1.54.)",futari15,ikacore_CV1k,ongo,missing,futari15.zip,futari15.zip
+_Core STGs,"Mushihime-Sama Matsuri Ver 1.5 (Japan, 2011-5-23 CAVEMATSURI VER1.5)",matsuri15,ikacore_CV1k,ongo,missing,matsuri15.zip,matsuri15.zip
+_Core STGs,"Nebulas Ray (Japan, NR1)",nebulrayj,Namco_NB1,ongo,missing,nebulrayj.zip | nebulray.zip | namcoc75.zip,nebulrayj.zip | nebulray.zip | namcoc75.zip
+_Core STGs,Nostradamus (Japan),nostj,Nostradamus,ongo,missing,nostj.zip | nost.zip,nostj.zip | nost.zip
+_Core STGs,Omega Fighter,omegaf,UPLFramebuffer,distribution,covered,omegaf.zip,
+_Core STGs,Phelios (Japan),pheliosj,NamcoS2_STD,kuze,missing,pheliosj.zip | phelios.zip | namcoc65.zip,pheliosj.zip | phelios.zip | namcoc65.zip
+_Core STGs,"Pink Sweets - Ibara Sorekara (Japan, 2006-04-06 MASTER VER....)",pinkswts,ikacore_CV1k,ongo,missing,pinkswts.zip,pinkswts.zip
+_Core STGs,Pioneer Balloon,pballoon,SNK6502,distribution,covered,pballoon.zip,
+_Core STGs,Plus Alpha,plusalph,megasys1_a,coinop,covered,plusalph.zip,
+_Core STGs,Psyvariar -Medium Unit- (V2.02O),psyvaria,TaitoGNET,shmupfan,missing,coh3002t.zip | gnet_psyvaria.zip,coh3002t.zip | gnet_psyvaria.zip
+_Core STGs,Psyvariar -Revision- (V2.04J),psyvarrv,TaitoGNET,shmupfan,missing,coh3002t.zip | gnet_psyvarrv.zip,coh3002t.zip | gnet_psyvarrv.zip
+_Core STGs,R-Shark (set 1),rshark,dooyong,shmupfan,missing,rshark.zip,rshark.zip
+_Core STGs,Rafflesia (315-5162),raflesia,segasys1,distribution,covered,raflesia.zip,
+_Core STGs,Raiden (Japan),raidenj,Raiden,distribution,parent only,raidenj.zip | raiden.zip,raidenj.zip
+_Core STGs,"Raiden DX (Japan, set 1)",raidendxj,Raiden2,distribution,parent only,raidendxj.zip | raidendx.zip,raidendxj.zip
+_Core STGs,"Raiden Fighters (Japan, earlier)",rdftj,SeibuSPI,ongo,missing,rdftj.zip | rdft.zip,rdftj.zip | rdft.zip
+_Core STGs,Raiden Fighters 2 - Operation Hell Dive (Japan set 1),rdft2j,SeibuSPI,ongo,missing,rdft2j.zip | rdft2.zip,rdft2j.zip | rdft2.zip
+_Core STGs,Raiden Fighters Jet (Japan),rfjetj,SeibuSPI,ongo,missing,rfjetj.zip | rfjet.zip,rfjetj.zip | rfjet.zip
+_Core STGs,Raiden II (Japan),raiden2j,Raiden2,distribution,parent only,raiden2j.zip | raiden2.zip,raiden2j.zip
+_Core STGs,Rapid Hero (NMK),raphero,NMK16_Raphero,kuze,missing,raphero.zip | arcadian.zip,raphero.zip | arcadian.zip
+_Core STGs,RayForce (Ver 2.3A 1994-01-20),rayforce,TaitoF3,ongo,missing,rayforce.zip | gunlock.zip,rayforce.zip | gunlock.zip
+_Core STGs,Rescue,rescue,scramble,distribution,covered,rescue.zip,
+_Core STGs,"Ryu Jin (Japan, ET910000B PCB)",ryujin,TaitoB,ongo,missing,ryujin.zip,ryujin.zip
+_Core STGs,S.S. Mission,ssmissin,NMK16_Gunnail,kuze,partial,ssmissin.zip | nmk004.zip,ssmissin.zip
+_Core STGs,Same! Same! Same! (2P Set),samesame2,vimana,coinop,partial,samesame2.zip | fireshrk.zip,samesame2.zip
+_Core STGs,Sand Scorpion,sandscrp,SandScrp,kuze,missing,sandscrp.zip,sandscrp.zip
+_Core STGs,Scooter Shooter,scotrsht,ScooterShooter,distribution,covered,scotrsht.zip,
+_Core STGs,"Scramble (Stern, Set 1)",scramble,scramble,distribution,partial,scramble.zip | scrambles.zip,scrambles.zip
+_Core STGs,"Scramble Spirits (World, Floppy Based)",sspirits,Meathax_SegaSystem24,ongo,missing,sspirits.zip,sspirits.zip
+_Core STGs,SD Gundam Neo Battling (Japan),neobattl,ppriest_Seta,ongo,missing,neobattl.zip,neobattl.zip
+_Core STGs,Sen Jing - Guardian Storm (Japan),grdnstrmj,NMK16_Afega,kuze,partial,grdnstrmj.zip | grdnstrm.zip | nmk004.zip,grdnstrmj.zip | grdnstrm.zip
+_Core STGs,Sengeki Striker (Japan),sengekisj,SKNS,ongo,missing,sengekisj.zip | sengekis.zip | skns.zip,sengekisj.zip | sengekis.zip | skns.zip
+_Core STGs,"Sengoku Ace (Japan, set 1)",sngkace,Psikyo,distribution,partial,sngkace.zip | samuraia.zip,sngkace.zip
+_Core STGs,Shienryu (JUET 961226 V1.000),shienryu,ST-V,distribution,covered,shienryu.zip | stvbios.zip,
+_Core STGs,Shikigami no Shiro - internal build (V1.02J),shikigama,TaitoGNET,shmupfan,missing,coh3002t.zip | gnet_shikigama.zip,coh3002t.zip | gnet_shikigama.zip
+_Core STGs,Shippu Mahou Daisakusen (Japan) [MD],shippumd,RaizingMD,distribution,partial,shippumd.zip | kingdmgp.zip,shippumd.zip
+_Core STGs,Skull Fang - Kuhga Gaiden (Japan 1.09),skullfngj,ppriest_DecoMLC156,ongo,missing,skullfngj.zip | skullfng.zip,skullfngj.zip | skullfng.zip
+_Core STGs,Sky Adventure (Japan),skyadvntj,alpha68k,coinop,parent only,skyadvntj.zip | skyadvnt.zip,skyadvntj.zip
+_Core STGs,Sky Smasher,skysmash,SkySmasher,distribution,covered,skysmash.zip,
+_Core STGs,Sky Soldiers (US),skysoldr,alpha68k,coinop,covered,skysoldr.zip,
+_Core STGs,Solite Spirits,slspirit,1945kiii,shmupfan,missing,slspirit.zip,slspirit.zip
+_Core STGs,Sonic Boom (FD1094 317-0053),sonicbom,jts16b,jotego,covered,sonicbom.zip,
+_Core STGs,Sonic Wings Limited (Japan),sncwgltd,XNZN1,ongo,missing,coh1002v.zip | sncwgltd.zip | aerofgts.zip,coh1002v.zip | sncwgltd.zip | aerofgts.zip
+_Core STGs,Space Dungeon,sdungeon,Qix,distribution,covered,sdungeon.zip,
+_Core STGs,Space Launcher,spacelnc,Meathax_Nintendo8080,ongo,missing,spacelnc.zip,spacelnc.zip
+_Core STGs,SRD - Super Real Darwin (Japan),srdarwinj,dec8,shmupfan,missing,srdarwinj.zip | srdarwin.zip,srdarwinj.zip | srdarwin.zip
+_Core STGs,SRD Mission,srdmissn,Kyugo,distribution,covered,srdmissn.zip,
+_Core STGs,Stagger I (Japan),stagger1,NMK16_Afega,kuze,partial,stagger1.zip | nmk004.zip,stagger1.zip
+_Core STGs,Star Fighter (v1),starfigh,Meathax_Suna8bit,ongo,missing,starfigh.zip,starfigh.zip
+_Core STGs,Star Force,starforc,starforce,distribution,covered,starforc.zip,
+_Core STGs,Star Jacker,starjack,segasys1,distribution,covered,starjack.zip,
+_Core STGs,Storm Blade (US),stmblade,Meathax_SSV,ongo,missing,stmblade.zip,stmblade.zip
+_Core STGs,Strike Gunner S.T.G,stg,ppriest_Seta,ongo,missing,stg.zip,stg.zip
+_Core STGs,Strikers 1945 (Japan - World),s1945a,Psikyo,distribution,parent only,s1945a.zip | s1945.zip,s1945a.zip
+_Core STGs,Strikers 1945 II,s1945ii,PsikyoSH2,distribution,covered,s1945ii.zip,
+_Core STGs,Strikers 1945 III,s1945iii,PsikyoSH2,distribution,covered,s1945iii.zip,
+_Core STGs,Super Cobra,scobra,scramble,distribution,covered,scobra.zip,
+_Core STGs,Super Spacefortress Macross - Chou-Jikuu Yousai Macross,macross,NMK16_Gunnail,kuze,partial,macross.zip | nmk004.zip,macross.zip
+_Core STGs,Super Zaxxon (315-5013),szaxxon,zaxxon,distribution,covered,szaxxon.zip,
+_Core STGs,Super-X (NTC),superx,dooyong,shmupfan,missing,superx.zip,superx.zip
+_Core STGs,Tac-Scan,tacscan,SegaG80V,distribution,covered,tacscan.zip,
+_Core STGs,Task Force Harrier,tharrier,NMK16_Gunnail,kuze,partial,tharrier.zip | nmk004.zip,tharrier.zip
+_Core STGs,Terra Cresta (YM3526 set 1) [MD],terracre,TerraCrestaMD,distribution,covered,terracre.zip,
+_Core STGs,The Game Paradise - Master of Shooting! - Game Tengoku - The Game Paradise (ver 1.0),gametngk,ppriest_JalecoMS32,ongo,missing,gametngk.zip,gametngk.zip
+_Core STGs,The Last Day (set 1),lastday,dooyong,shmupfan,missing,lastday.zip,lastday.zip
+_Core STGs,The Next Space (Japan),tnextspcj,nextspace,coinop,parent only,tnextspcj.zip | tnextspc.zip,tnextspcj.zip
+_Core STGs,Thunder Blaster (Japan),thndblst,IremM92,distribution,parent only,thndblst.zip | lethalth.zip,thndblst.zip
+_Core STGs,"Thunder Dragon (8th Jan. 1992, unprotected)",tdragon,NMK16_Gunnail,kuze,covered,tdragon.zip | nmk004.zip,
+_Core STGs,Thunder Dragon 2 (9th Nov. 1993),tdragon2,NMK16_Macross2,kuze,missing,tdragon2.zip,tdragon2.zip
+_Core STGs,Tokio - Scramble Formation (newer),tokio,jtbubl,jotego,covered,tokio.zip,
+_Core STGs,Tokio - Scramble Formation (US),tokiou,jtbubl,jotego,parent only,tokiou.zip | tokio.zip,tokiou.zip
+_Core STGs,Trigon (Japan),trigon,jtriders,jotego,partial,trigon.zip | lgtnfght.zip,trigon.zip
+_Core STGs,Truxton - Tatsujin,truxton,zerowing_20240404,coinop,covered,truxton.zip,
+_Core STGs,Truxton II - Tatsujin Oh,truxton2,truxton2,coinop,covered,truxton2.zip,
+_Core STGs,"Turbo Force (World, set 1)",turbofrc,pspike,ongo,missing,turbofrc.zip,turbofrc.zip
+_Core STGs,Twin Cobra II (Ver 2.1O 1995-11-30),tcobra2,TaitoF3,ongo,missing,tcobra2.zip,tcobra2.zip
+_Core STGs,Twin Eagle - Revenge Joe's Brother,twineagl,ppriest_SetaDowntown,ongo,missing,twineagl.zip,twineagl.zip
+_Core STGs,Twin Eagle II - The Rescue Mission,twineag2,Meathax_SSV,ongo,missing,twineag2.zip,twineag2.zip
+_Core STGs,"Twin Twist (Japan, 2P Co-Op)",twintwstb,twincobr_mister,ongo,partial,twintwst.zip | ktiger.zip | twincobr.zip,twintwst.zip | ktiger.zip
+_Core STGs,TwinBee,twinbee,BubSysROM,distribution,no zip listed,,
+_Core STGs,"U.N. Defense Force - Earth Joker (US-Japan, set 1)",earthjkr,TaitoAsuka,distribution,covered,earthjkr.zip,
+_Core STGs,Ufo Robo Dangar (4-07-1987),dangar,galivan,distribution,covered,dangar.zip,
+_Core STGs,Ultra X Weapons - Ultra Keibitai,ultrax,Meathax_SSV,ongo,missing,ultrax.zip,ultrax.zip
+_Core STGs,Vanguard (Japan),vanguardj,SNK6502,distribution,parent only,vanguardj.zip | vanguard.zip,vanguardj.zip
+_Core STGs,Vapor Trail - Hyper Offence Formation (US),vaportrau,vaportra_mister,coinop,parent only,vaportrau.zip | vaportra.zip,vaportrau.zip
+_Core STGs,"Vapor Trail - Hyper Offence Formation (World, Rev. 1)",vaportra,vaportra_mister,coinop,covered,vaportra.zip,
+_Core STGs,Varth Operation Thunderstorm (Japan Resale Ver. 920714),varthjr,jtcps1,jotego,parent only,varthjr.zip | varth.zip,varthjr.zip
+_Core STGs,Vasara 2 (set 1),vasara2,Meathax_SSV,ongo,missing,vasara2.zip,vasara2.zip
+_Core STGs,Vasara,vasara,Meathax_SSV,ongo,missing,vasara.zip,vasara.zip
+_Core STGs,Vastar,vastar,Vastar,distribution,covered,vastar.zip,
+_Core STGs,Vimana (Japan),vimanaj,vimana,coinop,parent only,vimanaj.zip | vimana.zip,vimanaj.zip
+_Core STGs,Viper Phase 1 (Japan),viprp1oj,SeibuSPI,ongo,missing,viprp1oj.zip | viprp1.zip,viprp1oj.zip | viprp1.zip
+_Core STGs,Vulgus (Japanx),vulgusj,jt1942,jotego,parent only,vulgusj.zip | vulgus.zip,vulgusj.zip
+_Core STGs,War of Aero - Project MEIOU,wrofaero,ppriest_Seta,ongo,missing,wrofaero.zip,wrofaero.zip
+_Core STGs,Wild Western,wwestern,TaitoSJ,distribution,covered,wwestern.zip,
+_Core STGs,Wivern Wings,wivernwg,ppriest_Vamphalf,ongo,missing,wivernwg.zip,wivernwg.zip
+_Core STGs,Wonder Planet (Japan),wndrplnt,jtkarnov,jotego,covered,wndrplnt.zip,
+_Core STGs,Xevious,xevious,xevious,distribution,covered,xevious.zip | namco50.zip | namco51.zip | namco54.zip,
+_Core STGs,XII Stag (V2.01J),xiistag,TaitoGNET,shmupfan,missing,coh3002t.zip | gnet_xiistag.zip,coh3002t.zip | gnet_xiistag.zip
+_Core STGs,XX Mission,xxmissio,UPLFramebuffer,distribution,covered,xxmissio.zip,
+_Core STGs,Zing Zing Zip (World) - Zhen Zhen Ji Pao (China),zingzip,ppriest_Seta,ongo,missing,zingzip.zip,zingzip.zip
+_Other Shooting Games/_Fixed Screen Shooting,Astro Fantasia (DECO),castfant,DECOCassette,distribution,covered,decocass.zip | castfant.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Balloon Bomber,ballbomb,spaceinvaders,distribution,covered,ballbomb.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Black Hole,blkhole,galaxian,distribution,covered,blkhole.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Carnival,carnival,SegaVICZ80,distribution,partial,carnival.zip | sspaceat.zip | /sound/carnival.zip,/sound/carnival.zip
+_Other Shooting Games/_Fixed Screen Shooting,Centipede (Rev 4),centiped,centipede,distribution,covered,centiped.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Cosmic Alien,cosmica,cosmic,distribution,covered,cosmica.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Cosmic Guerilla,cosmicg,CosmicGuerilla,distribution,covered,cosmicg.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Cosmo Gang the Video (Japan),cosmogngj,NamcoS2_STD,kuze,missing,cosmogngj.zip | cosmogng.zip | namcoc65.zip,cosmogngj.zip | cosmogng.zip | namcoc65.zip
+_Other Shooting Games/_Fixed Screen Shooting,Devil Fish (Galaxian Hardware),devilfsg,galaxian,distribution,partial,devilfsh.zip | devilfsg.zip,devilfsg.zip
+_Other Shooting Games/_Fixed Screen Shooting,Devil Zone,devzone,cosmic,distribution,covered,devzone.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Enigma II,enigma2,Enigma,ongo,missing,enigma2.zip,enigma2.zip
+_Other Shooting Games/_Fixed Screen Shooting,Exerion (Taito),exeriont,exerion,distribution,parent only,exerion.zip | exeriont.zip,exeriont.zip
+_Other Shooting Games/_Fixed Screen Shooting,Galaga '88 (Japan),galaga88j,jtshouse,jotego,parent only,galaga88j.zip | galaga88.zip,galaga88j.zip
+_Other Shooting Games/_Fixed Screen Shooting,"Galaga (Midway, Set 1)",galagamw,galaga,distribution,parent only,galaga.zip | galagamw.zip | namco51.zip | namco54.zip,galagamw.zip
+_Other Shooting Games/_Fixed Screen Shooting,Galaga 3 - Gaplus (GP2 Rev B),gaplus,gaplus,distribution,covered,gaplus.zip,
+_Other Shooting Games/_Fixed Screen Shooting,"Galaxian (Namco, Set 1)",galaxian,galaxian,distribution,covered,galaxian.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Gorf,gorf,astrocade,distribution,covered,gorf.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Graplop (Japan) (DECO),cgraplopj,DECOCassette,distribution,parent only,decocass.zip | cgraplop.zip | cgraplopj.zip,cgraplopj.zip
+_Other Shooting Games/_Fixed Screen Shooting,Juno First,junofrst,JunoFirst,distribution,covered,junofrst.zip,
+_Other Shooting Games/_Fixed Screen Shooting,King and Balloon (Japan),kingballj,galaxian,distribution,parent only,kingball.zip | kingballj.zip,kingballj.zip
+_Other Shooting Games/_Fixed Screen Shooting,Magical Spot,magspot,cosmic,distribution,covered,magspot.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Majestic Twelve - The Space Invaders Part IV (Japan),majest12j,TaitoF2,distribution,parent only,majest12j.zip | ssi.zip,majest12j.zip
+_Other Shooting Games/_Fixed Screen Shooting,Millipede,milliped,Millipede,ongo,missing,milliped.zip,milliped.zip
+_Other Shooting Games/_Fixed Screen Shooting,Moon Cresta (Galaxian Hardware) [bl],mooncrgx,galaxian,distribution,parent only,mooncrst.zip | mooncrgx.zip,mooncrgx.zip
+_Other Shooting Games/_Fixed Screen Shooting,Moon Quasar,moonqsr,galaxian,distribution,covered,moonqsr.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Nebula (DECO),cnebula,DECOCassette,distribution,covered,decocass.zip | cnebula.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Night Star (DECO),cnightst,DECOCassette,distribution,covered,decocass.zip | cnightst.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Phoenix (Taito Japan),phoenixj,phoenix,distribution,parent only,phoenix.zip | phoenixj.zip,phoenixj.zip
+_Other Shooting Games/_Fixed Screen Shooting,Pleiads (Tehkan),pleiads,phoenix,distribution,covered,pleiads.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Polaris,polaris,spaceinvaders,distribution,covered,polaris.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Radar Scope (rev. D),radarscp,donkeykong,distribution,covered,radarscp.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Repulse,repulse,Kyugo,distribution,covered,repulse.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Satan Of Saturn,satansat,SNK6502,distribution,covered,satansat.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Satan's Hollow (Set 1),shollow,mcr2,distribution,covered,shollow.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Saturn,saturnzi,BluePrint,distribution,covered,blueprnt.zip | saturnzi.zip,
+_Other Shooting Games/_Fixed Screen Shooting,SF-HiSplitter (set 1),highsplt,Meathax_Nintendo8080,ongo,missing,highsplt.zip,highsplt.zip
+_Other Shooting Games/_Fixed Screen Shooting,Sheriff,sheriff,Meathax_Nintendo8080,ongo,missing,sheriff.zip,sheriff.zip
+_Other Shooting Games/_Fixed Screen Shooting,Slither,slither,Qix,distribution,covered,slither.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Space Bomber (ver. B),sbomber,PsikyoSH2,distribution,covered,sbomber.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Space Cruiser,spacecr,TaitoSJ,distribution,covered,spacecr.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Space Fever (new version),spacefev,Meathax_Nintendo8080,ongo,missing,spacefev.zip,spacefev.zip
+_Other Shooting Games/_Fixed Screen Shooting,Space Invaders '95 - The Attack Of Lunar Loonies (Ver 2.5O 1995-06-14),spcinv95,TaitoF3,ongo,missing,spcinv95.zip,spcinv95.zip
+_Other Shooting Games/_Fixed Screen Shooting,Space Invaders Anniversary (V2.02J),sianniv,TaitoGNET,shmupfan,missing,coh3002t.zip | gnet_sianniv.zip,coh3002t.zip | gnet_sianniv.zip
+_Other Shooting Games/_Fixed Screen Shooting,Super Astro Fighter (DECO),csuperas,DECOCassette,distribution,covered,decocass.zip | csuperas.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Terranean (DECO),cterrani,DECOCassette,distribution,covered,decocass.zip | cterrani.zip,
+_Other Shooting Games/_Fixed Screen Shooting,The End,theend,scramble,distribution,covered,theend.zip,
+_Other Shooting Games/_Fixed Screen Shooting,Tornado (DECO),ctornado,DECOCassette,distribution,covered,decocass.zip | ctornado.zip,
+_Other Shooting Games/_Fixed Screen Shooting,War of the Bugs,warofbug,galaxian,distribution,covered,warofbug.zip,
+_Other Shooting Games/_Multidirectional Shooting,Azurian Attack,azurian,galaxian,distribution,covered,azurian.zip,
+_Other Shooting Games/_Multidirectional Shooting,Lizard Wizard,lizwiz,pacman,distribution,covered,lizwiz.zip,
+_Other Shooting Games/_Multidirectional Shooting,Mad Planets,mplanets,qbert,distribution,covered,mplanets.zip,
+_Other Shooting Games/_Multidirectional Shooting,Makyou Senshi (Japan),makyosen,dec8,shmupfan,missing,makyosen.zip | gondo.zip,makyosen.zip | gondo.zip
+_Other Shooting Games/_Multidirectional Shooting,No Mans Land,nomnlnd,cosmic,distribution,covered,nomnlnd.zip,
+_Other Shooting Games/_Multidirectional Shooting,Sinistar,sinistar,robotron,distribution,covered,sinistar.zip,
+_Other Shooting Games/_Multidirectional Shooting,Swat (315-5048),swat,segasys1,distribution,covered,swat.zip,
+_Other Shooting Games/_Multidirectional Shooting,The Percussor,percuss,Vastar,distribution,covered,percuss.zip,
+_Other Shooting Games/_Multidirectional Shooting,Time Pilot '84 (Set 1),tp84,TimePilot84,distribution,covered,tp84.zip,
+_Other Shooting Games/_Multidirectional Shooting,Time Pilot,timeplt,timepilot,distribution,covered,timeplt.zip,
+_Other Shooting Games/_Multidirectional Shooting,Victory,victorycb,galaxian,distribution,parent only,victoryc.zip | victorycb.zip,victorycb.zip
+_Other Shooting Games/_Multidirectional Shooting,Vortex,vortex,spaceinvaders,distribution,covered,vortex.zip,
+_Other Shooting Games/_Multidirectional Shooting,Zodiack,zodiack,Vastar,distribution,covered,zodiack.zip,
+_Other Shooting Games/_Overhead Shooting,Assault Plus (Japan),assaultp,NamcoS2_STD,kuze,missing,assaultp.zip | assault.zip | namcoc65.zip,assaultp.zip | assault.zip | namcoc65.zip
+_Other Shooting Games/_Overhead Shooting,Battle Field (Japan),btlfield,alpha68k,coinop,partial,btlfield.zip | timesold.zip,btlfield.zip
+_Other Shooting Games/_Overhead Shooting,Blazer (Japan),blazer,jtshouse,jotego,covered,blazer.zip,
+_Other Shooting Games/_Overhead Shooting,Caliber 50 (Ver. 1.01),calibr50,jtcal50,jotego,covered,calibr50.zip,
+_Other Shooting Games/_Overhead Shooting,Commando (World),commando,jtcommnd,jotego,covered,commando.zip,
+_Other Shooting Games/_Overhead Shooting,Crazy Cop (Japan),crazycop,jtaliens,jotego,partial,crazycop.zip | gbusters.zip,crazycop.zip
+_Other Shooting Games/_Overhead Shooting,Desert Breaker (Japan) (FD1094 317-0194),desertbrj,jts18,jotego,parent only,desertbrj.zip | desertbr.zip,desertbrj.zip
+_Other Shooting Games/_Overhead Shooting,Desert War - Wangan Sensou (ver 1.0),desertwr,ppriest_JalecoMS32,ongo,missing,desertwr.zip,desertwr.zip
+_Other Shooting Games/_Overhead Shooting,Extermination (Japan),extrmatnj,jtkiwi,jotego,parent only,extrmatnj.zip | extrmatn.zip,extrmatnj.zip
+_Other Shooting Games/_Overhead Shooting,Front Line,frontlin,TaitoSJ,distribution,covered,frontlin.zip,
+_Other Shooting Games/_Overhead Shooting,Gun Ball (Japan),gunball,nitrobal_mister,coinop,partial,gunball.zip | nitrobal.zip,gunball.zip
+_Other Shooting Games/_Overhead Shooting,"Gun.Smoke (Japan, 1985-11-15)",gunsmokej,jtgunsmk,jotego,parent only,gunsmokej.zip | gunsmoke.zip,gunsmokej.zip
+_Other Shooting Games/_Overhead Shooting,Gundhara,gundhara,ppriest_Seta,ongo,missing,gundhara.zip,gundhara.zip
+_Other Shooting Games/_Overhead Shooting,"Guwange (Japan, 1999 6-24 Master Ver 16-55)",guwange,cave,distribution,covered,guwange.zip,
+_Other Shooting Games/_Overhead Shooting,Heavy Barrel (World),hbarrel,jtninja,jotego,covered,hbarrel.zip,
+_Other Shooting Games/_Overhead Shooting,Highway Chase (DECO),chwy,DECOCassette,distribution,covered,decocass.zip | chwy.zip,
+_Other Shooting Games/_Overhead Shooting,Ikari Warriors JP,ikarijp,IkariWarriors,distribution,no zip listed,,
+_Other Shooting Games/_Overhead Shooting,KiKi KaiKai (Japan),kikikai,kikikai_mister,coinop,covered,kikikai.zip,
+_Other Shooting Games/_Overhead Shooting,Labyrinth Runner (Japan),labyrunr,jtlabrun,jotego,partial,labyrunr.zip | tricktrp.zip,labyrunr.zip
+_Other Shooting Games/_Overhead Shooting,Minefield,minefld,scramble,distribution,covered,minefld.zip,
+_Other Shooting Games/_Overhead Shooting,Mister Viking (315-5041),mrviking,segasys1,distribution,covered,mrviking.zip,
+_Other Shooting Games/_Overhead Shooting,Out Zone,outzone,zerowing_20240404,coinop,covered,outzone.zip,
+_Other Shooting Games/_Overhead Shooting,"Regulus (315-5033, Rev A)",regulus,segasys1,distribution,covered,regulus.zip,
+_Other Shooting Games/_Overhead Shooting,Rush & Crash (Japan),rushcrsh,jtrumble,jotego,partial,rushcrsh.zip | srumbler.zip,rushcrsh.zip
+_Other Shooting Games/_Overhead Shooting,SAR - Search And Rescue (Japan version 3),searcharj,SNK68,coinop,parent only,searcharj.zip | searchar.zip,searcharj.zip
+_Other Shooting Games/_Overhead Shooting,Senjou no Ookami II (Japan 900302),mercsj,jtcps1,jotego,parent only,mercsj.zip | mercs.zip,mercsj.zip
+_Other Shooting Games/_Overhead Shooting,Soldier Girl Amazon [MD],amazon,TerraCrestaMD,distribution,covered,amazon.zip,
+_Other Shooting Games/_Overhead Shooting,Spy Hunter,spyhunt,mcr3scroll,distribution,covered,spyhunt.zip,
+_Other Shooting Games/_Overhead Shooting,T.A.N.K_Japan,tnk3j,TNKIII,distribution,no zip listed,,
+_Other Shooting Games/_Overhead Shooting,Tazz-Mania (Set 1),tazmania,scramble,distribution,covered,tazmania.zip,
+_Other Shooting Games/_Overhead Shooting,The Battle-Road,battroad,iremm62,distribution,covered,battroad.zip,
+_Other Shooting Games/_Overhead Shooting,The Speed Rumbler (set 1),srumbler,jtrumble,jotego,covered,srumbler.zip,
+_Other Shooting Games/_Overhead Shooting,Tokushu Butai Jackal (JP),jackalj,Jackal,distribution,no zip listed,,
+_Other Shooting Games/_Overhead Shooting,Valtric,valtric,Meathax_Argus,ongo,missing,valtric.zip,valtric.zip
+_Other Shooting Games/_Overhead Shooting,Victory Road,victroad,IkariWarriors,distribution,no zip listed,,
+_Other Shooting Games/_Overhead Shooting,Youjyuden (JP),youjyudn,iremm62,distribution,covered,youjyudn.zip,
+_Other Vertical Games,"Ace Attacker (Japan, S16A) [FD1094 317-0060]",aceattaca,jts16,jotego,parent only,aceattaca.zip | aceattac.zip,aceattaca.zip
+_Other Vertical Games,Adventure Canoe,adcanoe,TaitoSJ,distribution,covered,adcanoe.zip,
+_Other Vertical Games,Ali Baba and 40 Thieves,alibaba,pacman,distribution,covered,alibaba.zip,
+_Other Vertical Games,Alpine Ski,alpine,TaitoSJ,distribution,covered,alpine.zip,
+_Other Vertical Games,Amidar (Scramble),amidars,scramble,distribution,parent only,amidar.zip | amidars.zip,amidars.zip
+_Other Vertical Games,Anteater,anteater,scramble,distribution,covered,anteater.zip,
+_Other Vertical Games,APB - All Points Bulletin (rev 6),apb6,atarisys2,distribution,parent only,apb6.zip | apb.zip,apb6.zip
+_Other Vertical Games,APB - All Points Bulletin (rev 7),apb,atarisys2,distribution,covered,apb.zip,
+_Other Vertical Games,Arabian,arabian,Arabian,distribution,covered,arabian.zip,
+_Other Vertical Games,Arkanoid (JP),arkanoidj,arkanoid,distribution,partial,arkanoid.zip | arkanoidj.zip | arkatayt.zip,arkanoidj.zip | arkatayt.zip
+_Other Vertical Games,Armored Car,armorcar,scramble,distribution,covered,armorcar.zip,
+_Other Vertical Games,"Asuka & Asuka (Japan, rev 1)",asukaj,TaitoAsuka,distribution,covered,asuka.zip,
+_Other Vertical Games,Asylum (prototype),asylum,Meathax_Leland,ongo,missing,asylum.zip,asylum.zip
+_Other Vertical Games,Bagman,bagman,bagman,distribution,covered,bagman.zip,
+_Other Vertical Games,Baluba-louk no Densetsu (Japan),baluba,starforce,distribution,covered,baluba.zip,
+_Other Vertical Games,Barrier,barrier,StarCastle,distribution,covered,barrier.zip,
+_Other Vertical Games,Beastie Feastie (Pac-Man Conversion),beastfp,pacman,distribution,parent only,suprglob.zip | beastfp.zip,beastfp.zip
+_Other Vertical Games,"Birdie Try (Japan, revision 2, revision 1 MCU)",birdtry,bazset_BirdieTry,ongo,missing,birdtry.zip,birdtry.zip
+_Other Vertical Games,Birdiy,birdiy,pacman,distribution,covered,birdiy.zip,
+_Other Vertical Games,Block Block (Japan 910910),blockj,jtpang,jotego,parent only,blockj.zip | block.zip,blockj.zip
+_Other Vertical Games,Block Carnival - Thunder & Lightning 2,blockcar,ppriest_Seta,ongo,missing,blockcar.zip,blockcar.zip
+_Other Vertical Games,Block Gal,blockgal,segasys1,distribution,covered,blockgal.zip,
+_Other Vertical Games,Blue Print (Japan),blueprntj,BluePrint,distribution,parent only,blueprnt.zip | blueprntj.zip,blueprntj.zip
+_Other Vertical Games,Bomb Jack,bombjack,bombjack,distribution,covered,bombjack.zip,
+_Other Vertical Games,Boomer Rang'r - Genesis (set 1),boomrang,Meathax_DataEastLiberation,ongo,missing,boomrang.zip,boomrang.zip
+_Other Vertical Games,Boong-Ga Boong-Ga (Spank'em!),boonggab,ppriest_Vamphalf,ongo,missing,boonggab.zip,boonggab.zip
+_Other Vertical Games,"Botanic (English, Spanish, Set 1)",botanic,bagman,distribution,covered,botanic.zip,
+_Other Vertical Games,Boulder Dash (DECO),cbdash,DECOCassette,distribution,covered,decocass.zip | cbdash.zip,
+_Other Vertical Games,Bowl-O-Rama (Rev 1.0),bowlrama,Gm0rk_ITech8,ongo,missing,bowlrama.zip,bowlrama.zip
+_Other Vertical Games,Breakout (TTL),breakout,breakout,distribution,no zip listed,,
+_Other Vertical Games,"Brick Zone (v6.0, Joystick)",brickzn,Meathax_Suna8bit,ongo,missing,brickzn.zip,brickzn.zip
+_Other Vertical Games,Bronx (bootleg of Cycle Shooting),bronx,jtflstory,jotego,partial,bronx.zip | cyclshtg.zip,bronx.zip
+_Other Vertical Games,Bump 'n' Jump Reverse Mod - HBMame,bnjr,burningrubber,distribution,missing,/hbmame/brubber.zip,/hbmame/brubber.zip
+_Other Vertical Games,Burnin Rubber (Japan) (DECO),cburnrubj,DECOCassette,distribution,parent only,decocass.zip | cburnrub.zip | cburnrubj.zip,cburnrubj.zip
+_Other Vertical Games,Calipso,calipso,scramble,distribution,covered,calipso.zip,
+_Other Vertical Games,Capcom Bowling (set 1),capbowl,Gm0rk_ITech8,ongo,missing,capbowl.zip,capbowl.zip
+_Other Vertical Games,Cavelon,cavelon,scramble,distribution,covered,cavelon.zip,
+_Other Vertical Games,"Circus Charlie (level select, set 1)",circusc,jtcircus,jotego,covered,circusc.zip,
+_Other Vertical Games,Colony 7 (Set 1),colony7,defender,distribution,covered,colony7.zip,
+_Other Vertical Games,Complex X,complexx,Qix,distribution,covered,complexx.zip,
+_Other Vertical Games,Congo Bongo,congo,CongoBongo,distribution,covered,congo.zip,
+_Other Vertical Games,"Contra (Japan, set 2)",contraj1,jtcontra,jotego,parent only,contraj1.zip | contra.zip,contraj1.zip
+_Other Vertical Games,Cosmo Police Galivan (12-26-1985),galivan,galivan,distribution,covered,galivan.zip,
+_Other Vertical Games,Cosmos,cosmos,bazset_CVS,ongo,missing,cosmos.zip,cosmos.zip
+_Other Vertical Games,Crazy Balloon,crbaloon,crazyballoon,distribution,covered,crbaloon.zip,
+_Other Vertical Games,Crazy Kong Part II (Japan),ckongpt2j,crazykong,distribution,parent only,ckongpt2j.zip | ckongpt2.zip,ckongpt2j.zip
+_Other Vertical Games,Crush Roller (Set 2),crush2,pacman,distribution,parent only,crush.zip | crush2.zip,crush2.zip
+_Other Vertical Games,Dark Warrior,darkwar,bazset_CVS,ongo,missing,darkwar.zip,darkwar.zip
+_Other Vertical Games,Dazzler,dazzler,bazset_CVS,ongo,missing,dazzler.zip,dazzler.zip
+_Other Vertical Games,DECO Darksoft Multigame (v16) (DECO),decodark,DECOCassette,distribution,covered,decocass.zip | decodark.zip,
+_Other Vertical Games,DECO Widel Multigame (DECO),decomult,DECOCassette,distribution,covered,decocass.zip | decomult.zip,
+_Other Vertical Games,Dig Dug (Rev 2),digdug,digdug,distribution,covered,digdug.zip,
+_Other Vertical Games,Dig Dug II (New Ver),digdug2,druaga,distribution,covered,digdug2.zip,
+_Other Vertical Games,Digger (CVS),diggerc,bazset_CVS,ongo,missing,diggerc.zip,diggerc.zip
+_Other Vertical Games,Donkey Kong Jr. (Japan),dkongjrj,donkeykongjunior,distribution,parent only,dkongjr.zip | dkongjrj.zip,dkongjrj.zip
+_Other Vertical Games,Dorodon (Set 1),dorodon,ladybug,distribution,covered,dorodon.zip,
+_Other Vertical Games,DownTown - Mokugeki (set 1),downtown,ppriest_SetaDowntown,ongo,missing,downtown.zip,downtown.zip
+_Other Vertical Games,Dr. Micro,drmicro,Meathax_DrMicro,ongo,missing,drmicro.zip,drmicro.zip
+_Other Vertical Games,Dream Shopper,dremshpr,pacman,distribution,covered,dremshpr.zip,
+_Other Vertical Games,Drift Out (Japan),driftoutj,TaitoF2,distribution,parent only,driftoutj.zip | driftout.zip,driftoutj.zip
+_Other Vertical Games,DS Telejan (DECO),cdsteljn,DECOCassette,distribution,covered,decocass.zip | cdsteljn.zip,
+_Other Vertical Games,Eeek! (Pac-Man Conversion),eeekkp,pacman,distribution,parent only,eeekk.zip | eeekkp.zip,eeekkp.zip
+_Other Vertical Games,Eggor,eggor,pacman,distribution,covered,eggor.zip,
+_Other Vertical Games,Exciting Hour,excthour,matmania,coinop,partial,excthour.zip | matmania.zip,excthour.zip
+_Other Vertical Games,Exciting Soccer (Japan),exctsccrj,ChampionBaseball,distribution,parent only,exctsccrj.zip | exctsccr.zip,exctsccrj.zip
+_Other Vertical Games,Exciting Soccer II,exctscc2,ChampionBaseball,distribution,covered,exctscc2.zip,
+_Other Vertical Games,"Eyes (US, Set 1)",eyes,pacman,distribution,covered,eyes.zip,
+_Other Vertical Games,F-1 Grand Prix (set 1),f1gp,f1grpr,ongo,missing,f1gp.zip,f1gp.zip
+_Other Vertical Games,Fantasy (Japan),fantasyj,SNK6502,distribution,parent only,fantasyj.zip | fantasyu.zip,fantasyj.zip
+_Other Vertical Games,Fast Lane,fastlane,jtflane,jotego,covered,fastlane.zip,
+_Other Vertical Games,Fighting Ice Hockey (DECO),cfghtice,DECOCassette,distribution,covered,decocass.zip | cfghtice.zip,
+_Other Vertical Games,Fire Trap (Japan),firetrapj,FireTrap,ongo,missing,firetrapj.zip | firetrap.zip,firetrapj.zip | firetrap.zip
+_Other Vertical Games,Fishing (Japan) (DECO),cfishing,DECOCassette,distribution,partial,decocass.zip | cadanglr.zip | cfishing.zip,cfishing.zip
+_Other Vertical Games,Flash Boy (DECO),cfboy0a1,DECOCassette,distribution,covered,decocass.zip | cfboy0a1.zip,
+_Other Vertical Games,Flying Ball (DECO),cflyball,DECOCassette,distribution,covered,decocass.zip | cflyball.zip,
+_Other Vertical Games,Freeze,freeze,freeze,distribution,covered,freeze.zip,
+_Other Vertical Games,Frogger (Konami Bugfixed),frogger,scramble,distribution,partial,frogger.zip | froggers2.zip,froggers2.zip
+_Other Vertical Games,Gaiapolis (ver EAF),gaiapols,Meathax_Konami353396A,ongo,missing,gaiapols.zip,gaiapols.zip
+_Other Vertical Games,"Gain Ground (World, 3 Players, Floppy Based, FD1094 317-0058-03d Rev A)",gground,Meathax_SegaSystem24,ongo,missing,gground.zip,gground.zip
+_Other Vertical Games,"Gals Panic (unprotected, ver. 2.0)",galpanic,jtgals,jotego,covered,galpanic.zip,
+_Other Vertical Games,Gold Bug,goldbug,bazset_CVS,ongo,missing,goldbug.zip,goldbug.zip
+_Other Vertical Games,Grasspin,grasspin,BluePrint,distribution,covered,blueprnt.zip | grasspin.zip,
+_Other Vertical Games,"Grobda (W, New Ver.)",grobda,druaga,distribution,covered,grobda.zip,
+_Other Vertical Games,Gunbarich,gnbarich,PsikyoSH2,distribution,covered,gnbarich.zip,
+_Other Vertical Games,Hamburger (Japan) (DECO),chamburger,DECOCassette,distribution,partial,decocass.zip | cbtime.zip | chamburger.zip,chamburger.zip
+_Other Vertical Games,Heart Attack,heartatk,bazset_CVS,ongo,missing,heartatk.zip,heartatk.zip
+_Other Vertical Games,Hero,hero,bazset_CVS,ongo,missing,hero.zip,hero.zip
+_Other Vertical Games,High Way Race,hwrace,TaitoSJ,distribution,covered,hwrace.zip,
+_Other Vertical Games,"Hissatsu Buraiken (Japan, rev. A)",buraiken,jttrojan,jotego,partial,buraiken.zip | avengers.zip,buraiken.zip
+_Other Vertical Games,Hot Shots Tennis (v1.1),hstennis,Gm0rk_ITech8,ongo,missing,hstennis.zip,hstennis.zip
+_Other Vertical Games,Hunchback (set 1),hunchbak,bazset_CVS,ongo,missing,hunchbak.zip,hunchbak.zip
+_Other Vertical Games,Hunchback Olympic,huncholy,bazset_CVS,ongo,missing,huncholy.zip,huncholy.zip
+_Other Vertical Games,Intrepid (set 1),intrepid,Intrepid,ongo,missing,intrepid.zip,intrepid.zip
+_Other Vertical Games,Jack Rabbit (set 1),jackrabt,Meathax_Zaccaria,ongo,missing,jackrabt.zip,jackrabt.zip
+_Other Vertical Games,Jack the Giantkiller (set 1),jack,freeze,distribution,covered,jack.zip,
+_Other Vertical Games,Jin,jin,defender,distribution,covered,jin.zip,
+_Other Vertical Games,Journey,journey,mcr3,distribution,partial,journey.zip | /sound/journey.zip,/sound/journey.zip
+_Other Vertical Games,Joust 2 - Survival of the Fittest (revision 2),joust2,joust2,distribution,covered,joust2.zip,
+_Other Vertical Games,Jump Shot,jumpshot,pacman,distribution,covered,jumpshot.zip,
+_Other Vertical Games,Jumping Jack,jjack,Meathax_DoCastle,ongo,missing,jjack.zip,jjack.zip
+_Other Vertical Games,Kageki (Japan),kagekij,jtkiwi,jotego,parent only,kagekij.zip | kageki.zip,kagekij.zip
+_Other Vertical Games,Kangaroo,kangaroo,Kangaroo,distribution,covered,kangaroo.zip,
+_Other Vertical Games,Karate Dou (Japan),karatedo,jtkchamp,jotego,partial,karatedo.zip | kchamp.zip,karatedo.zip
+_Other Vertical Games,Kick,kick,mcr1,distribution,covered,kick.zip,
+_Other Vertical Games,Kicker,kicker,jtkicker,jotego,covered,kicker.zip,
+_Other Vertical Games,Kid no Hore Hore Daisakusen [MD],horekid,TerraCrestaMD,distribution,covered,horekid.zip,
+_Other Vertical Games,Kyros no Yakata (Japan),kyrosj,Meathax_Alpha68kN,ongo,missing,kyrosj.zip | kyros.zip,kyrosj.zip | kyros.zip
+_Other Vertical Games,Lady Bug,ladybug,ladybug,distribution,covered,ladybug.zip,
+_Other Vertical Games,Laguna Racer,lagunar,spaceinvaders,distribution,covered,lagunar.zip,
+_Other Vertical Games,Led Storm Rally 2011 (World),leds2011,madgear,ongo,missing,leds2011.zip,leds2011.zip
+_Other Vertical Games,Lock'n'Chase (Japan) (DECO),clocknchj,DECOCassette,distribution,parent only,decocass.zip | clocknch.zip | clocknchj.zip,clocknchj.zip
+_Other Vertical Games,Logger (Rev.3),logger,bazset_CVS,ongo,missing,logger.zip,logger.zip
+_Other Vertical Games,Lost Tomb,losttomb,scramble,distribution,covered,losttomb.zip,
+_Other Vertical Games,Lucky Poker (DECO),cluckypo,DECOCassette,distribution,covered,decocass.zip | cluckypo.zip,
+_Other Vertical Games,Lucky Today,luctoday,galaxian,distribution,covered,luctoday.zip,
+_Other Vertical Games,Lunar Rescue,lrescue,spaceinvaders,distribution,covered,lrescue.zip,
+_Other Vertical Games,Lupin III (Set 2),lupin3a,spaceinvaders,distribution,parent only,lupin3.zip | lupin3a.zip,lupin3a.zip
+_Other Vertical Games,Mad Gear (Japan),madgearj,madgear,ongo,missing,madgearj.zip | madgear.zip,madgearj.zip | madgear.zip
+_Other Vertical Games,"Major League (World, S16A) [No Protection]",mjleague,jts16,jotego,covered,mjleague.zip,
+_Other Vertical Games,Manhattan (Japan) (DECO),cmanhat,DECOCassette,distribution,covered,decocass.zip | cmanhat.zip,
+_Other Vertical Games,Mania Challenge (Set 1),maniach,maniach,coinop,covered,maniach.zip,
+_Other Vertical Games,Mappy (Japan),mappyj,druaga,distribution,parent only,mappy.zip | mappyj.zip,mappyj.zip
+_Other Vertical Games,Maze of Flott (Japan),mofflott,TaitoAsuka,distribution,covered,mofflott.zip,
+_Other Vertical Games,Megumi Rescue (Japan),megrescu,SMS,distribution,covered,megrescu.zip,
+_Other Vertical Games,Mogu Chan,moguchan,Vastar,distribution,covered,moguchan.zip,
+_Other Vertical Games,Money Money (set 1),monymony,Meathax_Zaccaria,ongo,missing,monymony.zip,monymony.zip
+_Other Vertical Games,Motos,motos,druaga,distribution,covered,motos.zip,
+_Other Vertical Games,Mr. Do Nightmare,mrdonight,galaxian,distribution,no zip listed,,
+_Other Vertical Games,Mr. Do! vs. Unicorns (Japan),douni,Meathax_DoCastle,ongo,missing,docastle.zip | douni.zip,docastle.zip | douni.zip
+_Other Vertical Games,Mr. Do!,mrdo,mrdo,distribution,covered,mrdo.zip,
+_Other Vertical Games,Mr. Jong,mrjong,mrjong,distribution,covered,mrjong.zip,
+_Other Vertical Games,Mr. TNT,mrtnt,pacman,distribution,covered,mrtnt.zip,
+_Other Vertical Games,Mustache Boy (Japan),mustache,bazset_MustacheBoy,ongo,partial,mustache.zip | t5182.zip,mustache.zip
+_Other Vertical Games,Mysterious Stones - Dr. John's Adventure,mystston,Meathax_MysteriousStones,ongo,missing,mystston.zip,mystston.zip
+_Other Vertical Games,"Namco Classic Collection Vol.1 (Japan, v1.03)",ncv1j2,Meathax_NamcoND1,ongo,missing,ncv1j2.zip | ncv1.zip,ncv1j2.zip | ncv1.zip
+_Other Vertical Games,Namco Classic Collection Vol.2 (Japan),ncv2j,Meathax_NamcoND1,ongo,missing,ncv2j.zip | ncv2.zip,ncv2j.zip | ncv2.zip
+_Other Vertical Games,Naughty Boy (Jaleco),naughtyb,naughtyboy,distribution,covered,naughtyb.zip,
+_Other Vertical Games,"Nibbler (Rev 9, Set 2)",nibblera,SNK6502,distribution,parent only,nibblera.zip | nibbler.zip,nibblera.zip
+_Other Vertical Games,Number Crash,numcrash,pacman,distribution,covered,numcrash.zip,
+_Other Vertical Games,Ocean To Ocean (Japan) (DECO),cocean1a,DECOCassette,distribution,covered,decocass.zip | cocean1a.zip,
+_Other Vertical Games,Oozumou - Grand Sumo (DECO),coozumou,DECOCassette,distribution,covered,decocass.zip | coozumou.zip,
+_Other Vertical Games,Orbitron,orbitron,galaxian,distribution,covered,orbitron.zip,
+_Other Vertical Games,Pac & Pal,pacnpal,druaga,distribution,covered,pacnpal.zip,
+_Other Vertical Games,Pac-Man Plus,pacplus,pacman,distribution,covered,pacplus.zip,
+_Other Vertical Games,Pac-Mania (Japan),pacmaniaj,jtshouse,jotego,parent only,pacmaniaj.zip | pacmania.zip,pacmaniaj.zip
+_Other Vertical Games,Pacu Pacu [v1.1],pacupacu,pacman,ongo,missing,pacupacu.zip,pacupacu.zip
+_Other Vertical Games,Paddle Mania,paddlema,nextspace,coinop,covered,paddlema.zip,
+_Other Vertical Games,Pairs Love,pairlove,ppriest_Seta,ongo,missing,pairlove.zip,pairlove.zip
+_Other Vertical Games,"Passing Shot (Japan, 4 Players) (FD1094 317-0070)",passshtj,jts16b,jotego,parent only,passshtj.zip | passsht.zip,passshtj.zip
+_Other Vertical Games,"Peggle (Joystick, v1.0)",peggle,Gm0rk_ITech8,ongo,missing,peggle.zip,peggle.zip
+_Other Vertical Games,"Pengo (Set 1, Rev C)",pengo,pengo,distribution,covered,pengo.zip,
+_Other Vertical Games,Performan (Japan),perfrman,Performan,distribution,covered,perfrman.zip,
+_Other Vertical Games,Peter Pepper's Ice Cream Factory (DECO),cppicf,DECOCassette,distribution,covered,decocass.zip | cppicf.zip,
+_Other Vertical Games,Peter Pepper's Ice Cream Factory (Set 2) (DECO),cppicf2,DECOCassette,distribution,parent only,decocass.zip | cppicf.zip | cppicf2.zip,cppicf2.zip
+_Other Vertical Games,Pickin',pickin,bagman,distribution,covered,pickin.zip,
+_Other Vertical Games,Playball (Prototype),playball,robotron,distribution,covered,playball.zip | robotron.zip,
+_Other Vertical Games,Poker Dice (v1.7),pokrdice,Gm0rk_ITech8,ongo,missing,pokrdice.zip,pokrdice.zip
+_Other Vertical Games,Pooyan,pooyan,pooyan,distribution,covered,pooyan.zip,
+_Other Vertical Games,Pop Flamer (Bootleg conversion),popflamn,naughtyboy,distribution,partial,popflame.zip | popflamn.zip,popflamn.zip
+_Other Vertical Games,Port Man (bootleg on Moon Cresta hardware),porter,galaxian,distribution,parent only,porter.zip | dockman.zip,porter.zip
+_Other Vertical Games,Pro Bowling (DECO),cprobowl,DECOCassette,distribution,covered,decocass.zip | cprobowl.zip,
+_Other Vertical Games,Pro Soccer (Japan) (DECO),cpsoccerj,DECOCassette,distribution,parent only,decocass.zip | cpsoccer.zip | cpsoccerj.zip,cpsoccerj.zip
+_Other Vertical Games,"Pro Sports - Bowling, Tennis, and Golf",prosport,Meathax_DataEastLiberation,ongo,missing,prosport.zip,prosport.zip
+_Other Vertical Games,Pro Tennis (Japan) (DECO),cptennisj,DECOCassette,distribution,parent only,decocass.zip | cptennis.zip | cptennisj.zip,cptennisj.zip
+_Other Vertical Games,Psychic 5 (Japan),psychic5j,Psychic5,distribution,no zip listed,,
+_Other Vertical Games,Pulsar,pulsar,SegaVICZ80,distribution,partial,pulsar.zip | sspaceat.zip | /sound/pulsar.zip,/sound/pulsar.zip
+_Other Vertical Games,Q'bert (Japan),qbertj,qbert,distribution,parent only,qbert.zip | qbertj.zip,qbertj.zip
+_Other Vertical Games,QBert Qubes,qbertqub,qbert,distribution,covered,qbertqub.zip,
+_Other Vertical Games,Qix II (Tournament),qix2,Qix,distribution,parent only,qix.zip | qix2.zip,qix2.zip
+_Other Vertical Games,Qix,qix,Qix,distribution,covered,qix.zip,
+_Other Vertical Games,Quester (Japan),quester,jtshouse,jotego,covered,quester.zip,
+_Other Vertical Games,Radar Zone,radarzon,bazset_CVS,ongo,missing,radarzon.zip,radarzon.zip
+_Other Vertical Games,Raiders,raiders,bazset_CVS,ongo,missing,raiders.zip,raiders.zip
+_Other Vertical Games,Rally Bike - Dash Yarou,rallybik,rallybike,coinop,covered,rallybik.zip,
+_Other Vertical Games,Reaktor (Track & Field conversion),reaktor,bazset_Reaktor,ongo,missing,reaktor.zip,reaktor.zip
+_Other Vertical Games,Riddle of Pythagoras (Japan),ridleofp,SMS,distribution,covered,ridleofp.zip,
+_Other Vertical Games,Ring King (US set 1),ringking,ringking,distribution,missing,ringking.zip,ringking.zip
+_Other Vertical Games,Road Fighter (set 1),roadf,jtroadf,jotego,covered,roadf.zip,
+_Other Vertical Games,Roc'n Rope,rocnrope,jtroc,jotego,covered,rocnrope.zip,
+_Other Vertical Games,"Rompers (Japan, new version (Rev B))",rompers,jtshouse,jotego,covered,rompers.zip,
+_Other Vertical Games,Rootin' Tootin' (DECO),clapapa2,DECOCassette,distribution,parent only,decocass.zip | clapapa.zip | clapapa2.zip,clapapa2.zip
+_Other Vertical Games,Rumba Lumber (rev 1),rumba,jtflstory,jotego,covered,rumba.zip,
+_Other Vertical Games,Sasuke Vs. Commander,sasuke,SNK6502,distribution,covered,sasuke.zip,
+_Other Vertical Games,Scrum Try (DECO),cscrtry,DECOCassette,distribution,covered,decocass.zip | cscrtry.zip,
+_Other Vertical Games,Seicross (set 1),seicross,Meathax_Seicross,ongo,missing,seicross.zip,seicross.zip
+_Other Vertical Games,Shinnyuu Shain Tooru-kun (Japan),mikiej,jtmikie,jotego,parent only,mikiej.zip | mikie.zip,mikiej.zip
+_Other Vertical Games,Shot Rider (B-Board 89624B-1),shtrider,traverseusa,distribution,covered,shtrider.zip,
+_Other Vertical Games,Shuffleboard,shuffle,spaceinvaders,distribution,covered,shuffle.zip,
+_Other Vertical Games,Skater (DECO),cskater,DECOCassette,distribution,covered,decocass.zip | cskater.zip,
+_Other Vertical Games,Solar Fox,solarfox,mcr1,distribution,covered,solarfox.zip,
+_Other Vertical Games,Space Chaser,schaser,spaceinvaders,distribution,covered,schaser.zip,
+_Other Vertical Games,Space Fortress (CVS),spacefrt,bazset_CVS,ongo,missing,spacefrt.zip,spacefrt.zip
+_Other Vertical Games,Space Panic,panic,cosmic,distribution,covered,panic.zip,
+_Other Vertical Games,Speed Coin,spdcoin,scramble,distribution,covered,spdcoin.zip,
+_Other Vertical Games,Strata Bowling (v3),stratab,Gm0rk_ITech8,ongo,missing,stratab.zip,stratab.zip
+_Other Vertical Games,Super Bagman,sbagman,bagman,distribution,partial,sbagman.zip | sbagman2.zip,sbagman2.zip
+_Other Vertical Games,"Super Basketball (version I, encrypted)",sbasketb,jtsbaskt,jotego,covered,sbasketb.zip,
+_Other Vertical Games,Super Breakout (Rev 04),sbrkout,superbreakout,distribution,covered,sbrkout.zip,
+_Other Vertical Games,Super Casino,sucasino,freeze,distribution,covered,sucasino.zip,
+_Other Vertical Games,Super Contra Alien no Gyakushuu (Japan),scontraj,jtaliens,jotego,parent only,scontraj.zip | scontra.zip,scontraj.zip
+_Other Vertical Games,Super Doubles Tennis (DECO),csdtenis,DECOCassette,distribution,covered,decocass.zip | csdtenis.zip,
+_Other Vertical Games,Super Pac-Man,superpac,druaga,distribution,covered,superpac.zip,
+_Other Vertical Games,Super Stingray (Japan),sstingry,Meathax_Alpha68kN,ongo,missing,sstingry.zip,sstingry.zip
+_Other Vertical Games,Superbike,superbik,bazset_CVS,ongo,missing,superbik.zip,superbik.zip
+_Other Vertical Games,Sweet Heart (DECO),csweetht,DECOCassette,distribution,partial,decocass.zip | cdiscon1.zip | csweetht.zip,csweetht.zip
+_Other Vertical Games,Taisen Karate Dou (Japan),karatevs,jtkchamp,jotego,partial,karatevs.zip | kchampvs.zip,karatevs.zip
+_Other Vertical Games,Talbot,talbot,ChampionBaseball,distribution,covered,talbot.zip,
+_Other Vertical Games,Tank Battalion,tankbatt,TankBattalion,distribution,covered,tankbatt.zip,
+_Other Vertical Games,Tee'd Off (World),teedoff,bazset_TeedOff,ongo,missing,teedoff.zip,teedoff.zip
+_Other Vertical Games,Tetris (cocktail set 2),atetrisc2,ataritetris,distribution,parent only,atetris.zip | atetrisc2.zip,atetrisc2.zip
+_Other Vertical Games,The Electric Yo-Yo,elecyoyo,Qix,distribution,covered,elecyoyo.zip,
+_Other Vertical Games,The Lost Castle In Darkmist [CoC],darkmist,darkmist_mister,coinop,partial,darkmist.zip | t5182.zip | coinopkey.zip,coinopkey.zip
+_Other Vertical Games,The Tower (DECO),ctower,DECOCassette,distribution,covered,decocass.zip | ctower.zip,
+_Other Vertical Games,The Tower of Druaga,todruaga,druaga,distribution,covered,todruaga.zip,
+_Other Vertical Games,Thunder & Lightning (set 1),thunderl,ppriest_Seta,ongo,missing,thunderl.zip,thunderl.zip
+_Other Vertical Games,"Time Scanner (set 3, Japan, System 16B) (FD1089B 317-0024)",timescan3,jts16b,jotego,parent only,timescan3.zip | timescan.zip,timescan3.zip
+_Other Vertical Games,Tokusyu Butai U.A.G. (Japan),tndrcadej,ppriest_SetaDowntown,ongo,missing,tndrcadej.zip | tndrcade.zip,tndrcadej.zip | tndrcade.zip
+_Other Vertical Games,Toobin' (rev 2),toobin2,Toobin,distribution,parent only,toobin2.zip | toobin.zip,toobin2.zip
+_Other Vertical Games,Tournament Pro Golf (DECO),cprogolf,DECOCassette,distribution,covered,decocass.zip | cprogolf.zip,
+_Other Vertical Games,Tournament Pro Golf (Japan) (DECO),cprogolfj,DECOCassette,distribution,parent only,decocass.zip | cprogolf.zip | cprogolfj.zip,cprogolfj.zip
+_Other Vertical Games,Traverse USA- Zippy Race (US),travrusa,traverseusa,distribution,covered,travrusa.zip,
+_Other Vertical Games,Treasure Island (DECO),ctisland,DECOCassette,distribution,covered,decocass.zip | ctisland.zip,
+_Other Vertical Games,Tri-Pool (Casino Tech),tripool,freeze,distribution,covered,tripool.zip,
+_Other Vertical Games,Tron,tron,mcr2,distribution,covered,tron.zip,
+_Other Vertical Games,Turbo (program 1513-1515),turbo,segavco,distribution,covered,turbo.zip,
+_Other Vertical Games,Turbo Tag (Prototype),turbotag,mcr3scroll,distribution,covered,turbotag.zip,
+_Other Vertical Games,Turtles,turtles,scramble,distribution,covered,turtles.zip,
+_Other Vertical Games,Tutankham,tutankhm,Tutankham,distribution,covered,tutankhm.zip,
+_Other Vertical Games,Up'n Down,upndown,segasys1,distribution,covered,upndown.zip,
+_Other Vertical Games,Van-Van Car,vanvan,pacman,distribution,covered,vanvan.zip,
+_Other Vertical Games,Vandyke (Japan),vandyke,NMK16_Gunnail,kuze,partial,vandyke.zip | nmk004.zip,vandyke.zip
+_Other Vertical Games,Video Eight Ball,8ball,bazset_CVS,ongo,missing,8ball.zip,8ball.zip
+_Other Vertical Games,"Volfied (Japan, rev 1)",volfiedj,jtvlfied,jotego,parent only,volfiedj.zip | volfied.zip | cchip.zip,volfiedj.zip
+_Other Vertical Games,Wall Street,wallst,bazset_CVS,ongo,missing,wallst.zip,wallst.zip
+_Other Vertical Games,Water Match (315-5064),wmatch,segasys1,distribution,covered,wmatch.zip,
+_Other Vertical Games,Water Ski,waterski,TaitoSJ,distribution,covered,waterski.zip,
+_Other Vertical Games,Wiz,wiz,bazset_Wiz,ongo,missing,wiz.zip,wiz.zip
+_Other Vertical Games,Woodpecker (Set 1),woodpeck,pacman,distribution,covered,woodpeck.zip,
+_Other Vertical Games,"Wrestle War (set 1, Japan) (FD1094 317-0090)",wrestwar1,jts16b,jotego,parent only,wrestwar1.zip | wrestwar.zip,wrestwar1.zip
+_Other Vertical Games,Yellow Cab (Japan),yellowcbj,Meathax_DataEastLiberation,ongo,missing,yellowcbj.zip | kamikcab.zip,yellowcbj.zip | kamikcab.zip
+_Other Vertical Games,Zeroize (DECO),czeroize,DECOCassette,distribution,covered,decocass.zip | czeroize.zip,
+_Other Vertical Games,Zzyzzyxx (set 1),zzyzzyxx,freeze,distribution,covered,zzyzzyxx.zip,

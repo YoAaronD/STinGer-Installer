@@ -41,6 +41,10 @@ git -C sources/ongo   fetch -q --depth 1 --filter=blob:none origin db
 git -C sources/ongo   show FETCH_HEAD:db.json.zip        > sources/dbs/ongo.json.zip
 git -C sources/kuze fetch -q --depth 1 --filter=blob:none origin db
 git -C sources/kuze show FETCH_HEAD:db.json.zip          > sources/dbs/kuze.json.zip
+# Arcade ROMs database (what Update All's ROMs switch installs): only read, for docs/ROMS.md
+rm -rf sources/arcade_roms_db
+git clone -q --depth 1 -b db https://github.com/zakk4223/ArcadeROMsDB_MiSTer sources/arcade_roms_db
+cp sources/arcade_roms_db/arcade_roms_db.json.zip sources/dbs/arcade_roms_db.json.zip
 python3 -I - <<'PY'   # kuze ships its cores outside the repo tree: list them from its database
 import json, zipfile
 z = zipfile.ZipFile("sources/dbs/kuze.json.zip"); d = json.load(z.open(z.namelist()[0]))

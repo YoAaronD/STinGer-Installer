@@ -101,6 +101,9 @@ Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.
 | 240p Test Suite | `240psuite` | Just the core (Utility), for setting up the CRT |
 | STinGer | `!cv1000` | Raki's CV1000 core is Patreon-only; `all` opts in. Must stay explicit, or it would inherit `!mra` |
 
+ROMs aren't part of STinGer. [`docs/ROMS.md`](docs/ROMS.md) lists, game by game, which zips each one needs and
+which of them Update All's Arcade ROMs database covers, plus the zips to supply yourself.
+
 Anything switched on later in Update All (arcade ROMs, BIOS, names files) installs normally with no edits:
 `!mra` only removes stock game lists.
 
