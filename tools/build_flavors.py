@@ -26,6 +26,11 @@ FLAVOR_EXTRA = {
     "heber-ms2": ["player_1_controller=usb-1.7/input2/ ; Heber CTRLDock Arcade: JAMMA player 1",
                   "player_2_controller=usb-1.7/input3/ ; Heber CTRLDock Arcade: JAMMA player 2"],
 }
+# Overlay sections a flavor leaves out. MiSTercades: no [Menu] block. It routes the main menu through
+# the scaler's analog output, which made the menu lose sync on a V2 + IO DAC board in a Blast City
+# (2026-11-21) and goes to pins a standard dual-SDRAM V2 doesn't wire to the cab. MiSTerAddons'
+# own inis leave it out too (their README lists it as optional).
+SKIP_SECTIONS = {"mistercade-v2": {"menu"}, "mistercade-v1": {"menu"}}
 KEY = re.compile(r"^\s*([A-Za-z0-9_]+)\s*=")
 SECTION = re.compile(r"^\s*\[([^\]]+)\]")
 
@@ -77,7 +82,8 @@ def main(sources, out):
         text = open(os.path.join(sources, base), encoding="utf-8", errors="replace").read()
         if name in FLAVOR_EXTRA:
             text = apply(text, {"MiSTer": FLAVOR_EXTRA[name]})
-        open(os.path.join(d, "MiSTer.ini"), "w", encoding="utf-8").write(apply(text, overlay))
+        ov = {sec: ls for sec, ls in overlay.items() if sec.lower() not in SKIP_SECTIONS.get(name, set())}
+        open(os.path.join(d, "MiSTer.ini"), "w", encoding="utf-8").write(apply(text, ov))
         shutil.copy(os.path.join(ROOT, "templates", "downloader.ini"), os.path.join(d, "downloader.ini"))
         if maps:
             ini = open(os.path.join(sources, maps), encoding="utf-8").read().rstrip("\n")
