@@ -1,0 +1,15 @@
+# Yoko (horizontal) build: where each tier lands under _Arcade, next to the normal arcade library.
+# Folders list before games in MiSTer's menu, so these sit at the top of Arcade.
+# MiSTer sorts folders alphabetically (ignoring case) and hides the leading "_".
+# "hardware" / "year": the Core STGs again, one subfolder per board / release year.
+tier,folder,in_build
+core,_Core STGs,yes
+practice,_Core STGs/_Practice ROMs,yes
+hack,_Core STGs/_Hacks & Mods,yes
+hardware,_Core STGs/_By Hardware,yes
+year,_Core STGs/_By Year,yes
+fixed,_Other Shooting Games/_Fixed Screen Shooting,yes
+multidirectional,_Other Shooting Games/_Multidirectional Shooting,yes
+overhead,_Other Shooting Games/_Overhead Shooting,yes
+3d,_Other Shooting Games/_3D Shooting,yes
+other,_Other Horizontal Games,no

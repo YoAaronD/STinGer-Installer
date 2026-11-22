@@ -139,6 +139,11 @@ The installer is what ties them together, staged so it never blocks the build:
 - [ ] Installer stage 1: Mr. Fusion remaster with the inis preloaded
 - [ ] Installer stage 2: STinGer's own Mr. Fusion fork with hardware detection and a display picker
 - [ ] More displays: tate CW, yoko, LCD tate
+- [ ] **Yoko CRT ("hori STinGer")**, parked 2026-11-21. Agreed so far: curate only the shooters (189 horizontal picks,
+      108 Core STGs); keep the normal arcade library untouched beside them (no cores-only filters, no "other" folder);
+      put all of STinGer in one folder at the top of Arcade (`@...`, name undecided); 3D shooters get their own folder.
+      Groundwork in place: `build_db.py variant=yoko` and `data/layout_yoko.csv` (not wired into the build yet).
+      Still to do: folder name, curation pass on the horizontal list, flavors (downloader + ini without menu rotation).
 
 ### Upstream proposals (MiSTer itself)
 

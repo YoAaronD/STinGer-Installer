@@ -1,6 +1,10 @@
-"""Generate the STinGer Downloader database (tate build).
+"""Generate the STinGer Downloader databases.
 
-usage: python3 -I tools/build_db.py <picks.csv> <data_dir> <out_dir> <label=repo_dir> [...]
+usage: python3 -I tools/build_db.py <picks.csv> <data_dir> <out_dir> <label=repo_dir> [...] [variant=yoko]
+
+Tate (default): data/layout.csv, writes db.json.zip (add-on) and full.json.zip (full install).
+Yoko (variant=yoko): data/layout_yoko.csv, horizontal games, writes yoko.json.zip. Its folders sit
+in _Arcade next to the normal arcade library, which a yoko cab keeps.
 
 Every entry points at the MRA inside its upstream repo, pinned to the commit we built from,
 and is saved under _Arcade/<layout folder>/<display name>.mra. STinGer hosts no MRAs itself.
@@ -11,6 +15,7 @@ DB_ID = "YoAaronD/STinGer-Installer"
 DB_URL = "https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/db.json.zip"
 # Full install (the flavors): same db_id, so switching between the two cleans up after itself.
 FULL_DB_URL = "https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/full.json.zip"
+YOKO_DB_URL = "https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/yoko.json.zip"
 ADDON_ROOT = "_Arcade/_Vertical Arcade"
 REPOS = {  # label -> GitHub owner/repo the MRAs are downloaded from
     "distribution": "MiSTer-devel/Distribution_MiSTer",
@@ -22,13 +27,13 @@ REPOS = {  # label -> GitHub owner/repo the MRAs are downloaded from
 }
 # Filter tags per tier. Downloader lowercases tags and ignores '-' and '_'.
 TIER_TAG = {"core": "stg", "fixed": "stgfixed", "multidirectional": "stgmultidirectional",
-            "overhead": "stgoverhead", "practice": "stgpractice", "hack": "stghacks", "other": "tateother"}
+            "overhead": "stgoverhead", "practice": "stgpractice", "hack": "stghacks", "other": "tateother", "3d": "stg3d"}
 
 def read_csv(path):
     return list(csv.DictReader(l for l in open(path, encoding="utf-8") if not l.startswith("#")))
 
 def read_layout(path):
-    return {r["tier"]: (r["folder"], r["in_tate_build"] == "yes") for r in read_csv(path)}
+    return {r["tier"]: (r["folder"], (r.get("in_build") or r.get("in_tate_build")) == "yes") for r in read_csv(path)}
 
 def safe_name(name):
     name = re.sub(r'[<>:"/\\|?*]', "-", name)  # characters Windows / exFAT won't take
@@ -56,9 +61,14 @@ def is_tate(row):
     s = row["tate_ccw_cab"]
     return not (s.startswith("horizontal") or s == "unknown")
 
+def is_yoko(row):
+    return row["yoko_cab"].startswith("native")
+
 def main(picks, data_dir, out_dir, *sources):
-    layout = read_layout(os.path.join(data_dir, "layout.csv"))
-    opts = dict(s.split("=", 1) for s in sources if s.split("=", 1)[0] in ("mad", "shmupfan_db"))
+    opts = dict(s.split("=", 1) for s in sources if s.split("=", 1)[0] in ("mad", "shmupfan_db", "variant"))
+    yoko = opts.get("variant") == "yoko"
+    layout = read_layout(os.path.join(data_dir, "layout_yoko.csv" if yoko else "layout.csv"))
+    fits = is_yoko if yoko else is_tate
     mad_csv = opts.get("mad")
     sources = tuple(s for s in sources if s.split("=", 1)[0] not in opts)
     board_of = read_hardware(data_dir, mad_csv)
@@ -82,7 +92,7 @@ def main(picks, data_dir, out_dir, *sources):
 
     for r in read_csv(picks):
         folder, in_build = layout.get(r["tier"], (None, False))
-        if not in_build or not is_tate(r):
+        if not in_build or not fits(r):
             continue
         if r["core_status"].startswith("NOT") and r["core"] != "ikacore_CV1k":
             skipped.append((r["mra_name"], "core not shipped anywhere: " + r["core"])); continue
@@ -139,8 +149,11 @@ def main(picks, data_dir, out_dir, *sources):
         "default_options": {"filter": "!cv1000"},
     }
     os.makedirs(out_dir, exist_ok=True)
-    write_db(db, out_dir, "db")
-    write_db(full_variant(db, opts.get("shmupfan_db")), out_dir, "full")
+    if yoko:
+        write_db(dict(db, db_url=YOKO_DB_URL), out_dir, "yoko")
+    else:
+        write_db(db, out_dir, "db")
+        write_db(full_variant(db, opts.get("shmupfan_db")), out_dir, "full")
     by_folder = {}
     for p in files:
         k = "/".join(p.split("/")[1:-1]) if not p.startswith(hw_root + "/") else hw_root[8:]
