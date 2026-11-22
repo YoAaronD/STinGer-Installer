@@ -34,7 +34,7 @@ EOF
 #    and full.json.zip (full install: folders straight in _Arcade, plus shmupfan cores)
 python3 -I tools/build_db.py data/picks.csv data build/db $SRC mad=$S/mad/ArcadeDatabase.csv shmupfan_db=$S/dbs/shmupfan.json
 # ROM checklist: which zips each game needs, and which the Arcade ROMs database covers
-[ -s $S/dbs/arcade_roms_db.json.zip ] && python3 -I tools/rom_report.py build/db/full.json build/picks.csv $S/dbs/arcade_roms_db.json.zip $S docs
+[ -s $S/dbs/arcade_roms_db.json.zip ] && python3 -I tools/rom_report.py build/db/full.json build/picks.csv $S/dbs/ongo.json.zip $S/dbs/arcade_roms_db.json.zip $S docs
 
 # 7. per-hardware flavors (MiSTercade V2 / V1 / regular) into build/flavors/
 python3 -I tools/build_flavors.py $S build/flavors

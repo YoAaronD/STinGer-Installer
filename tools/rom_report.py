@@ -2,7 +2,9 @@
 """ROM checklist: which zips each STinGer game needs, and which of them the Arcade ROMs database
 (zakk4223/ArcadeROMsDB_MiSTer, the one Update All switches on) provides.
 
-usage: rom_report.py <full.json> <picks.csv> <arcade_roms_db.json.zip> <sources dir> <out dir>
+usage: rom_report.py <full.json> <picks.csv> <ongo.json.zip> <arcade_roms_db.json.zip> <sources dir> <out dir>
+ROMs counted: the ones Ongo's database ships (part of STinGer's full install) plus Update All's
+Arcade ROMs database (optional switch). The "where" column says which of the two each game needs.
 writes <out dir>/roms.csv (one row per game) and <out dir>/ROMS.md (summary + the zips to supply yourself)
 
 Status per game:
@@ -14,10 +16,14 @@ Status per game:
 """
 import csv, json, os, re, sys, zipfile, collections
 
-def main(full_json, picks_csv, roms_db, sources, out_dir):
-    with zipfile.ZipFile(roms_db) as z:
-        rdb = json.loads(z.read(z.namelist()[0]))
-    have = {os.path.basename(p).lower() for p in rdb["files"]}
+def zips_in(db_zip):
+    with zipfile.ZipFile(db_zip) as z:
+        d = json.loads(z.read(z.namelist()[0]))
+    return {os.path.basename(p).lower() for p in d["files"] if p.lower().endswith(".zip")}
+
+def main(full_json, picks_csv, ongo_db, roms_db, sources, out_dir):
+    ongo, ardb = zips_in(ongo_db), zips_in(roms_db)
+    have = ongo | ardb
 
     db = json.load(open(full_json, encoding="utf-8"))
     # one entry per game: the main folders, not the By Hardware / By Year copies
@@ -61,13 +67,16 @@ def main(full_json, picks_csv, roms_db, sources, out_dir):
         else:
             status = "missing"
         missing = [z for z in zips if z not in have]
+        found = [z for z in zips if z in have]
+        where = ("Ongo (default)" if all(z in ongo for z in found) else
+                 "Update All ROMs" if all(z in ardb for z in found) else "both") if found else ""
         if status in ("partial", "missing"):
             for z in missing:
                 need_count[z] += 1
         rows.append({
             "folder": os.path.dirname(path).split("/", 1)[1] if "/" in path else "",
             "game": name[:-4], "setname": r["setname"], "core": r["core"], "source": r["database"],
-            "status": status, "zips": " | ".join(zips), "not_in_roms_db": " | ".join(missing),
+            "status": status, "roms_from": where, "zips": " | ".join(zips), "not_in_roms_db": " | ".join(missing),
         })
 
     os.makedirs(out_dir, exist_ok=True)
@@ -81,15 +90,16 @@ def main(full_json, picks_csv, roms_db, sources, out_dir):
         by_src[r["source"]][r["status"]] += 1
     order = ["covered", "parent only", "partial", "missing", "no zip listed"]
     md = ["# ROMs for STinGer's games", "",
-          "STinGer doesn't ship ROMs. Update All can switch on the Arcade ROMs database",
-          "(zakk4223/ArcadeROMsDB_MiSTer); this is how far that gets you, game by game.",
+          "STinGer's full install brings the ROMs Ongo's database ships. Update All's Arcade ROMs switch",
+          "(zakk4223/ArcadeROMsDB_MiSTer) adds more. This is how far the two get you, game by game;",
+          "the `roms_from` column in the full list says which one each game relies on.",
           "Full list: [`roms.csv`](roms.csv). Regenerated with every database build.", "",
           "| Status | Games | Meaning |", "| --- | --- | --- |"]
     meaning = {
-        "covered": "Everything it needs comes with the ROMs database",
+        "covered": "Everything it needs comes with Ongo's ROMs and/or Update All's ROMs switch",
         "parent only": "Only the parent set is there (typical for Japanese versions). Works if those zips are merged sets; otherwise supply the clone zip",
-        "partial": "Some files are there, but not the game itself (e.g. GunNail: `nmk004.zip` yes, `gunnail.zip` no)",
-        "missing": "Nothing for it in the ROMs database: supply the zips yourself",
+        "partial": "Some files are there, but not the game's own zip",
+        "missing": "Neither source has it: supply the zips yourself",
         "no zip listed": "The MRA names no zip (homebrew or built-in)",
     }
     for s in order:
@@ -105,7 +115,11 @@ def main(full_json, picks_csv, roms_db, sources, out_dir):
     for z, n in sorted(need_count.items(), key=lambda kv: (-kv[1], kv[0])):
         md.append(f"- `{z}` ({n})")
     open(os.path.join(out_dir, "ROMS.md"), "w", encoding="utf-8").write("\n".join(md) + "\n")
+    from_ = collections.Counter(r["roms_from"] for r in rows if r["status"] == "covered")
+    md.insert(md.index("## By source"), "Covered games by where their ROMs come from: " +
+              ", ".join(f"{k} {v}" for k, v in from_.most_common()) + ".\n")
+    open(os.path.join(out_dir, "ROMS.md"), "w", encoding="utf-8").write("\n".join(md) + "\n")
     print(f"rom_report: {len(rows)} games, " + ", ".join(f"{s} {stat[s]}" for s in order if stat[s]))
 
 if __name__ == "__main__":
-    main(*sys.argv[1:6])
+    main(*sys.argv[1:7])
