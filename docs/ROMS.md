@@ -8,7 +8,7 @@ Full list: [`roms.csv`](roms.csv). Regenerated with every database build.
 | Status | Games | Meaning |
 | --- | --- | --- |
 | covered | 388 | Everything it needs comes with Ongo's ROMs and/or Update All's ROMs switch |
-| parent only | 124 | Only the parent set is there (typical for Japanese versions). Works if those zips are merged sets; otherwise supply the clone zip |
+| parent only | 124 | Only the parent set is there (typical for Japanese versions). Works: the zips are merged sets, so the clone's files are inside (tested with 1941 Japan) |
 | partial | 51 | Some files are there, but not the game's own zip |
 | missing | 3 | Neither source has it: supply the zips yourself |
 | no zip listed | 10 | The MRA names no zip (homebrew or built-in) |

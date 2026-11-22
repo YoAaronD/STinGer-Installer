@@ -9,8 +9,8 @@ writes <out dir>/roms.csv (one row per game) and <out dir>/ROMS.md (summary + th
 
 Status per game:
   covered      every zip the MRA lists is in the ROMs database
-  parent only  the game's own zip is missing but its parent's is there; works if the database's
-               zips are merged sets (clone files inside the parent zip), otherwise supply the clone zip
+  parent only  the game's own zip is missing but its parent's is there. Works: the ROM databases use
+               merged sets (clone files inside the parent zip); confirmed with 1941 (Japan), 2026-11-21
   partial      some zips are there, but not the game's own (e.g. GunNail: nmk004.zip yes, gunnail.zip no)
   missing      none of its zips are in the ROMs database: supply them yourself
 """
@@ -97,7 +97,7 @@ def main(full_json, picks_csv, ongo_db, roms_db, sources, out_dir):
           "| Status | Games | Meaning |", "| --- | --- | --- |"]
     meaning = {
         "covered": "Everything it needs comes with Ongo's ROMs and/or Update All's ROMs switch",
-        "parent only": "Only the parent set is there (typical for Japanese versions). Works if those zips are merged sets; otherwise supply the clone zip",
+        "parent only": "Only the parent set is there (typical for Japanese versions). Works: the zips are merged sets, so the clone's files are inside (tested with 1941 Japan)",
         "partial": "Some files are there, but not the game's own zip",
         "missing": "Neither source has it: supply the zips yourself",
         "no zip listed": "The MRA names no zip (homebrew or built-in)",
