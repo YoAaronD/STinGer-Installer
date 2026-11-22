@@ -124,17 +124,18 @@ def main(picks, data_dir, out_dir, *sources):
     hw_root = "_Arcade/" + layout["hardware"][0]
     for b, name, entry, extra in hardware_entries:
         board = b if counts[b] >= MIN_BOARD_GAMES else "Other hardware"
-        path = f"{hw_root}/{safe_name(board)}/{name}"
+        # MiSTer's core list only shows folders whose names start with "_" (it hides the rest)
+        path = f"{hw_root}/_{safe_name(board)}/{name}"
         files[path] = dict(entry, tags=tag_ids("arcade", "stghardware", *extra))
-        add_folder(f"{hw_root}/{safe_name(board)}", "arcade", "stghardware")
+        add_folder(f"{hw_root}/_{safe_name(board)}", "arcade", "stghardware")
 
     # _By Year/<year>/: the same MRAs again, grouped by release year
     if "year" in layout:
         yr_root = "_Arcade/" + layout["year"][0]
         for y, name, entry, extra in year_entries:
-            path = f"{yr_root}/{y}/{name}"
+            path = f"{yr_root}/_{y}/{name}"
             files[path] = dict(entry, tags=tag_ids("arcade", "stgyear", *extra))
-            add_folder(f"{yr_root}/{y}", "arcade", "stgyear")
+            add_folder(f"{yr_root}/_{y}", "arcade", "stgyear")
     folders["_Arcade"] = {"tags": tag_ids("arcade")}
 
     db = {
