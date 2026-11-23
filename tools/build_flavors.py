@@ -30,7 +30,7 @@ FLAVOR_EXTRA = {
 # the scaler's analog output, which made the menu lose sync on a V2 + IO DAC board in a Blast City
 # (2026-11-21) and goes to pins a standard dual-SDRAM V2 doesn't wire to the cab. MiSTerAddons'
 # own inis leave it out too (their README lists it as optional).
-SKIP_SECTIONS = {"mistercade-v2": {"menu"}, "mistercade-v1": {"menu"}}
+SKIP_SECTIONS = {"mistercade-v2": {"menu"}, "mistercade-v1": {"menu"}, "heber-ms2": {"menu"}}
 KEY = re.compile(r"^\s*([A-Za-z0-9_]+)\s*=")
 SECTION = re.compile(r"^\s*\[([^\]]+)\]")
 
