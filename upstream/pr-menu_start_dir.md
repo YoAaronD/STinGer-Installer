@@ -19,11 +19,12 @@ menu_start_dir=_Arcade
 
 **Change:** 19 lines in `cfg.h`, `cfg.cpp`, `menu.cpp` (in `SelectFile()`, right after `ResolveExistingCorePath()`), plus a commented example in `MiSTer.ini`.
 
-**Tested** on a DE10-Nano in a MiSTercade V2 (IO DAC) in a Blast City, 15 kHz tate CRT:
+**Tested** on a DE10-Nano with a standard MiSTer setup, and on a MiSTercade V2 in a Blast City (15 kHz CRT):
 - boot → core list opens inside `_Arcade`
 - Back → root
 - launch a game, return to the menu → opens in `_Arcade` again
+- `menu_start_dir=_Console` → opens in `_Console`
 - setting commented out → opens at the root as before
-- wrong folder name → root
+- misspelled folder (`_Arcadee`) → root
 
-<!-- photos: core list opening in _Arcade on the CRT; Back going up to the root -->
+<!-- video -->
