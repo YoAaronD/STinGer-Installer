@@ -29,6 +29,7 @@ Sources: [Distribution](https://github.com/MiSTer-devel/Distribution_MiSTer),
 [Coin-Op Collection](https://github.com/Coin-OpCollection/Distribution-MiSTerFPGA),
 [Ongo](https://github.com/OngoGablogian/MiSTer_Ongo),
 [kuze](https://github.com/kuzearcade/kuzecores),
+[Slop-Core](https://github.com/TheJesusFish/Slop-Core),
 [shmupfan](https://github.com/shmupfan/Distribution),
 and the [MiSTer Arcade Database](https://github.com/Toryalai1/MiSTer_ArcadeDatabase) for genre data.
 
@@ -95,7 +96,7 @@ Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.
 | --- | --- | --- |
 | `[mister]` | `!mra` | Skips stock game lists for any database without its own filter line |
 | Distribution | `arcaderbfsonly all_filters font` | Arcade cores, essentials, plus the video filters and fonts the inis use |
-| Jotego, Ongo, kuze | `arcaderbfsonly` | Cores only (Update All appends `!jtbeta` to Jotego's) |
+| Jotego, Ongo, kuze, Slop-Core | `arcaderbfsonly` | Cores only (Update All appends `!jtbeta` to Jotego's) |
 | Coin-Op Collection | none: falls back to `[mister]` | Update All rewrites Coin-Op's filter line on every run; every value it writes starts with `[MiSTer]` |
 | shmupfan | no section | Its database has no tags, so STinGer's `full.json.zip` delivers its 5 cores |
 | 240p Test Suite | `240psuite` | Just the core (Utility), for setting up the CRT |

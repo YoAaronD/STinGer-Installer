@@ -23,6 +23,7 @@ sparse_mras jotego       https://github.com/jotego/jtcores_mister
 sparse_mras coinop       https://github.com/Coin-OpCollection/Distribution-MiSTerFPGA
 sparse_mras ongo         https://github.com/OngoGablogian/MiSTer_Ongo
 sparse_mras kuze         https://github.com/kuzearcade/kuzecores
+sparse_mras slopcore     https://github.com/TheJesusFish/Slop-Core  # Batsugun, Dogyuun, Grind Stormer, FixEight
 
 # MiSTer Arcade Database (genre / rotation / flip per setname)
 if [ ! -d sources/mad/.git ]; then
@@ -41,6 +42,8 @@ git -C sources/ongo   fetch -q --depth 1 --filter=blob:none origin db
 git -C sources/ongo   show FETCH_HEAD:db.json.zip        > sources/dbs/ongo.json.zip
 git -C sources/kuze fetch -q --depth 1 --filter=blob:none origin db
 git -C sources/kuze show FETCH_HEAD:db.json.zip          > sources/dbs/kuze.json.zip
+git -C sources/slopcore fetch -q --depth 1 --filter=blob:none origin db
+git -C sources/slopcore show FETCH_HEAD:db.json.zip      > sources/dbs/slopcore.json.zip
 # Arcade ROMs database (what Update All's ROMs switch installs): only read, for docs/ROMS.md
 rm -rf sources/arcade_roms_db
 git clone -q --depth 1 -b db https://github.com/zakk4223/ArcadeROMsDB_MiSTer sources/arcade_roms_db

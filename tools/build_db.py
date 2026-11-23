@@ -15,6 +15,9 @@ DB_ID = "YoAaronD/STinGer-Installer"
 DB_URL = "https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/db.json.zip"
 # Full install (the flavors): same db_id, so switching between the two cleans up after itself.
 FULL_DB_URL = "https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/full.json.zip"
+# ROM list: its own repo and database, so a takedown there can never take the menu with it.
+ROMS_DB_ID = "YoAaronD/STinGer-ROMs"
+ROMS_DB_URL = "https://raw.githubusercontent.com/YoAaronD/STinGer-ROMs/main/db.json.zip"
 YOKO_DB_URL = "https://raw.githubusercontent.com/YoAaronD/STinGer-Installer/db/yoko.json.zip"
 ADDON_ROOT = "_Arcade/_Vertical Arcade"
 REPOS = {  # label -> GitHub owner/repo the MRAs are downloaded from
@@ -23,6 +26,7 @@ REPOS = {  # label -> GitHub owner/repo the MRAs are downloaded from
     "coinop": "Coin-OpCollection/Distribution-MiSTerFPGA",
     "ongo": "OngoGablogian/MiSTer_Ongo",
     "kuze": "kuzearcade/kuzecores",
+    "slopcore": "TheJesusFish/Slop-Core",
     # shmupfan's MRAs live in several core repos; mirror_db.py records each one's URL in .urls.json
 }
 # Filter tags per tier. Downloader lowercases tags and ignores '-' and '_'.
@@ -157,8 +161,9 @@ def main(picks, data_dir, out_dir, *sources):
         write_db(dict(db, db_url=YOKO_DB_URL), out_dir, "yoko")
     else:
         write_db(db, out_dir, "db")
-        roms_dbs = opts["roms_dbs"].split(",") if opts.get("roms_dbs") else []
-        write_db(full_variant(db, opts.get("shmupfan_db"), roms_dbs, game_zips), out_dir, "full")
+        write_db(full_variant(db, opts.get("shmupfan_db")), out_dir, "full")
+        if opts.get("roms_dbs"):
+            write_db(roms_db(opts["roms_dbs"].split(","), game_zips), out_dir, "roms")
     by_folder = {}
     for p in files:
         k = "/".join(p.split("/")[1:-1]) if not p.startswith(hw_root + "/") else hw_root[8:]
@@ -199,7 +204,30 @@ def rom_index(roms_dbs):
                              ("|" + rel, {"hash": v["hash"], "size": v["size"], "url": v["url"]}))
     return index
 
-def full_variant(db, shmupfan_db, roms_dbs=(), game_zips=()):
+def roms_db(roms_dbs, game_zips):
+    """STinGer-ROMs: exactly the ROM zips STinGer's games ask for, pointing at the same files the ROM
+    databases use (Update All's Arcade ROMs first, then Ongo). Zips only CV1000 games use are tagged
+    cv1000 and stay off by default, with those games."""
+    tags = {}
+    def tag_ids(*names):
+        return [tags.setdefault(n, len(tags)) for n in names]
+    index = rom_index(roms_dbs)
+    needed = {}
+    for zips, cv in game_zips:
+        for z in zips:
+            needed[z] = needed.get(z, True) and cv
+    files, folders = {}, {"|games": {"tags": tag_ids("arcade", "stgroms")}}
+    for z, only_cv in sorted(needed.items()):
+        if z not in index:
+            continue
+        path, entry = index[z]
+        files[path] = dict(entry, tags=tag_ids("arcade", "stgroms", *(("cv1000",) if only_cv else ())))
+        folders.setdefault(path.rsplit("/", 1)[0], {"tags": tag_ids("arcade", "stgroms")})
+    return {"v": 1, "db_id": ROMS_DB_ID, "db_url": ROMS_DB_URL, "timestamp": int(time.time()),
+            "files": files, "folders": dict(sorted(folders.items())), "tag_dictionary": tags,
+            "default_options": {"filter": "!cv1000"}}
+
+def full_variant(db, shmupfan_db):
     """The full install: STinGer's folders sit straight in _Arcade (the other databases ship
     cores only there), and STinGer also delivers shmupfan's cores, since shmupfan's database
     has no tags to trim its loose MRAs with."""
@@ -215,25 +243,6 @@ def full_variant(db, shmupfan_db, roms_dbs=(), game_zips=()):
             if p.startswith("_Arcade/cores/") and p.endswith(".rbf"):
                 files[p] = {"hash": v["hash"], "size": v["size"], "url": v["url"], "tags": core_tags}
         folders.setdefault("_Arcade/cores", {"tags": core_tags})
-    if roms_dbs:
-        # Exactly the ROM zips STinGer's games ask for, pointing at the same files the ROM databases
-        # use (Update All's Arcade ROMs, then Ongo). Opt out with "!stgroms"; a zip only CV1000 games
-        # use is tagged cv1000 too, so it stays off with them.
-        index = rom_index(roms_dbs)
-        needed = {}
-        for zips, cv in game_zips:
-            for z in zips:
-                needed[z] = needed.get(z, True) and cv
-        rom_folders = set()
-        for z, only_cv in sorted(needed.items()):
-            if z not in index:
-                continue
-            path, entry = index[z]
-            names = ("arcade", "stgroms") + (("cv1000",) if only_cv else ())
-            files[path] = dict(entry, tags=[tags.setdefault(n, len(tags)) for n in names])
-            rom_folders.add(path.rsplit("/", 1)[0])
-        for f in sorted(rom_folders | {"|games"}):
-            folders.setdefault(f, {"tags": [tags.setdefault(n, len(tags)) for n in ("arcade", "stgroms")]})
     return dict(db, db_url=FULL_DB_URL, files=dict(sorted(files.items())),
                 folders=dict(sorted(folders.items())), tag_dictionary=tags)
 

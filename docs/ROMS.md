@@ -8,24 +8,25 @@ Full list: [`roms.csv`](roms.csv). Regenerated with every database build.
 
 | Status | Games | Meaning |
 | --- | --- | --- |
-| covered | 388 | Everything it needs comes with STinGer's ROM list |
-| parent only | 124 | Only the parent set is there (typical for Japanese versions). Works: the zips are merged sets, so the clone's files are inside (tested with 1941 Japan) |
-| partial | 51 | Some files are there, but not the game's own zip |
+| covered | 391 | Everything it needs comes with STinGer's ROM list |
+| parent only | 127 | Only the parent set is there (typical for Japanese versions). Works: the zips are merged sets, so the clone's files are inside (tested with 1941 Japan) |
+| partial | 50 | Some files are there, but not the game's own zip |
 | missing | 3 | Neither source has it: supply the zips yourself |
 | no zip listed | 10 | The MRA names no zip (homebrew or built-in) |
 
-Covered games by where their ROMs come from: Arcade ROMs DB 253, Ongo 126, both 9.
+Covered games by where their ROMs come from: Arcade ROMs DB 253, Ongo 129, both 9.
 
 ## By source
 
 | Source | covered | parent only | partial | missing | no zip listed |
 | --- | --- | --- | --- | --- | --- |
-| coinop | 10 | 6 | 5 | 0 | 0 |
-| distribution | 213 | 56 | 19 | 3 | 10 |
+| coinop | 8 | 4 | 4 | 0 | 0 |
+| distribution | 215 | 59 | 19 | 3 | 10 |
 | jotego | 29 | 24 | 13 | 0 | 0 |
 | kuze | 13 | 6 | 1 | 0 | 0 |
 | ongo | 113 | 26 | 12 | 0 | 0 |
 | shmupfan | 10 | 6 | 1 | 0 | 0 |
+| slopcore | 3 | 2 | 0 | 0 | 0 |
 
 ## Zips to supply yourself
 
@@ -45,7 +46,6 @@ The number is how many STinGer games use that zip.
 - `arkanoidj.zip` (1)
 - `arkatayt.zip` (1)
 - `bronx.zip` (1)
-- `btlfield.zip` (1)
 - `buraiken.zip` (1)
 - `cfishing.zip` (1)
 - `chamburger.zip` (1)

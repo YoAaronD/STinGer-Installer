@@ -17,14 +17,15 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 - The 3D section isn't in the tate build (almost all horizontal).
 
 ## Sources
-- Distribution, Jotego, Coin-Op Collection, Ongo, **kuze** (NMK16 family, Jaleco MS1, Namco System 2) and **shmupfan** (Taito G-NET, Dooyong, DEC8, Tecmo 16, 1945k III).
-- When two sources ship the same game, the order is Distribution > Jotego > kuze > Coin-Op > shmupfan > Ongo, after region.
+- Distribution, Jotego, Coin-Op Collection, Ongo, **kuze** (NMK16 family, Jaleco MS1, Namco System 2), **shmupfan** (Taito G-NET, Dooyong, DEC8, Tecmo 16, 1945k III) and **Slop-Core** (TheJesusFish's Toaplan 2 cores: Batsugun, Dogyuun, V-Five, FixEight, Ghox).
+- Slop-Core (2026-11-23): Ongo doesn't ship these cores; it hosts their ROMs (`OngoFiles/mame-slopcore`) and lists Slop-Core under recommended databases. The cores come from Slop-Core's own section (`arcaderbfsonly`, its MRAs carry the `mra` tag); the ROMs come through STinGer-ROMs. Neither Ongo nor Slop-Core is in Update All's catalog, so Update All leaves both sections alone.
+- When two sources ship the same game, the order is Distribution > Jotego > kuze > Coin-Op > shmupfan > Slop-Core > Ongo, after region.
 - **Thunder Dragon** is pinned to kuze's feature-complete NMK16 core (`tdragon@kuze`); Coin-Op's NMK16 builds are betas.
 - `templates/downloader.ini` enables all of them; `[mister]` carries no positive filter because Jotego and Coin-Op inherit it.
 
 ## Update All
 - Installed via its official `[update_all_mister]` Downloader section in the template, not bundled.
-- Checked in its source: it edits downloader.ini as a document, touching only databases in its catalog (and only the filter lines of Jotego/Coin-Op), so STinGer, kuze, shmupfan and Ongo sections and our Distribution `filter = arcade` survive. Disabling Distribution/JTCORES/Coin-Op in its settings would remove cores STinGer needs.
+- Checked in its source: it edits downloader.ini as a document, touching only databases in its catalog (and only the filter lines of Jotego/Coin-Op), so STinGer, kuze, shmupfan, Slop-Core and Ongo sections and our Distribution `filter = arcade` survive. Disabling Distribution/JTCORES/Coin-Op in its settings would remove cores STinGer needs.
 
 ## Version picking
 - Japanese first, then World, newest revision within the region.
