@@ -5,6 +5,8 @@ A shmup-focused MiSTer build for **vertical (tate) CRT arcade cabinets**.
 > Status: early. The game list is built and curated; the downloader database,
 > ini templates and installer image are next.
 
+> **Cave CV1000 games** (Mushihime-sama, Mushihime-sama Futari, Espgaluda II, DoDonPachi Dai-Fukkatsu, Ibara and more) are included, and they need Raki's CV1000 core, which is on his Patreon. It's a few dollars a month, and it's what makes these games possible on MiSTer. Put the core (`ikacore_CV1k_*.rbf`) in `_Arcade/cores`. To leave the CV1000 games out instead, set `filter = !cv1000` in the STinGer and STinGer-ROMs sections of downloader.ini.
+
 ## Goals
 
 1. **An STG-focused MiSTer.** Every shooting game MiSTer can run, sorted into its own menu, without anyone combing through databases by hand.
@@ -103,7 +105,8 @@ Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.
 | Coin-Op Collection | none: falls back to `[mister]` | Update All rewrites Coin-Op's filter line on every run; every value it writes starts with `[MiSTer]` |
 | shmupfan | no section | Its database has no tags, so STinGer's `full.json.zip` delivers its 5 cores |
 | 240p Test Suite | `240psuite` | Just the core (Utility), for setting up the CRT |
-| STinGer | `!cv1000` | The menu, shmupfan's cores and exactly the ROMs its games use (~1.3 GB; 2.2 GB with CV1000). `all` opts into CV1000, `!stgroms` skips the ROMs. Must stay explicit, or it would inherit `!mra` |
+| STinGer | `all` | The menu and the cores of a few small databases its games need. `!cv1000` leaves out the CV1000 games. Must stay explicit, or it would inherit `!mra` |
+| STinGer-ROMs | `all` | Exactly the ROM zips STinGer's games use (~2.2 GB, 0.9 GB of it CV1000). `!cv1000` skips the CV1000 ones |
 
 The full install brings exactly the ROM zips STinGer's games use, pointing at the same archive.org files
 Update All's Arcade ROMs and Ongo use. Leave Update All's Arcade ROMs switch off. [`docs/ROMS.md`](docs/ROMS.md)

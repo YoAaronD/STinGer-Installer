@@ -156,8 +156,7 @@ def main(picks, data_dir, out_dir, *sources):
         "files": dict(sorted(files.items())),
         "folders": dict(sorted(folders.items())),
         "tag_dictionary": tags,
-        # Raki's CV1000 core is Patreon-only: leave those entries off unless the user opts in.
-        "default_options": {"filter": "!cv1000"},
+        # CV1000 games are in by default (they need Raki's Patreon core); tagged cv1000 so they can be skipped.
     }
     os.makedirs(out_dir, exist_ok=True)
     if yoko:
@@ -210,7 +209,7 @@ def rom_index(roms_dbs):
 def roms_db(roms_dbs, game_zips):
     """STinGer-ROMs: exactly the ROM zips STinGer's games ask for, pointing at the same files the ROM
     databases use (Update All's Arcade ROMs first, then Ongo). Zips only CV1000 games use are tagged
-    cv1000 and stay off by default, with those games."""
+    cv1000, so they can be skipped along with those games ("filter = !cv1000")."""
     tags = {}
     def tag_ids(*names):
         return [tags.setdefault(n, len(tags)) for n in names]
@@ -227,8 +226,7 @@ def roms_db(roms_dbs, game_zips):
         files[path] = dict(entry, tags=tag_ids("arcade", "stgroms", *(("cv1000",) if only_cv else ())))
         folders.setdefault(path.rsplit("/", 1)[0], {"tags": tag_ids("arcade", "stgroms")})
     return {"v": 1, "db_id": ROMS_DB_ID, "db_url": ROMS_DB_URL, "timestamp": int(time.time()),
-            "files": files, "folders": dict(sorted(folders.items())), "tag_dictionary": tags,
-            "default_options": {"filter": "!cv1000"}}
+            "files": files, "folders": dict(sorted(folders.items())), "tag_dictionary": tags}
 
 def full_variant(db, shmupfan_db, core_dbs="", used_cores=()):
     """The full install: STinGer's folders sit straight in _Arcade (the other databases ship

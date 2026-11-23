@@ -8,7 +8,7 @@ Databases published 2026-11-20: add-on (`db.json.zip`, 1,014 menu entries) and f
 1. Back up `/media/fat/downloader.ini` and `/media/fat/MiSTer.ini` anyway.
 2. Copy `A-add-to-current-card/downloader_stinger.ini` to `/media/fat/`.
    If your downloader.ini already has an Ongo, kuze or shmupfan section, delete that section from `downloader_stinger.ini`.
-3. Have Raki's CV1000 core? Uncomment `filter = arcade` under the STinGer section.
+3. The CV1000 games need Raki's core (Patreon) in `_Arcade/cores`. Without it, uncomment `filter = !cv1000` under the STinGer section to leave them out.
 4. On the cab: Scripts → `update` (or `update_all`). Let it finish, then reboot.
 
 **B: full STinGer install (spare SD card only)**
