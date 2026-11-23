@@ -24,6 +24,7 @@ sparse_mras coinop       https://github.com/Coin-OpCollection/Distribution-MiSTe
 sparse_mras ongo         https://github.com/OngoGablogian/MiSTer_Ongo
 sparse_mras kuze         https://github.com/kuzearcade/kuzecores
 sparse_mras slopcore     https://github.com/TheJesusFish/Slop-Core  # Batsugun, Dogyuun, Grind Stormer, FixEight
+sparse_mras jlrh         https://github.com/jlrh/jlrh-misterfpga-db  # Detana!! TwinBee
 
 # MiSTer Arcade Database (genre / rotation / flip per setname)
 if [ ! -d sources/mad/.git ]; then
@@ -44,6 +45,8 @@ git -C sources/kuze fetch -q --depth 1 --filter=blob:none origin db
 git -C sources/kuze show FETCH_HEAD:db.json.zip          > sources/dbs/kuze.json.zip
 git -C sources/slopcore fetch -q --depth 1 --filter=blob:none origin db
 git -C sources/slopcore show FETCH_HEAD:db.json.zip      > sources/dbs/slopcore.json.zip
+git -C sources/jlrh fetch -q --depth 1 --filter=blob:none origin db
+git -C sources/jlrh show FETCH_HEAD:db.json.zip          > sources/dbs/jlrh.json.zip
 # Arcade ROMs database (what Update All's ROMs switch installs): only read, for docs/ROMS.md
 rm -rf sources/arcade_roms_db
 git clone -q --depth 1 -b db https://github.com/zakk4223/ArcadeROMsDB_MiSTer sources/arcade_roms_db
@@ -55,11 +58,20 @@ open("sources/kuze/.rbf_list", "w").write("\n".join(p.split("/")[-1][:-4] for p 
 PY
 
 # shmupfan's database points at MRAs in its individual core repos: mirror them
-mkdir -p sources/shmupfan_db
-curl -sSL -o sources/dbs/shmupfan.json https://raw.githubusercontent.com/shmupfan/Distribution/main/db.json \
-  || git -C sources/shmupfan_db clone -q --depth 1 https://github.com/shmupfan/Distribution . 2>/dev/null
-[ -s sources/dbs/shmupfan.json ] || cp sources/shmupfan_db/db.json sources/dbs/shmupfan.json
+rm -rf sources/shmupfan_db
+curl -fsSL -o sources/dbs/shmupfan.json https://raw.githubusercontent.com/shmupfan/Distribution/main/db.json \
+  || { git clone -q --depth 1 https://github.com/shmupfan/Distribution sources/shmupfan_db \
+       && cp sources/shmupfan_db/db.json sources/dbs/shmupfan.json; }
 python3 -I tools/mirror_db.py sources/dbs/shmupfan.json sources/shmupfan
+# decoryah (Sky Alert, Varia Metal, Silver Millennium, Fighting Hawk) and Blackwine (Gardia) keep their
+# MRAs behind their databases too
+for pair in "decoryah decoryah/MiSTer_decoryah" "blackwine TheJesusFish/Blackwine-SegaSystem1-2_MiSTer"; do
+  set -- $pair
+  rm -rf "sources/${1}_db"
+  git clone -q --depth 1 --filter=blob:none --no-checkout -b db "https://github.com/$2" "sources/${1}_db"
+  git -C "sources/${1}_db" show HEAD:db.json.zip > "sources/dbs/$1.json.zip"
+  python3 -I tools/mirror_db.py "sources/dbs/$1.json.zip" "sources/$1"
+done
 # Flavor bases: MiSTerAddons' official MiSTercade inis + control mappings, and MiSTer's stock MiSTer.ini
 for pair in "misteraddons_ini misteraddons/mister_ini" "misteraddons_mistercade misteraddons/MiSTercade"; do
   set -- $pair

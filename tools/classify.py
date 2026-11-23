@@ -56,8 +56,11 @@ def read_mra(path):
     except ET.ParseError:
         return None
     g = lambda t: (root.findtext(t) or "").strip()
-    return {k: g(k) for k in ("name", "setname", "parent", "rbf", "rotation", "flip", "region",
-                                "category", "year", "manufacturer", "platform")}
+    m = {k: g(k) for k in ("name", "setname", "parent", "rbf", "rotation", "flip", "region",
+                             "category", "year", "manufacturer", "platform")}
+    # a "Flip Screen" DIP switch in the MRA counts as a flip setting (e.g. Varia Metal on decoryah's Metro)
+    m["dip_flip"] = any("flip" in (d.get("name") or "").lower() for d in root.iter("dip"))
+    return m
 
 def main(mad_csv, ovr_csv, out, *sources):
     others = "--others" in sources
@@ -105,6 +108,8 @@ def main(mad_csv, ovr_csv, out, *sources):
                 tier, src = "other", "vertical, not a shooter"
             if not tier: continue
             flip = norm_flip(m["flip"] or d.get("flip"))
+            if flip != "yes" and m["dip_flip"]:
+                flip = "yes"
             rows.append({
                 "title": title, "mra_name": m["name"] or f[:-4], "setname": m["setname"],
                 "region": m["region"], "parent": m["parent"],

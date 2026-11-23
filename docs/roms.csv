@@ -61,6 +61,7 @@ _Core STGs,Daioh,daioh,ppriest_Seta,ongo,covered,Ongo,daioh.zip,
 _Core STGs,Daisenpu (Japan),daisenpu,jttaitox,jotego,partial,Arcade ROMs DB,daisenpu.zip | twinhawk.zip | cchip.zip | jtbeta.zip,daisenpu.zip | jtbeta.zip
 _Core STGs,Dangerous Seed (Japan),dangseed,jtshouse,jotego,covered,Arcade ROMs DB,dangseed.zip,
 _Core STGs,"Dangun Feveron (Japan, 98-09-17 VER.)",dfeveron,cave,distribution,partial,Arcade ROMs DB,dfeveron.zip | feversos.zip,dfeveron.zip
+_Core STGs,"Detana!! Twin Bee (FF, Japan ver J, Konami, 1991)",detatwin,ffblswhstl,jlrh,partial,Ongo,detatwin.zip | blswhstl.zip,detatwin.zip
 _Core STGs,"DoDonPachi (Japan, 1997 2-5 Master Ver.)",ddonpachj,cave,distribution,parent only,Arcade ROMs DB,ddonpachj.zip | ddonpach.zip,ddonpachj.zip
 _Core STGs,"DoDonPachi Dai-Fukkatsu Black Label (Japan, 2010-1-18 BLACK LABEL)",dfkbl,ikacore_CV1k,ongo,covered,Ongo,dfkbl.zip,
 _Core STGs,"DoDonPachi Dai-Fukkatsu Ver 1.0 (Japan, 2008-05-16 MASTER VER)",ddpdfk10,ikacore_CV1k,ongo,parent only,Ongo,ddpdfk10.zip | ddpdfk.zip,ddpdfk10.zip
@@ -86,6 +87,7 @@ _Core STGs,"Espgaluda II (Japan, 2005-11-14 MASTER VER, newer CV1000-B PCB)",esp
 _Core STGs,Exed Exes,exedexes,jtexed,jotego,covered,Arcade ROMs DB,exedexes.zip,
 _Core STGs,Explorer (DECO),cexplore,DECOCassette,distribution,covered,Arcade ROMs DB,decocass.zip | cexplore.zip,
 _Core STGs,"Fever SOS (World, 98-09-25 VER)",feversos,cave,distribution,covered,Arcade ROMs DB,feversos.zip,
+_Core STGs,Fighting Hawk (Japan),fhawkj,taitol,decoryah,parent only,decoryah,fhawkj.zip | fhawk.zip,fhawkj.zip
 _Core STGs,"Final Star Force (Japan, set 1)",fstarfrcj,tecmo16,shmupfan,parent only,Ongo,fstarfrcj.zip | fstarfrc.zip,fstarfrcj.zip
 _Core STGs,Finalizer - Super Transformation (Set 1),finalizr,Finalizer,distribution,covered,Arcade ROMs DB,finalizr.zip,
 _Core STGs,Fire Barrel (Japan),firebarr,IremM107,distribution,parent only,Arcade ROMs DB,airass.zip | firebarr.zip,firebarr.zip
@@ -95,6 +97,7 @@ _Core STGs,Funky Fish,fnkyfish,Kangaroo,distribution,covered,Arcade ROMs DB,fnky
 _Core STGs,Future Spy (315-5061),futspy,zaxxon,distribution,covered,Arcade ROMs DB,futspy.zip,
 _Core STGs,G-Stream G2020,gstream,ppriest_GStream,ongo,covered,Ongo,gstream.zip,
 _Core STGs,Galmedes (Japan),galmedes,TaitoAsuka,distribution,covered,Arcade ROMs DB,galmedes.zip,
+_Core STGs,Gardia (317-0006),gardia,Blackwine-SegaSystem1-2,blackwine,covered,Ongo,gardia.zip,
 _Core STGs,Garuka (Japan ver. W),garuka,Meathax_PWB351024A,ongo,partial,Ongo,garuka.zip | devstors.zip,garuka.zip
 _Core STGs,Gekirindan (Ver 2.3O 1995-09-21),gekiridn,TaitoF3,ongo,covered,Ongo,gekiridn.zip,
 _Core STGs,Gemini Wing,gemini,Tecmo,distribution,covered,Arcade ROMs DB,gemini.zip,
@@ -173,8 +176,10 @@ _Core STGs,"Sengoku Ace (Japan, set 1)",sngkace,Psikyo,distribution,partial,Arca
 _Core STGs,Shienryu (JUET 961226 V1.000),shienryu,ST-V,distribution,covered,Arcade ROMs DB,shienryu.zip | stvbios.zip,
 _Core STGs,Shikigami no Shiro - internal build (V1.02J),shikigama,TaitoGNET,shmupfan,covered,Ongo,coh3002t.zip | gnet_shikigama.zip,
 _Core STGs,Shippu Mahou Daisakusen (Japan) [MD],shippumd,RaizingMD,distribution,partial,Arcade ROMs DB,shippumd.zip | kingdmgp.zip,shippumd.zip
+_Core STGs,Silver Millennium,silvmil,silvmil,decoryah,covered,decoryah,silvmil.zip,
 _Core STGs,Skull Fang - Kuhga Gaiden (Japan 1.09),skullfngj,ppriest_DecoMLC156,ongo,parent only,Ongo,skullfngj.zip | skullfng.zip,skullfngj.zip
 _Core STGs,Sky Adventure (Japan) [MD],skyadvntj,Alpha68kMD,distribution,parent only,Arcade ROMs DB,skyadvntj.zip | skyadvnt.zip,skyadvntj.zip
+_Core STGs,Sky Alert,skyalert,metro,decoryah,covered,decoryah,skyalert.zip,
 _Core STGs,Sky Smasher,skysmash,SkySmasher,distribution,covered,Arcade ROMs DB,skysmash.zip,
 _Core STGs,Sky Soldiers (US) [MD],skysoldr,Alpha68kMD,distribution,covered,Arcade ROMs DB,skysoldr.zip,
 _Core STGs,Solite Spirits,slspirit,1945kiii,shmupfan,covered,Ongo,slspirit.zip,
@@ -224,6 +229,7 @@ _Core STGs,V-Five (Japan),vfive,GrindStormer,slopcore,covered,Ongo,grindstm.zip,
 _Core STGs,Vanguard (Japan),vanguardj,SNK6502,distribution,parent only,Arcade ROMs DB,vanguardj.zip | vanguard.zip,vanguardj.zip
 _Core STGs,Vapor Trail - Hyper Offence Formation (US),vaportrau,vaportra_mister,coinop,parent only,Arcade ROMs DB,vaportrau.zip | vaportra.zip,vaportrau.zip
 _Core STGs,"Vapor Trail - Hyper Offence Formation (World, Rev. 1)",vaportra,vaportra_mister,coinop,covered,Arcade ROMs DB,vaportra.zip,
+_Core STGs,Varia Metal,vmetal,metro,decoryah,covered,decoryah,vmetal.zip,
 _Core STGs,Varth Operation Thunderstorm (Japan Resale Ver. 920714),varthjr,jtcps1,jotego,parent only,Arcade ROMs DB,varthjr.zip | varth.zip,varthjr.zip
 _Core STGs,Vasara 2 (set 1),vasara2,Meathax_SSV,ongo,covered,Ongo,vasara2.zip,
 _Core STGs,Vasara,vasara,Meathax_SSV,ongo,covered,Ongo,vasara.zip,
@@ -341,6 +347,7 @@ _Other Vertical Games,"Ace Attacker (Japan, S16A) [FD1094 317-0060]",aceattaca,j
 _Other Vertical Games,Adventure Canoe,adcanoe,TaitoSJ,distribution,covered,Arcade ROMs DB,adcanoe.zip,
 _Other Vertical Games,Ali Baba and 40 Thieves,alibaba,pacman,distribution,covered,Arcade ROMs DB,alibaba.zip,
 _Other Vertical Games,Alpine Ski,alpine,TaitoSJ,distribution,covered,Arcade ROMs DB,alpine.zip,
+_Other Vertical Games,American Horseshoes (US),horshoes,taitol,decoryah,covered,decoryah,horshoes.zip,
 _Other Vertical Games,Amidar (Scramble),amidars,scramble,distribution,parent only,Arcade ROMs DB,amidar.zip | amidars.zip,amidars.zip
 _Other Vertical Games,Anteater,anteater,scramble,distribution,covered,Arcade ROMs DB,anteater.zip,
 _Other Vertical Games,APB - All Points Bulletin (rev 6),apb6,atarisys2,distribution,parent only,Arcade ROMs DB,apb6.zip | apb.zip,apb6.zip
@@ -374,6 +381,7 @@ _Other Vertical Games,Burnin Rubber (Japan) (DECO),cburnrubj,DECOCassette,distri
 _Other Vertical Games,Calipso,calipso,scramble,distribution,covered,Arcade ROMs DB,calipso.zip,
 _Other Vertical Games,Capcom Bowling (set 1),capbowl,Gm0rk_ITech8,ongo,covered,Ongo,capbowl.zip,
 _Other Vertical Games,Cavelon,cavelon,scramble,distribution,covered,Arcade ROMs DB,cavelon.zip,
+_Other Vertical Games,"Chequered Flag (FF, Konami, 1988)",chqflag,ffcheqflag,jlrh,covered,Ongo,chqflag.zip,
 _Other Vertical Games,"Circus Charlie (level select, set 1)",circusc,jtcircus,jotego,covered,Arcade ROMs DB,circusc.zip,
 _Other Vertical Games,Colony 7 (Set 1),colony7,defender,distribution,covered,Arcade ROMs DB,colony7.zip,
 _Other Vertical Games,Complex X,complexx,Qix,distribution,covered,Arcade ROMs DB,complexx.zip,
@@ -383,6 +391,7 @@ _Other Vertical Games,Cosmo Police Galivan (12-26-1985),galivan,galivan,distribu
 _Other Vertical Games,Cosmos,cosmos,bazset_CVS,ongo,covered,Ongo,cosmos.zip,
 _Other Vertical Games,Crazy Balloon,crbaloon,crazyballoon,distribution,covered,Arcade ROMs DB,crbaloon.zip,
 _Other Vertical Games,Crazy Kong Part II (Japan),ckongpt2j,crazykong,distribution,parent only,Arcade ROMs DB,ckongpt2j.zip | ckongpt2.zip,ckongpt2j.zip
+_Other Vertical Games,"Crazy Rally (FF, Tecfri, 1985)",crzrally,ffcrzrally,jlrh,covered,Ongo,crzrally.zip,
 _Other Vertical Games,Crush Roller (Set 2),crush2,pacman,distribution,parent only,Arcade ROMs DB,crush.zip | crush2.zip,crush2.zip
 _Other Vertical Games,Dark Warrior,darkwar,bazset_CVS,ongo,covered,Ongo,darkwar.zip,
 _Other Vertical Games,Dazzler,dazzler,bazset_CVS,ongo,covered,Ongo,dazzler.zip,
@@ -400,6 +409,7 @@ _Other Vertical Games,Drift Out (Japan),driftoutj,TaitoF2,distribution,parent on
 _Other Vertical Games,DS Telejan (DECO),cdsteljn,DECOCassette,distribution,covered,Arcade ROMs DB,decocass.zip | cdsteljn.zip,
 _Other Vertical Games,Eeek! (Pac-Man Conversion),eeekkp,pacman,distribution,parent only,Arcade ROMs DB,eeekk.zip | eeekkp.zip,eeekkp.zip
 _Other Vertical Games,Eggor,eggor,pacman,distribution,covered,Arcade ROMs DB,eggor.zip,
+_Other Vertical Games,Evil Stone,evilston,taitol,decoryah,covered,decoryah,evilston.zip,
 _Other Vertical Games,Exciting Hour,excthour,matmania,coinop,partial,Arcade ROMs DB,excthour.zip | matmania.zip,excthour.zip
 _Other Vertical Games,Exciting Soccer (Japan),exctsccrj,ChampionBaseball,distribution,parent only,Arcade ROMs DB,exctsccrj.zip | exctsccr.zip,exctsccrj.zip
 _Other Vertical Games,Exciting Soccer II,exctscc2,ChampionBaseball,distribution,covered,Arcade ROMs DB,exctscc2.zip,
@@ -414,13 +424,14 @@ _Other Vertical Games,Flash Boy (DECO),cfboy0a1,DECOCassette,distribution,covere
 _Other Vertical Games,Flying Ball (DECO),cflyball,DECOCassette,distribution,covered,Arcade ROMs DB,decocass.zip | cflyball.zip,
 _Other Vertical Games,Freeze,freeze,freeze,distribution,covered,Arcade ROMs DB,freeze.zip,
 _Other Vertical Games,Frogger (Konami Bugfixed),frogger,scramble,distribution,partial,Arcade ROMs DB,frogger.zip | froggers2.zip,froggers2.zip
-_Other Vertical Games,Gaiapolis (ver EAF),gaiapols,Meathax_Konami353396A,ongo,covered,Ongo,gaiapols.zip,
+_Other Vertical Games,Gaiapolis (Japan ver JAF),gaiapolsj,gaiapolis,decoryah,parent only,Ongo,gaiapolsj.zip | gaiapols.zip,gaiapolsj.zip
 _Other Vertical Games,"Gain Ground (World, 3 Players, Floppy Based, FD1094 317-0058-03d Rev A)",gground,Meathax_SegaSystem24,ongo,covered,Ongo,gground.zip,
 _Other Vertical Games,"Gals Panic (unprotected, ver. 2.0)",galpanic,jtgals,jotego,covered,Arcade ROMs DB,galpanic.zip,
 _Other Vertical Games,Ghox (Joystick),ghoxj,Ghox,slopcore,parent only,Ongo,ghoxj.zip | ghox.zip,ghoxj.zip
 _Other Vertical Games,Gold Bug,goldbug,bazset_CVS,ongo,covered,Ongo,goldbug.zip,
 _Other Vertical Games,Grasspin,grasspin,BluePrint,distribution,covered,Arcade ROMs DB,blueprnt.zip | grasspin.zip,
 _Other Vertical Games,"Grobda (W, New Ver.)",grobda,druaga,distribution,covered,Arcade ROMs DB,grobda.zip,
+_Other Vertical Games,"Guerrilla War (FF, SNK, 1987)",gwar,ffgwar,jlrh,covered,Ongo,gwar.zip,
 _Other Vertical Games,Gunbarich,gnbarich,PsikyoSH2,distribution,covered,Arcade ROMs DB,gnbarich.zip,
 _Other Vertical Games,Hamburger (Japan) (DECO),chamburger,DECOCassette,distribution,partial,Arcade ROMs DB,decocass.zip | cbtime.zip | chamburger.zip,chamburger.zip
 _Other Vertical Games,Heart Attack,heartatk,bazset_CVS,ongo,covered,Ongo,heartatk.zip,
@@ -448,6 +459,8 @@ _Other Vertical Games,Kyros no Yakata (Japan),kyrosj,Meathax_Alpha68kN,ongo,pare
 _Other Vertical Games,Lady Bug,ladybug,ladybug,distribution,covered,Arcade ROMs DB,ladybug.zip,
 _Other Vertical Games,Laguna Racer,lagunar,spaceinvaders,distribution,covered,Arcade ROMs DB,lagunar.zip,
 _Other Vertical Games,Led Storm Rally 2011 (World),leds2011,madgear,ongo,covered,Ongo,leds2011.zip,
+_Other Vertical Games,Lethal Crash Race (set 1),crshrace,crashrace,decoryah,covered,decoryah,crshrace.zip,
+_Other Vertical Games,Lethal Crash Race (set 2),crshrace2,crashrace,decoryah,parent only,decoryah,crshrace2.zip | crshrace.zip,crshrace2.zip
 _Other Vertical Games,Lock'n'Chase (Japan) (DECO),clocknchj,DECOCassette,distribution,parent only,Arcade ROMs DB,decocass.zip | clocknch.zip | clocknchj.zip,clocknchj.zip
 _Other Vertical Games,Logger (Rev.3),logger,bazset_CVS,ongo,covered,Ongo,logger.zip,
 _Other Vertical Games,Lost Tomb,losttomb,scramble,distribution,covered,Arcade ROMs DB,losttomb.zip,
@@ -462,6 +475,7 @@ _Other Vertical Games,Mania Challenge (Set 1),maniach,maniach,coinop,covered,Arc
 _Other Vertical Games,Mappy (Japan),mappyj,druaga,distribution,parent only,Arcade ROMs DB,mappy.zip | mappyj.zip,mappyj.zip
 _Other Vertical Games,Maze of Flott (Japan),mofflott,TaitoAsuka,distribution,covered,Arcade ROMs DB,mofflott.zip,
 _Other Vertical Games,Megumi Rescue (Japan),megrescu,SMS,distribution,covered,Arcade ROMs DB,megrescu.zip,
+_Other Vertical Games,Moeyo Gonta!! (Japan),moegonta,metro,decoryah,partial,decoryah,moegonta.zip | ladykill.zip,moegonta.zip
 _Other Vertical Games,Mogu Chan,moguchan,Vastar,distribution,covered,Arcade ROMs DB,moguchan.zip,
 _Other Vertical Games,Money Money (set 1),monymony,Meathax_Zaccaria,ongo,covered,Ongo,monymony.zip,
 _Other Vertical Games,Motos,motos,druaga,distribution,covered,Arcade ROMs DB,motos.zip,
@@ -470,16 +484,19 @@ _Other Vertical Games,Mr. Do! vs. Unicorns (Japan),douni,Meathax_DoCastle,ongo,p
 _Other Vertical Games,Mr. Do!,mrdo,mrdo,distribution,covered,Arcade ROMs DB,mrdo.zip,
 _Other Vertical Games,Mr. Jong,mrjong,mrjong,distribution,covered,Arcade ROMs DB,mrjong.zip,
 _Other Vertical Games,Mr. TNT,mrtnt,pacman,distribution,covered,Arcade ROMs DB,mrtnt.zip,
+_Other Vertical Games,"Music Ball (FF, Tecfri, 1988)",musicbal,ffspeedbal,jlrh,covered,Ongo,musicbal.zip,
 _Other Vertical Games,Mustache Boy (Japan),mustache,bazset_MustacheBoy,ongo,covered,both,mustache.zip | t5182.zip,
 _Other Vertical Games,Mysterious Stones - Dr. John's Adventure,mystston,Meathax_MysteriousStones,ongo,covered,Ongo,mystston.zip,
 _Other Vertical Games,"Namco Classic Collection Vol.1 (Japan, v1.03)",ncv1j2,Meathax_NamcoND1,ongo,parent only,Ongo,ncv1j2.zip | ncv1.zip,ncv1j2.zip
 _Other Vertical Games,Namco Classic Collection Vol.2 (Japan),ncv2j,Meathax_NamcoND1,ongo,parent only,Ongo,ncv2j.zip | ncv2.zip,ncv2j.zip
 _Other Vertical Games,Naughty Boy (Jaleco),naughtyb,naughtyboy,distribution,covered,Arcade ROMs DB,naughtyb.zip,
 _Other Vertical Games,"Nibbler (Rev 9, Set 2)",nibblera,SNK6502,distribution,parent only,Arcade ROMs DB,nibblera.zip | nibbler.zip,nibblera.zip
+_Other Vertical Games,Noboranka (bootleg),nobb,Blackwine-SegaSystem1-2,blackwine,covered,Ongo,nob.zip,
 _Other Vertical Games,Number Crash,numcrash,pacman,distribution,covered,Arcade ROMs DB,numcrash.zip,
 _Other Vertical Games,Ocean To Ocean (Japan) (DECO),cocean1a,DECOCassette,distribution,covered,Arcade ROMs DB,decocass.zip | cocean1a.zip,
 _Other Vertical Games,Oozumou - Grand Sumo (DECO),coozumou,DECOCassette,distribution,covered,Arcade ROMs DB,decocass.zip | coozumou.zip,
 _Other Vertical Games,Orbitron,orbitron,galaxian,distribution,covered,Arcade ROMs DB,orbitron.zip,
+_Other Vertical Games,"Over Drive (FF, Konami, 1990)",overdriv,ffoverdriv,jlrh,covered,Ongo,overdriv.zip,
 _Other Vertical Games,Pac & Pal,pacnpal,druaga,distribution,covered,Arcade ROMs DB,pacnpal.zip,
 _Other Vertical Games,Pac-Man Plus,pacplus,pacman,distribution,covered,Arcade ROMs DB,pacplus.zip,
 _Other Vertical Games,Pac-Mania (Japan),pacmaniaj,jtshouse,jotego,parent only,Arcade ROMs DB,pacmaniaj.zip | pacmania.zip,pacmaniaj.zip
@@ -493,8 +510,12 @@ _Other Vertical Games,Performan (Japan),perfrman,Performan,distribution,covered,
 _Other Vertical Games,Peter Pepper's Ice Cream Factory (DECO),cppicf,DECOCassette,distribution,covered,Arcade ROMs DB,decocass.zip | cppicf.zip,
 _Other Vertical Games,Peter Pepper's Ice Cream Factory (Set 2) (DECO),cppicf2,DECOCassette,distribution,parent only,Arcade ROMs DB,decocass.zip | cppicf.zip | cppicf2.zip,cppicf2.zip
 _Other Vertical Games,Pickin',pickin,bagman,distribution,covered,Arcade ROMs DB,pickin.zip,
+_Other Vertical Games,Play Girls 2 (Japan),plgirls2j,taitol,decoryah,parent only,decoryah,plgirls2j.zip | plgirls2.zip,plgirls2j.zip
+_Other Vertical Games,Play Girls,plgirls,taitol,decoryah,covered,decoryah,plgirls.zip,
 _Other Vertical Games,Playball (Prototype),playball,robotron,distribution,covered,Arcade ROMs DB,playball.zip | robotron.zip,
 _Other Vertical Games,Poker Dice (v1.7),pokrdice,Gm0rk_ITech8,ongo,covered,Ongo,pokrdice.zip,
+_Other Vertical Games,Poly-Net Warriors (ver JAA),polynetw,Polygonet,decoryah,covered,decoryah,polynetw.zip,
+_Other Vertical Games,Polygonet Commanders (ver UAA),plygonet,Polygonet,decoryah,covered,decoryah,plygonet.zip,
 _Other Vertical Games,Pooyan,pooyan,pooyan,distribution,covered,Arcade ROMs DB,pooyan.zip,
 _Other Vertical Games,Pop Flamer (Bootleg conversion),popflamn,naughtyboy,distribution,partial,Arcade ROMs DB,popflame.zip | popflamn.zip,popflamn.zip
 _Other Vertical Games,Port Man (bootleg on Moon Cresta hardware),porter,galaxian,distribution,parent only,Arcade ROMs DB,porter.zip | dockman.zip,porter.zip
@@ -531,6 +552,7 @@ _Other Vertical Games,Solar Fox,solarfox,mcr1,distribution,covered,Arcade ROMs D
 _Other Vertical Games,Space Chaser,schaser,spaceinvaders,distribution,covered,Arcade ROMs DB,schaser.zip,
 _Other Vertical Games,Space Fortress (CVS),spacefrt,bazset_CVS,ongo,covered,Ongo,spacefrt.zip,
 _Other Vertical Games,Space Panic,panic,cosmic,distribution,covered,Arcade ROMs DB,panic.zip,
+_Other Vertical Games,"Speed Ball (FF, Tecfri, 1987)",speedbal,ffspeedbal,jlrh,covered,Ongo,speedbal.zip,
 _Other Vertical Games,Speed Coin,spdcoin,scramble,distribution,covered,Arcade ROMs DB,spdcoin.zip,
 _Other Vertical Games,Strata Bowling (v3),stratab,Gm0rk_ITech8,ongo,covered,Ongo,stratab.zip,
 _Other Vertical Games,Super Bagman,sbagman,bagman,distribution,partial,Arcade ROMs DB,sbagman.zip | sbagman2.zip,sbagman2.zip

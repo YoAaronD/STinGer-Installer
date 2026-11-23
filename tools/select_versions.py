@@ -65,7 +65,7 @@ def newness(name):
     if re.search(r"\bnewer?\b", n): return (1, 1)
     return (1,)
 
-def main(inp, pref_csv, out, prio="db_priority=distribution,jotego,kuze,coinop,shmupfan,slopcore,ongo", split_csv=None):
+def main(inp, pref_csv, out, prio="db_priority=distribution,jotego,kuze,coinop,shmupfan,slopcore,blackwine,jlrh,ongo,decoryah", split_csv=None):
     split_csv = split_csv or os.path.join(os.path.dirname(os.path.abspath(pref_csv)), "split.csv")
     splits = [r["pattern"] for r in csv.DictReader(l for l in open(split_csv) if not l.startswith("#"))] if os.path.exists(split_csv) else []
     prio = prio.split("=", 1)[1].split(",")

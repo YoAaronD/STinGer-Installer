@@ -22,8 +22,10 @@ def zips_in(db_zip):
     return {os.path.basename(p).lower() for p in d["files"] if p.lower().endswith(".zip")}
 
 def main(full_json, picks_csv, ongo_db, roms_db, sources, out_dir):
-    ongo, ardb = zips_in(ongo_db), zips_in(roms_db)
-    have = ongo | ardb
+    # ongo_db may list more databases that ship ROMs, comma-separated (decoryah)
+    extra = {os.path.basename(p).split(".")[0]: zips_in(p) for p in ongo_db.split(",")[1:]}
+    ongo, ardb = zips_in(ongo_db.split(",")[0]), zips_in(roms_db)
+    have = ongo.union(ardb, *extra.values())
 
     db = json.load(open(full_json, encoding="utf-8"))
     # one entry per game: the main folders, not the By Hardware / By Year copies
@@ -69,7 +71,8 @@ def main(full_json, picks_csv, ongo_db, roms_db, sources, out_dir):
         missing = [z for z in zips if z not in have]
         found = [z for z in zips if z in have]
         where = ("Ongo" if all(z in ongo for z in found) else
-                 "Arcade ROMs DB" if all(z in ardb for z in found) else "both") if found else ""
+                 "Arcade ROMs DB" if all(z in ardb for z in found) else
+                 next((k for k, v in extra.items() if all(z in v for z in found)), "both")) if found else ""
         if status in ("partial", "missing"):
             for z in missing:
                 need_count[z] += 1

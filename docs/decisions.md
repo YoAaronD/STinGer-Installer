@@ -18,7 +18,10 @@ Calls made while curating the list, so they don't get relitigated. Most are enco
 
 ## Sources
 - Distribution, Jotego, Coin-Op Collection, Ongo, **kuze** (NMK16 family, Jaleco MS1, Namco System 2), **shmupfan** (Taito G-NET, Dooyong, DEC8, Tecmo 16, 1945k III) and **Slop-Core** (TheJesusFish's Toaplan 2 cores: Batsugun, Dogyuun, V-Five, FixEight, Ghox).
-- Slop-Core (2026-11-23): Ongo doesn't ship these cores; it hosts their ROMs (`OngoFiles/mame-slopcore`) and lists Slop-Core under recommended databases. The cores come from Slop-Core's own section (`arcaderbfsonly`, its MRAs carry the `mra` tag); the ROMs come through STinGer-ROMs. Neither Ongo nor Slop-Core is in Update All's catalog, so Update All leaves both sections alone.
+- Slop-Core (2026-11-23): Ongo doesn't ship these cores; it hosts their ROMs (`OngoFiles/mame-slopcore`) and lists Slop-Core under recommended databases. The ROMs come through STinGer-ROMs.
+- Databases Ongo recommends, checked 2026-11-23. Added: **decoryah** (Sky Alert, Varia Metal, Silver Millennium, Fighting Hawk; it ships its own ROMs), **jlrh** (Detana!! TwinBee) and **Blackwine Sega System 1/2** (Gardia). Nothing new in rmcores (Raiden, Darius) or asturur (Turbo Force, Aero Fighters). Rodimus skipped: test builds and bootlegs of classic cores Distribution already covers.
+- Cores from small databases (decoryah, Slop-Core, jlrh, Blackwine) are delivered by STinGer's full database, only the ones its games use, instead of a downloader.ini section each: decoryah has no tags to filter with, and jlrh's 47 cores are 164 MB for one game. They update when STinGer rebuilds.
+- A "Flip Screen" DIP switch in a game's MRA now counts as a flip setting (21 games moved off "upside down", Raiden Fighters and Varia Metal among them).
 - When two sources ship the same game, the order is Distribution > Jotego > kuze > Coin-Op > shmupfan > Slop-Core > Ongo, after region.
 - **Thunder Dragon** is pinned to kuze's feature-complete NMK16 core (`tdragon@kuze`); Coin-Op's NMK16 builds are betas.
 - `templates/downloader.ini` enables all of them; `[mister]` carries no positive filter because Jotego and Coin-Op inherit it.

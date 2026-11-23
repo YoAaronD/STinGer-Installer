@@ -3,7 +3,7 @@
 set -euo pipefail
 cd "$(dirname "$0")/.."
 S=sources
-SRC="distribution=$S/distribution jotego=$S/jotego coinop=$S/coinop ongo=$S/ongo kuze=$S/kuze slopcore=$S/slopcore shmupfan=$S/shmupfan"
+SRC="distribution=$S/distribution jotego=$S/jotego coinop=$S/coinop ongo=$S/ongo kuze=$S/kuze slopcore=$S/slopcore jlrh=$S/jlrh decoryah=$S/decoryah blackwine=$S/blackwine shmupfan=$S/shmupfan"
 mkdir -p build
 
 # 1. classify every MRA (shooter tiers, plus vertical non-shooters as "other")
@@ -16,7 +16,7 @@ python3 -I tools/core_check.py build/picks.csv $SRC
 python3 -I tools/tag_merge.py build/picks.csv \
   distribution=$S/dbs/distribution.json.zip jotego=$S/dbs/jotego.json.zip \
   coinop=$S/dbs/coinop.json.zip ongo=$S/dbs/ongo.json.zip kuze=$S/dbs/kuze.json.zip \
-  slopcore=$S/dbs/slopcore.json.zip
+  slopcore=$S/dbs/slopcore.json.zip jlrh=$S/dbs/jlrh.json.zip blackwine=$S/dbs/blackwine.json.zip
 
 # 5. publish a trimmed, sorted copy
 python3 -I - <<'EOF'
@@ -33,9 +33,9 @@ EOF
 
 # 6. generate the Downloader databases into build/db/: db.json.zip (add-on, under _Vertical Arcade)
 #    and full.json.zip (full install: folders straight in _Arcade, plus shmupfan cores)
-python3 -I tools/build_db.py data/picks.csv data build/db $SRC mad=$S/mad/ArcadeDatabase.csv shmupfan_db=$S/dbs/shmupfan.json roms_dbs=$S/dbs/arcade_roms_db.json.zip,$S/dbs/ongo.json.zip
+python3 -I tools/build_db.py data/picks.csv data build/db $SRC mad=$S/mad/ArcadeDatabase.csv shmupfan_db=$S/dbs/shmupfan.json core_dbs=decoryah:$S/dbs/decoryah.json.zip,slopcore:$S/dbs/slopcore.json.zip,jlrh:$S/dbs/jlrh.json.zip,blackwine:$S/dbs/blackwine.json.zip roms_dbs=$S/dbs/arcade_roms_db.json.zip,$S/dbs/ongo.json.zip,$S/dbs/decoryah.json.zip
 # ROM checklist: which zips each game needs, and which the Arcade ROMs database covers
-[ -s $S/dbs/arcade_roms_db.json.zip ] && python3 -I tools/rom_report.py build/db/full.json build/picks.csv $S/dbs/ongo.json.zip $S/dbs/arcade_roms_db.json.zip $S docs
+[ -s $S/dbs/arcade_roms_db.json.zip ] && python3 -I tools/rom_report.py build/db/full.json build/picks.csv $S/dbs/ongo.json.zip,$S/dbs/decoryah.json.zip $S/dbs/arcade_roms_db.json.zip $S docs
 
 # 7. per-hardware flavors (MiSTercade V2 / V1 / regular) into build/flavors/
 python3 -I tools/build_flavors.py $S build/flavors

@@ -90,3 +90,7 @@ re:^(Valkyrie no Densetsu|Dirt Fox|Pollux|Many Block),exclude,,Not a shooter,
 re:^(Dolmen|Goindol),include,other,Puzzle Bobble-style game - not a shooter (per Aaron),
 re:^Vandyke,include,other,Vertical Rastan-style action game - not a shooter (per Aaron),
 re:^Makyou Senshi,include,multidirectional,Multidirectional shooter (per Aaron),
+skyalert,include,core,decoryah's Metro core - vertical shooter with no genre tag (MAME ROT270),ccw
+silvmil,include,core,decoryah's Silver Millennium core - vertical shooter with no genre tag (MAME ROT270),ccw
+re:^Fighting Hawk,include,core,decoryah's Taito L core - vertical shooter with no genre tag (MAME ROT270),ccw
+vmetal,include,core,decoryah's Metro core - vertical shooter with no genre tag (MAME ROT90; flip switch SW1:5),cw

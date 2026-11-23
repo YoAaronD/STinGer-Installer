@@ -27,7 +27,8 @@ REPOS = {  # label -> GitHub owner/repo the MRAs are downloaded from
     "ongo": "OngoGablogian/MiSTer_Ongo",
     "kuze": "kuzearcade/kuzecores",
     "slopcore": "TheJesusFish/Slop-Core",
-    # shmupfan's MRAs live in several core repos; mirror_db.py records each one's URL in .urls.json
+    "jlrh": "jlrh/jlrh-misterfpga-db",
+    # shmupfan's, decoryah's and Blackwine's MRAs live in other repos; mirror_db.py records each one's URL in .urls.json
 }
 # Filter tags per tier. Downloader lowercases tags and ignores '-' and '_'.
 TIER_TAG = {"core": "stg", "fixed": "stgfixed", "multidirectional": "stgmultidirectional",
@@ -70,7 +71,7 @@ def is_yoko(row):
 
 def main(picks, data_dir, out_dir, *sources):
     opts = dict(s.split("=", 1) for s in sources
-                if s.split("=", 1)[0] in ("mad", "shmupfan_db", "variant", "roms_dbs"))
+                if s.split("=", 1)[0] in ("mad", "shmupfan_db", "core_dbs", "variant", "roms_dbs"))
     yoko = opts.get("variant") == "yoko"
     layout = read_layout(os.path.join(data_dir, "layout_yoko.csv" if yoko else "layout.csv"))
     fits = is_yoko if yoko else is_tate
@@ -80,6 +81,7 @@ def main(picks, data_dir, out_dir, *sources):
     hardware_entries = []  # (board, file name, entry) for the _STG Hardware view
     year_entries = []  # (year, file name, entry) for the _By Year view
     game_zips = []     # ([zip names], is_cv1000) for each game, for the full install's ROM list
+    used_cores = set()  # core names STinGer's games use, for the cores the full install delivers
     display = {r["setname"]: r["display_name"] for r in read_csv(os.path.join(data_dir, "display_names.csv"))}
     roots = dict(s.split("=", 1) for s in sources)
     commits = {k: subprocess.check_output(["git", "-C", v, "rev-parse", "HEAD"], text=True).strip()
@@ -105,6 +107,7 @@ def main(picks, data_dir, out_dir, *sources):
         src = os.path.join(roots[r["database"]], r["mra_path"])
         blob = open(src, "rb").read()
         game_zips.append((mra_zips(blob), r["core"] == "ikacore_CV1k"))
+        used_cores.add((r["database"], r["core"].lower()))
         base = display.get(r["setname"]) or os.path.basename(r["mra_path"])[:-4]
         dest = f"_Arcade/{folder}/{safe_name(base)}.mra"
         if dest in files:  # same file name from two sources: keep both, label the second
@@ -161,7 +164,7 @@ def main(picks, data_dir, out_dir, *sources):
         write_db(dict(db, db_url=YOKO_DB_URL), out_dir, "yoko")
     else:
         write_db(db, out_dir, "db")
-        write_db(full_variant(db, opts.get("shmupfan_db")), out_dir, "full")
+        write_db(full_variant(db, opts.get("shmupfan_db"), opts.get("core_dbs", ""), used_cores), out_dir, "full")
         if opts.get("roms_dbs"):
             write_db(roms_db(opts["roms_dbs"].split(","), game_zips), out_dir, "roms")
     by_folder = {}
@@ -227,22 +230,37 @@ def roms_db(roms_dbs, game_zips):
             "files": files, "folders": dict(sorted(folders.items())), "tag_dictionary": tags,
             "default_options": {"filter": "!cv1000"}}
 
-def full_variant(db, shmupfan_db):
+def full_variant(db, shmupfan_db, core_dbs="", used_cores=()):
     """The full install: STinGer's folders sit straight in _Arcade (the other databases ship
-    cores only there), and STinGer also delivers shmupfan's cores, since shmupfan's database
-    has no tags to trim its loose MRAs with."""
+    cores only there), and STinGer also delivers cores from databases with no tags to trim
+    their loose MRAs with: all of shmupfan's, and just the ones STinGer's games use from each
+    of core_dbs (decoryah, Slop-Core, jlrh, Blackwine), so a database with dozens of
+    cores doesn't install them all for one or two games."""
     def move(path):
         return "_Arcade" + path[len(ADDON_ROOT):] if path.startswith(ADDON_ROOT + "/") else path
     tags = dict(db["tag_dictionary"])
     files = {move(p): v for p, v in db["files"].items()}
     folders = {move(p): v for p, v in db["folders"].items() if p != ADDON_ROOT}
-    if shmupfan_db:
-        src = json.load(open(shmupfan_db, encoding="utf-8"))
-        core_tags = [tags.setdefault(n, len(tags)) for n in ("arcade", "shmupfancores")]
+    def add_cores(path, tag, keep):
+        with open(path, "rb") as f:
+            raw = f.read()
+        if path.endswith(".zip"):
+            with zipfile.ZipFile(path) as z:
+                raw = z.read(z.namelist()[0])
+        src = json.loads(raw)
+        core_tags = [tags.setdefault(n, len(tags)) for n in ("arcade", tag)]
         for p, v in src["files"].items():
-            if p.startswith("_Arcade/cores/") and p.endswith(".rbf"):
-                files[p] = {"hash": v["hash"], "size": v["size"], "url": v["url"], "tags": core_tags}
+            if p.startswith("_Arcade/cores/") and p.endswith(".rbf") and keep(p):
+                url = v.get("url") or src["base_files_url"] + urllib.parse.quote(p)
+                files[p] = {"hash": v["hash"], "size": v["size"], "url": url, "tags": core_tags}
         folders.setdefault("_Arcade/cores", {"tags": core_tags})
+    if shmupfan_db:
+        add_cores(shmupfan_db, "shmupfancores", lambda p: True)
+    def core_name(p):  # metro_20261018c.rbf -> metro
+        return re.sub(r"_[0-9][0-9a-z]*$", "", os.path.basename(p)[:-4]).lower()
+    for spec in filter(None, core_dbs.split(",")):
+        label, path = spec.split(":", 1)
+        add_cores(path, "stingercores", lambda p: (label, core_name(p)) in used_cores)
     return dict(db, db_url=FULL_DB_URL, files=dict(sorted(files.items())),
                 folders=dict(sorted(folders.items())), tag_dictionary=tags)
 

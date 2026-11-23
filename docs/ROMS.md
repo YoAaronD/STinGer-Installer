@@ -8,23 +8,26 @@ Full list: [`roms.csv`](roms.csv). Regenerated with every database build.
 
 | Status | Games | Meaning |
 | --- | --- | --- |
-| covered | 391 | Everything it needs comes with STinGer's ROM list |
-| parent only | 127 | Only the parent set is there (typical for Japanese versions). Works: the zips are merged sets, so the clone's files are inside (tested with 1941 Japan) |
-| partial | 50 | Some files are there, but not the game's own zip |
+| covered | 407 | Everything it needs comes with STinGer's ROM list |
+| parent only | 131 | Only the parent set is there (typical for Japanese versions). Works: the zips are merged sets, so the clone's files are inside (tested with 1941 Japan) |
+| partial | 52 | Some files are there, but not the game's own zip |
 | missing | 3 | Neither source has it: supply the zips yourself |
 | no zip listed | 10 | The MRA names no zip (homebrew or built-in) |
 
-Covered games by where their ROMs come from: Arcade ROMs DB 253, Ongo 129, both 9.
+Covered games by where their ROMs come from: Arcade ROMs DB 253, Ongo 136, both 9, decoryah 9.
 
 ## By source
 
 | Source | covered | parent only | partial | missing | no zip listed |
 | --- | --- | --- | --- | --- | --- |
+| blackwine | 2 | 0 | 0 | 0 | 0 |
 | coinop | 8 | 4 | 4 | 0 | 0 |
+| decoryah | 9 | 4 | 1 | 0 | 0 |
 | distribution | 215 | 59 | 19 | 3 | 10 |
+| jlrh | 6 | 0 | 1 | 0 | 0 |
 | jotego | 29 | 24 | 13 | 0 | 0 |
 | kuze | 13 | 6 | 1 | 0 | 0 |
-| ongo | 113 | 26 | 12 | 0 | 0 |
+| ongo | 112 | 26 | 12 | 0 | 0 |
 | shmupfan | 10 | 6 | 1 | 0 | 0 |
 | slopcore | 3 | 2 | 0 | 0 | 0 |
 
@@ -55,6 +58,7 @@ The number is how many STinGer games use that zip.
 - `daisenpu.zip` (1)
 - `ddpdojb.zip` (1)
 - `ddpdojblk.zip` (1)
+- `detatwin.zip` (1)
 - `devilfsg.zip` (1)
 - `dfeveron.zip` (1)
 - `excthour.zip` (1)
@@ -70,6 +74,7 @@ The number is how many STinGer games use that zip.
 - `labyrunr.zip` (1)
 - `mahoudai.zip` (1)
 - `makyosen.zip` (1)
+- `moegonta.zip` (1)
 - `popflamn.zip` (1)
 - `raphero.zip` (1)
 - `ringking.zip` (1)
