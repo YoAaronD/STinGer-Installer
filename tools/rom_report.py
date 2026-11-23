@@ -68,8 +68,8 @@ def main(full_json, picks_csv, ongo_db, roms_db, sources, out_dir):
             status = "missing"
         missing = [z for z in zips if z not in have]
         found = [z for z in zips if z in have]
-        where = ("Ongo (default)" if all(z in ongo for z in found) else
-                 "Update All ROMs" if all(z in ardb for z in found) else "both") if found else ""
+        where = ("Ongo" if all(z in ongo for z in found) else
+                 "Arcade ROMs DB" if all(z in ardb for z in found) else "both") if found else ""
         if status in ("partial", "missing"):
             for z in missing:
                 need_count[z] += 1
@@ -90,13 +90,14 @@ def main(full_json, picks_csv, ongo_db, roms_db, sources, out_dir):
         by_src[r["source"]][r["status"]] += 1
     order = ["covered", "parent only", "partial", "missing", "no zip listed"]
     md = ["# ROMs for STinGer's games", "",
-          "STinGer's full install brings the ROMs Ongo's database ships. Update All's Arcade ROMs switch",
-          "(zakk4223/ArcadeROMsDB_MiSTer) adds more. This is how far the two get you, game by game;",
-          "the `roms_from` column in the full list says which one each game relies on.",
+          "STinGer's full install brings exactly the ROM zips its games use, pointing at the same files",
+          "Update All's Arcade ROMs (zakk4223/ArcadeROMsDB_MiSTer) and Ongo use: about 2.2 GB, or 1.3 GB",
+          "without the CV1000 games. This is how far that gets you, game by game; the `roms_from` column",
+          "says which source each game's ROMs come from. Opt out with `!stgroms` in STinGer's filter line.",
           "Full list: [`roms.csv`](roms.csv). Regenerated with every database build.", "",
           "| Status | Games | Meaning |", "| --- | --- | --- |"]
     meaning = {
-        "covered": "Everything it needs comes with Ongo's ROMs and/or Update All's ROMs switch",
+        "covered": "Everything it needs comes with STinGer's ROM list",
         "parent only": "Only the parent set is there (typical for Japanese versions). Works: the zips are merged sets, so the clone's files are inside (tested with 1941 Japan)",
         "partial": "Some files are there, but not the game's own zip",
         "missing": "Neither source has it: supply the zips yourself",

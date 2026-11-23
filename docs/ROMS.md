@@ -1,19 +1,20 @@
 # ROMs for STinGer's games
 
-STinGer's full install brings the ROMs Ongo's database ships. Update All's Arcade ROMs switch
-(zakk4223/ArcadeROMsDB_MiSTer) adds more. This is how far the two get you, game by game;
-the `roms_from` column in the full list says which one each game relies on.
+STinGer's full install brings exactly the ROM zips its games use, pointing at the same files
+Update All's Arcade ROMs (zakk4223/ArcadeROMsDB_MiSTer) and Ongo use: about 2.2 GB, or 1.3 GB
+without the CV1000 games. This is how far that gets you, game by game; the `roms_from` column
+says which source each game's ROMs come from. Opt out with `!stgroms` in STinGer's filter line.
 Full list: [`roms.csv`](roms.csv). Regenerated with every database build.
 
 | Status | Games | Meaning |
 | --- | --- | --- |
-| covered | 388 | Everything it needs comes with Ongo's ROMs and/or Update All's ROMs switch |
+| covered | 388 | Everything it needs comes with STinGer's ROM list |
 | parent only | 124 | Only the parent set is there (typical for Japanese versions). Works: the zips are merged sets, so the clone's files are inside (tested with 1941 Japan) |
 | partial | 51 | Some files are there, but not the game's own zip |
 | missing | 3 | Neither source has it: supply the zips yourself |
 | no zip listed | 10 | The MRA names no zip (homebrew or built-in) |
 
-Covered games by where their ROMs come from: Update All ROMs 253, Ongo (default) 126, both 9.
+Covered games by where their ROMs come from: Arcade ROMs DB 253, Ongo 126, both 9.
 
 ## By source
 

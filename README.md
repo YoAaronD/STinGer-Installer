@@ -99,10 +99,11 @@ Folder names live in `data/layout.csv`; board names in `data/hardware.csv`.
 | Coin-Op Collection | none: falls back to `[mister]` | Update All rewrites Coin-Op's filter line on every run; every value it writes starts with `[MiSTer]` |
 | shmupfan | no section | Its database has no tags, so STinGer's `full.json.zip` delivers its 5 cores |
 | 240p Test Suite | `240psuite` | Just the core (Utility), for setting up the CRT |
-| STinGer | `!cv1000` | Raki's CV1000 core is Patreon-only; `all` opts in. Must stay explicit, or it would inherit `!mra` |
+| STinGer | `!cv1000` | The menu, shmupfan's cores and exactly the ROMs its games use (~1.3 GB; 2.2 GB with CV1000). `all` opts into CV1000, `!stgroms` skips the ROMs. Must stay explicit, or it would inherit `!mra` |
 
-ROMs aren't part of STinGer. [`docs/ROMS.md`](docs/ROMS.md) lists, game by game, which zips each one needs and
-which of them Update All's Arcade ROMs database covers, plus the zips to supply yourself.
+The full install brings exactly the ROM zips STinGer's games use, pointing at the same archive.org files
+Update All's Arcade ROMs and Ongo use. Leave Update All's Arcade ROMs switch off. [`docs/ROMS.md`](docs/ROMS.md)
+lists, game by game, what's covered and the few zips to supply yourself.
 
 Anything switched on later in Update All (arcade ROMs, BIOS, names files) installs normally with no edits:
 `!mra` only removes stock game lists.
