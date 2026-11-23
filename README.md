@@ -5,7 +5,7 @@ A shmup-focused MiSTer build for **vertical (tate) CRT arcade cabinets**.
 > Status: early. The game list is built and curated; the downloader database,
 > ini templates and installer image are next.
 
-> **Cave CV1000 games** (Mushihime-sama, Mushihime-sama Futari, Espgaluda II, DoDonPachi Dai-Fukkatsu, Ibara and more) are included, and they need Raki's CV1000 core, which is on his Patreon. It's a few dollars a month, and it's what makes these games possible on MiSTer. Put the core (`ikacore_CV1k_*.rbf`) in `_Arcade/cores`. To leave the CV1000 games out instead, set `filter = !cv1000` in the STinGer and STinGer-ROMs sections of downloader.ini.
+> **Cave CV1000 games** (Mushihime-sama, Mushihime-sama Futari, Espgaluda II, DoDonPachi Dai-Fukkatsu, Ibara and more) are included, and they need Raki's CV1000 core, which is on [his Patreon](https://www.patreon.com/cw/ikamusume). It's a few dollars a month, and it's what makes these games possible on MiSTer. Put the core (`ikacore_CV1k_*.rbf`) in `_Arcade/cores`. To leave the CV1000 games out instead, set `filter = !cv1000` in the STinGer and STinGer-ROMs sections of downloader.ini.
 
 ## Goals
 
