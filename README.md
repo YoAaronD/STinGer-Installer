@@ -139,6 +139,7 @@ The installer is what ties them together, staged so it never blocks the build:
 - [ ] Installer stage 1: Mr. Fusion remaster with the inis preloaded
 - [ ] Installer stage 2: STinGer's own Mr. Fusion fork with hardware detection and a display picker
 - [ ] More displays: tate CW, yoko, LCD tate
+- [ ] **Install images (stage 1):** `installer/build_image.sh` makes Mr. Fusion images per flavor with STinGer's files and splash. Untested yet: build on AD1 (WSL), flash a spare card.
 - [ ] **Yoko CRT ("hori STinGer")**, parked 2026-11-21. Agreed so far: curate only the shooters (189 horizontal picks,
       108 Core STGs); keep the normal arcade library untouched beside them (no cores-only filters, no "other" folder);
       put all of STinGer in one folder at the top of Arcade (`@...`, name undecided); 3D shooters get their own folder.
