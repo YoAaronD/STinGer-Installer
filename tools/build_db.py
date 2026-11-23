@@ -65,7 +65,8 @@ def is_yoko(row):
     return row["yoko_cab"].startswith("native")
 
 def main(picks, data_dir, out_dir, *sources):
-    opts = dict(s.split("=", 1) for s in sources if s.split("=", 1)[0] in ("mad", "shmupfan_db", "variant"))
+    opts = dict(s.split("=", 1) for s in sources
+                if s.split("=", 1)[0] in ("mad", "shmupfan_db", "variant", "roms_dbs"))
     yoko = opts.get("variant") == "yoko"
     layout = read_layout(os.path.join(data_dir, "layout_yoko.csv" if yoko else "layout.csv"))
     fits = is_yoko if yoko else is_tate
@@ -74,6 +75,7 @@ def main(picks, data_dir, out_dir, *sources):
     board_of = read_hardware(data_dir, mad_csv)
     hardware_entries = []  # (board, file name, entry) for the _STG Hardware view
     year_entries = []  # (year, file name, entry) for the _By Year view
+    game_zips = []     # ([zip names], is_cv1000) for each game, for the full install's ROM list
     display = {r["setname"]: r["display_name"] for r in read_csv(os.path.join(data_dir, "display_names.csv"))}
     roots = dict(s.split("=", 1) for s in sources)
     commits = {k: subprocess.check_output(["git", "-C", v, "rev-parse", "HEAD"], text=True).strip()
@@ -98,6 +100,7 @@ def main(picks, data_dir, out_dir, *sources):
             skipped.append((r["mra_name"], "core not shipped anywhere: " + r["core"])); continue
         src = os.path.join(roots[r["database"]], r["mra_path"])
         blob = open(src, "rb").read()
+        game_zips.append((mra_zips(blob), r["core"] == "ikacore_CV1k"))
         base = display.get(r["setname"]) or os.path.basename(r["mra_path"])[:-4]
         dest = f"_Arcade/{folder}/{safe_name(base)}.mra"
         if dest in files:  # same file name from two sources: keep both, label the second
@@ -154,7 +157,8 @@ def main(picks, data_dir, out_dir, *sources):
         write_db(dict(db, db_url=YOKO_DB_URL), out_dir, "yoko")
     else:
         write_db(db, out_dir, "db")
-        write_db(full_variant(db, opts.get("shmupfan_db")), out_dir, "full")
+        roms_dbs = opts["roms_dbs"].split(",") if opts.get("roms_dbs") else []
+        write_db(full_variant(db, opts.get("shmupfan_db"), roms_dbs, game_zips), out_dir, "full")
     by_folder = {}
     for p in files:
         k = "/".join(p.split("/")[1:-1]) if not p.startswith(hw_root + "/") else hw_root[8:]
@@ -168,7 +172,34 @@ def write_db(db, out_dir, name):
     with zipfile.ZipFile(os.path.join(out_dir, name + ".json.zip"), "w", zipfile.ZIP_DEFLATED) as z:
         z.writestr("db.json", json.dumps(db, separators=(",", ":"), ensure_ascii=False))
 
-def full_variant(db, shmupfan_db):
+def mra_zips(blob):
+    """Zip names an MRA asks for, e.g. zip="1941j.zip|1941.zip" -> ["1941j.zip", "1941.zip"]."""
+    names = []
+    for m in re.finditer(rb'zip="([^"]+)"', blob):
+        for z in m.group(1).decode("utf-8", "replace").split("|"):
+            z = z.strip().lower()
+            if z and z not in names:
+                names.append(z)
+    return names
+
+def rom_index(roms_dbs):
+    """zip name -> entry from the ROM databases, first database wins (list them in priority order).
+    Paths use the "|games/..." form: games folder on whichever drive holds it (SD or USB)."""
+    index = {}
+    for path in roms_dbs:
+        with zipfile.ZipFile(path) as z:
+            d = json.loads(z.read(z.namelist()[0]))
+        for p, v in d["files"].items():
+            if not p.lower().endswith(".zip"):
+                continue
+            rel = p.lstrip("|")
+            if not rel.startswith("games/"):
+                continue
+            index.setdefault(os.path.basename(rel).lower(),
+                             ("|" + rel, {"hash": v["hash"], "size": v["size"], "url": v["url"]}))
+    return index
+
+def full_variant(db, shmupfan_db, roms_dbs=(), game_zips=()):
     """The full install: STinGer's folders sit straight in _Arcade (the other databases ship
     cores only there), and STinGer also delivers shmupfan's cores, since shmupfan's database
     has no tags to trim its loose MRAs with."""
@@ -184,6 +215,25 @@ def full_variant(db, shmupfan_db):
             if p.startswith("_Arcade/cores/") and p.endswith(".rbf"):
                 files[p] = {"hash": v["hash"], "size": v["size"], "url": v["url"], "tags": core_tags}
         folders.setdefault("_Arcade/cores", {"tags": core_tags})
+    if roms_dbs:
+        # Exactly the ROM zips STinGer's games ask for, pointing at the same files the ROM databases
+        # use (Update All's Arcade ROMs, then Ongo). Opt out with "!stgroms"; a zip only CV1000 games
+        # use is tagged cv1000 too, so it stays off with them.
+        index = rom_index(roms_dbs)
+        needed = {}
+        for zips, cv in game_zips:
+            for z in zips:
+                needed[z] = needed.get(z, True) and cv
+        rom_folders = set()
+        for z, only_cv in sorted(needed.items()):
+            if z not in index:
+                continue
+            path, entry = index[z]
+            names = ("arcade", "stgroms") + (("cv1000",) if only_cv else ())
+            files[path] = dict(entry, tags=[tags.setdefault(n, len(tags)) for n in names])
+            rom_folders.add(path.rsplit("/", 1)[0])
+        for f in sorted(rom_folders | {"|games"}):
+            folders.setdefault(f, {"tags": [tags.setdefault(n, len(tags)) for n in ("arcade", "stgroms")]})
     return dict(db, db_url=FULL_DB_URL, files=dict(sorted(files.items())),
                 folders=dict(sorted(folders.items())), tag_dictionary=tags)
 
