@@ -24,7 +24,11 @@ FLAVORS = {
 FLAVOR_EXTRA = {
     # From Heber's Multisystem2 Arcade product page / manual: "Player Bindings are configured in the mister.ini file"
     "heber-ms2": ["player_1_controller=usb-1.7/input2/ ; Heber CTRLDock Arcade: JAMMA player 1",
-                  "player_2_controller=usb-1.7/input3/ ; Heber CTRLDock Arcade: JAMMA player 2"],
+                  "player_2_controller=usb-1.7/input3/ ; Heber CTRLDock Arcade: JAMMA player 2",
+                  # analog out with no scaler: size the Linux terminal (Update All, scripts) for the CRT,
+                  # or MiSTer shows "If you see this, then you need to modify MiSTer.ini" instead (2026-11-23)
+                  "fb_terminal=2 ; terminal sized for a 15 kHz CRT (scripts, Update All)"],
+    "regular": ["fb_terminal=2 ; terminal sized for a 15 kHz CRT (scripts, Update All)"],
 }
 # Overlay sections a flavor leaves out. MiSTercades: no [Menu] block. It routes the main menu through
 # the scaler's analog output, which made the menu lose sync on a V2 + IO DAC board in a Blast City
